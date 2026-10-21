@@ -1,0 +1,230 @@
+URL: https://docs.overledger.dev/docs/fusion-rollup
+TITLE: Fusion Rollup
+
+Jump to Content
+Quant Connect Login
+Talk to us
+Home
+Guides
+API Reference
+Release Notes
+Search
+CTRL-K
+OVERLEDGER
+Start Here
+Overview
+QuickStart
+Authentication
+Overledger Gateway
+Connectors
+Flow Apps
+Signing
+Fusion Rollup
+Overledger Firewall
+Tutorials
+Troubleshooting
+Staking
+Powered by 
+Fusion Rollup
+
+Audience: Smart-contract developers; anyone moving value through the Fusion Rollup. Reading time: ~15 minutes. Prerequisites: Familiarity with EVM-style chains. You'll learn: What makes Fusion a multi-ledger rollup, the four core rollup services, how to connect to Fusion Rollup, and the deposit / cross-domain-message / withdrawal lifecycles.
+
+Fusion is the world's first multi-ledger rollup, what we call Layer 2.5 because where a conventional Layer 2 rolls up transactions from a single DLT network, Fusion derives its state from N DLT networks simultaneously, creating one EVM-compatible execution environment that spans multiple chains. A single contract deployed on Fusion can receive deposits from, settle to, and exchange cross-chain messages with any of the connected DLT networks.
+
+8.1 What is Fusion
+
+Fusion is a multi-ledger rollup: one EVM execution environment whose state derives from N connected DLT networks. The full service-level breakdown is in section 8.2.
+
+What is a rollup?
+
+A rollup bundles many transactions off-chain and posts them in compressed form traditionally to one connected DLT network (blockchain). The benefits of that pattern are well-known:
+
+Faster processing than running each transaction directly on the blockchain.
+Lower fees than transactions on the connected chain.
+Trust-minimised withdrawals, funds are released back on the connected chain against a cryptographic proof of the Rollup state, not a custodian's say-so.
+Multi-ledger by design
+
+Most institutional use cases need to coordinate value across more than one chain. The conventional answer is bridges, independent third-party contracts that move tokens between L1s. Bridges carry well-known risks: lock-and-mint mismatches, custodian compromise, oracle failure.
+
+Fusion takes a different approach. Instead of bridging between DLT networks, it derives a single state from all of them. From a developer's perspective:
+
+One smart-contract deployment on the Fusion Rollup receives traffic originating from any connected blockchain.
+Cross-chain messaging is a native primitive, not a third-party bridge.
+Settlement happens to all connected blockchains, state roots are posted to each, so any can verify the Rollup's history.
+
+We chose an optimistic rollup over a ZK rollup specifically because ZK validity proofs would have to be posted to every connected DLT network, making data-availability costs scale linearly with the number of connected blockchains. The Fusion rollups can post transaction data to a single permissioned chain and only state roots to the others, keeping costs flat as more DLT networks are connected.
+
+Why Fusion matters
+
+Three properties make Fusion a fit for institutional and regulated multi-chain workloads:
+
+Built for institutions. Supports both public and permissioned DLTs side by side, with the Overledger Firewall tunable per deployment, locked-down on mainnet, permissive on testnet, fully configurable on private Firewall deployments.
+Non-custodial. Assets remain in the holder's control throughout: deposits and withdrawals are signed by the user's own keys, the deposit contracts on each connected DLT network are audited, and no relayer or custodian holds funds in the middle of the flow.
+Ends blockchain silos. A single contract on Fusion can receive, route, and settle activity that originates on any connected DLT network, without the user having to think about which chain the value started on.
+What you can do with Fusion
+
+Four interoperability primitives cover everything from value movement to cross-chain smart-contract invocation:
+
+#	Primitive	What it lets you do	Reference
+1	Deposit	Bring tokens from any connected DLT network onto the Fusion Rollup.	Section 8.5
+2	Unify	Merge multiple chain-specific representations of the same underlying asset into a single rollup balance, see Multi-chain unified tokens under section 8.5.	Section 8.5
+3	Trigger	Call a Fusion Rollup smart contract from a transaction or a smart contract on any connected DLT network, and call back out in the same way.	Section 8.6
+4	Withdraw / mint	Move tokens off the Rollup back onto any connected DLT network (or mint chain-native representations onto a connected DLT network).	Section 8.7
+8.2 Architecture
+
+Fusion is built on the standard OP Stack architecture, organised into four core rollup services and a set of on-chain contracts on every connected DLT network.
+
+The four services map one-to-one to the boxes inside the FUSION ROLLUP container in the diagram above:
+
+Service / contract	Role
+Execution Service	The EVM-compatible execution engine that serves the JSON-RPC you reach through /rpc/{apiKey}. Hosts rollup data (blocks, transactions, balances), token contracts (bridged, native, settlement), Fusion system and Fusion Firewall contracts, and access-restricted / private contracts.
+Consensus Service	Orders transactions, produces Fusion Rollup blocks, reads transactions from every connected DLT network in a deterministic manner, and includes their deposits and withdrawals in the next rollup block.
+Dispute Resolution Services	Compute Fusion Rollup state roots and post them to all connected DLT networks for settlement; monitor the output roots posted on each chain for validity; defend against incorrect disputes; and trigger the dispute game if any chain receives an invalid proposal.
+Data Availability Service	Aggregates Fusion Rollup batch transaction data and submits it to the private data available chain only (typically a permissioned Besu network).
+Bridge contracts	The bridge and dispute contracts deployed on each connected DLT network. Standard OP Stack contracts, one deployment per chain.
+
+Each block on Fusion Rollup has an origin, the specific block on a connected DLT network whose deposits and messages were ingested. The origin rotates across connected networks in a deterministic order so every chain gets equal attention.
+
+8.3 Networks & chain IDs
+Network	Chain ID	Status	Data-availability L1
+Fusion Testnet	73073	active	Permissioned Besu
+Fusion Mainnet	<mainnet-chain-id>	active (production)	Permissioned Besu mainnet
+
+Connected DLT networks on testnet launch are: Ethereum Sepolia, Polygon Amoy, Quant's permissioned Besu testnet. The full live list comes from GET /networks/fusion.
+
+📘
+Info, About the permissioned Besu chain
+
+It is a private permissioned network (per the networks taxonomy) and is reachable only by the Fusion off-chain services and by clients who have been granted access.
+
+8.4 Connecting to Fusion Rollup
+
+Use any EVM tool. Point it at Quant's URL. The Gateway authenticates the caller — by API key in the URL path (/rpc/{apiKey}) or via the X-API-Key header — applies the Overledger Firewall (the off-chain elements first, then the Fusion Firewall sub-component), and forwards the request to the rollup's Execution Service.
+
+Supported JSON-RPC methods
+
+The Fusion Rollup does not expose a full Ethereum node. The supported surface is a curated subset of the eth_* namespace plus net_version, listed in section 8.8. Security-sensitive and node-management methods — account enumeration, mining, transaction filters and subscriptions, node-side signing/sending, and the listed admin_* / personal_* calls — are explicitly rejected with JSON-RPC error code -32601 ("RPC method not supported"). Build against the methods in section 8.8 and treat anything outside that list as unavailable.
+
+Supported methods fall into two access tiers, both enforced by the Overledger Firewall:
+
+Accessible — callable by any authenticated API key. Returns network-level data or your own account data, with no additional checks.
+Permissioned — callable, but the call is authorised against the accounts and contracts your API key owns or has been granted access to, and the results are filtered to match. An unauthorised request returns a JSON-RPC error (for example -32004 for an unauthorised to contract, or -32008 for an account that is not yours).
+
+See section 8.8 for the full per-method list.
+
+8.5 Token deposits
+
+Deposits move tokens from a connected DLT network into the Fusion Rollup. The flow:
+
+Approve the deposit contract on the connected DLT network to spend the token.
+Call depositERC20 (or depositTransaction for the native token of the chain - if whitelisted).
+The deposit is included in an Fusion Rollup block whose origin includes the connected DLT network block containing your deposit.
+Once the Fusion Rollup block is safe (the relevant connected DLT network block has finalized), the deposit is final and your Fusion Rollup balance reflects it.
+
+Typical timing:
+
+Ethereum → Fusion Rollup: ~20 minutes (Ethereum finality is the bottleneck).
+Polygon → Fusion Rollup: ~3 minutes (Polygon has a shorter finality).
+Permissioned Besu → Fusion Rollup: ~1 minute.
+Multi-chain unified tokens
+
+Many assets exist as distinct ERC-20 contracts on multiple DLT networks, USDC on Ethereum, USDC on Polygon, USDC on Avalanche, and so on, even though they represent the same underlying value. On a typical bridge, those map to three different wrapped tokens, and an application has to handle each version separately.
+
+Fusion can map several token contracts to a single rollup-side ERC-20, so deposits from any of those source chains land in one unified balance. The mapping is configured per-asset in the TokenWhitelist contract. For example:
+
+L1 chain	L1 token address	→ Rollup token (unified)
+Ethereum Sepolia	0xA0b… USDC	0xUSDCRollup…
+Polygon Amoy	0x41E… USDC	0xUSDCRollup… (same rollup contract)
+Permissioned Besu	0x9d2… USDC	0xUSDCRollup… (same rollup contract)
+
+Withdrawals are similarly flexible, a unified rollup balance can be withdrawn back to any of the source L1s for which the user is allowlisted, regardless of which DLT network the deposit originated on. This is what powers the "Unify" primitive in section 8.1 — What you can do with Fusion.
+
+📘
+Info, Per-deployment mappings
+
+Which assets are unified, and which mappings each rollup deployment exposes, is environment-specific. The authoritative list comes from GET /networks/fusion (the rollup's tokens array shows the DLT network→rollup mappings per asset).
+
+8.6 Cross-chain messages
+
+Cross-chain messages let a sender on a connected DLT network, either an end-user transaction (EOA) or a smart contract calling the cross-domain messenger programmatically, trigger a function call on a Fusion Rollup smart contract, and vice versa. They are a native primitive of the OP Stack, extended on Fusion to anchor across all connected DLT networks rather than a single one.
+
+A single contract deployed on the Fusion Rollup can therefore receive messages from any of the connected DLT networks, Ethereum, Polygon, the permissioned Besu chain, and any other DLT network wired into the Rollup, and can dispatch messages back out to any of them. The sender on the connected DLT network side can be a transaction or another smart contract; the Rollup contract treats both the same. The recipient Rollup contract controls which L1 sender addresses are allowed to call it via the WhitelistCrossDomainMessage contract.
+
+Inbound, any connected DLT network → Rollup. The sender calls sendMessage on the cross-domain messenger contract of whichever DLT network they are on. The message is delivered on the next Rollup block whose origin contains the block which included the send. Latency matches a deposit from that DLT network, see the timings in section 8.5.
+
+Outbound, Rollup → any connected L1. A Rollup contract calls sendMessage on the Rollup's cross-domain messenger, targeting a specific connected DLT network. The message becomes claimable on the destination DLT network only after the Rollup state root containing it is finalized on that DLT network, see section 8.7 for the dispute-window mechanics.
+
+8.7 Token withdrawals
+
+Five phases: initiate, wait for state root, prove, dispute window, finalize. The dispute window is the load-bearing security property.
+
+Withdrawals move tokens from Fusion Rollup back to a connected DLT network. Because Fusion is an optimistic rollup, a withdrawal is not immediately final, there is a dispute window during which a challenger can prove the Fusion Rollup state root invalid.
+
+The flow has three phases:
+
+Initiate, call initiateWithdrawal on the Fusion Rollup withdrawal smart contract. Cheap, fast, happens immediately on Fusion Rollup (note that this function can also be called indirectly by placing a cross chain message on one of the connected DLT networks).
+Prove, once the Fusion Rollup state root containing your withdrawal is posted to the destination DLT network, submit a proof on that network referencing it. The dispute window starts.
+Finalize, after the dispute window elapses with no successful challenge, call finalizeWithdrawal on the destination network to release the funds.
+
+If a challenger successfully disputes the state root during the window, all withdrawals proven against that state root are invalidated and must be re-proven against a corrected root. The challenge game logic lives in the Dispute Resolution Services.
+
+8.8 JSON-RPC method reference
+
+The supported JSON-RPC methods the Fusion Rollup accepts, with each method's access tier (see section 8.4 — Supported JSON-RPC methods for what the tiers mean). Methods outside this list are not part of the supported surface; the security-sensitive and node-management methods are explicitly rejected with error -32601.
+
+Accessible methods
+Method	Notes
+eth_blockNumber	Returns the current block height.
+eth_chainId	Returns the chain ID; used when signing transactions.
+eth_feeHistory	Historical gas-fee data for fee analysis.
+eth_gasPrice	Current network gas price.
+eth_getBalance	Native-token balance of an address. Required for wallet integration.
+eth_getTransactionCount	Account nonce. Required for wallet integration.
+eth_maxPriorityFeePerGas	Suggested priority fee for transactions.
+eth_protocolVersion	Protocol metadata only.
+eth_syncing	Node sync status.
+net_version	Network ID. Exposed for wallets and tools that predate eth_chainId.
+Permissioned methods
+Method	Authorisation rule
+eth_call	If from is supplied it must be an account you own; if to is a contract it must be one you can access. State- and block-override objects are not accepted.
+eth_estimateGas	Same rule as eth_call. The state-override object is not accepted.
+eth_sendRawTransaction	The signed transaction is decoded first. Its from is added to your owned-account set (if not already present); if to is a contract it must be one you can access. If to is null (a contract deployment) the transaction is allowed and the new contract is recorded in the private access state, owned by you.
+eth_getBlockByHash	The transactions array is filtered to transactions whose to/from is one of your accounts, or whose to is a contract you can access.
+eth_getBlockByNumber	As eth_getBlockByHash.
+eth_getBlockReceipts	The returned logs are filtered by the same rule as eth_getBlockByHash.
+eth_getCode	If address is a contract, it must be one you can access.
+eth_getProof	address must be an account you own or a contract you can access.
+eth_getStorageAt	If address is a contract, it must be one you can access.
+eth_getTransactionByBlockHashAndIndex	Returned only if the transaction's to/from is one of your accounts, or its to is a contract you can access.
+eth_getTransactionByBlockNumberAndIndex	As eth_getTransactionByBlockHashAndIndex.
+eth_getTransactionByHash	As eth_getTransactionByBlockHashAndIndex.
+eth_getTransactionReceipt	Returned only if the transaction's from is one of your accounts and any contractAddress is one you can access.
+📘
+Info, Access tiers are enforced, not advisory
+
+Both tiers run through the Overledger Firewall. On mainnet the firewall is locked down; on testnet it is more permissive. The exact filtering applied to permissioned methods depends on the accounts and contracts associated with your API key — see chapter 9.
+
+Updated 4 months ago
+
+Signing
+Overledger Firewall
+Did this page help you?
+Yes
+No
+Copy Page
+8.1 What is Fusion
+What is a rollup?
+Multi-ledger by design
+Why Fusion matters
+What you can do with Fusion
+8.2 Architecture
+8.3 Networks & chain IDs
+8.4 Connecting to Fusion Rollup
+Supported JSON-RPC methods
+8.5 Token deposits
+Multi-chain unified tokens
+8.6 Cross-chain messages
+8.7 Token withdrawals
+8.8 JSON-RPC method reference
+Accessible methods
+Permissioned methods

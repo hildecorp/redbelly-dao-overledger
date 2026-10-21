@@ -1,0 +1,41 @@
+Test run: 2026-10-15T08:32:57Z (UTC)
+https://governors.mainnet.redbelly.network eth_chainId -> {"jsonrpc":"2.0","id":1,"result":"0x97"}
+
+https://governors.mainnet.redbelly.network net_version -> {"jsonrpc":"2.0","id":1,"error":{"code":-32601,"message":"the method net_version does not exist/is not available"}}
+
+https://governors.mainnet.redbelly.network eth_blockNumber -> {"jsonrpc":"2.0","id":1,"result":"0x313a76"}
+
+https://governors.mainnet.redbelly.network web3_clientVersion -> {"jsonrpc":"2.0","id":1,"result":"./linux-amd64/go1.25.14"}
+
+https://rpc.ankr.com/redbelly_mainnet eth_chainId -> {"id":1,"jsonrpc":"2.0","result":"0x97"}
+https://rpc.ankr.com/redbelly_mainnet net_version -> {"id":1,"jsonrpc":"2.0","error":{"code":-32601,"message":"the method net_version does not exist/is not available"}}
+https://rpc.ankr.com/redbelly_mainnet eth_blockNumber -> {"id":1,"jsonrpc":"2.0","result":"0x313a76"}
+https://rpc.ankr.com/redbelly_mainnet web3_clientVersion -> {"id":1,"jsonrpc":"2.0","result":"./linux-amd64/go1.25.12"}
+https://governors.testnet.redbelly.network eth_chainId -> {"jsonrpc":"2.0","id":1,"result":"0x99"}
+
+https://governors.testnet.redbelly.network net_version -> {"jsonrpc":"2.0","id":1,"error":{"code":-32601,"message":"the method net_version does not exist/is not available"}}
+
+https://governors.testnet.redbelly.network eth_blockNumber -> {"jsonrpc":"2.0","id":1,"result":"0x2e8ea3"}
+
+https://governors.testnet.redbelly.network web3_clientVersion -> {"jsonrpc":"2.0","id":1,"result":"./linux-amd64/go1.25.14"}
+
+
+Second run: 2026-10-15T08:33:12Z (UTC), mainnet https://governors.mainnet.redbelly.network
+eth_syncing -> {"jsonrpc":"2.0","id":1,"result":false}
+
+eth_gasPrice -> {"jsonrpc":"2.0","id":1,"result":"0xf77b46f59406"}
+
+eth_maxPriorityFeePerGas -> {"jsonrpc":"2.0","id":1,"result":"0x0"}
+
+eth_feeHistory -> {"jsonrpc":"2.0","id":1,"result":{"oldestBlock":"0x313a73","reward":[["0x0","0x0"],["0x0","0x0"],["0x0","0x0"],["0x0","0x0"]],"baseFeePerGas":["0xe119a45585d7","0xe119a45585d7","0xe0fbb4df40c0","0xe0fbb4df40c0","0xe0fbb4df40c0"],"gasUsedRatio":[3.5e-7,0.000002
+
+eth_getBlockByNumber -> {"jsonrpc":"2.0","id":1,"result":{"baseFeePerGas":"0xe0fbb4df40c0","blobGasUsed":"0x0","difficulty":"0x0","excessBlobGas":"0x0","extraData":"0xd9c0c096d58325c09683313a7601c1128301bda7846ad08f9380","gasLimit":"0xdf8475800","gasUsed":"0x1bda7","hash":"0xfab3dd86
+
+eth_getBalance -> {"jsonrpc":"2.0","id":1,"result":"0xa0aa57d8d7cdb258"}
+
+eth_getLogs -> {"jsonrpc":"2.0","id":1,"result":[]}
+
+eth_getCode -> {"jsonrpc":"2.0","id":1,"result":"0x608060405261000c61000e565b005b7f00000000000000000000000012fe7b61a82233371ec52597c6b76dab298676456001600160a01b0316330361007b576000356001600160e01b03191663278f794360e11b14610071576040516334ad5dbb60e21b815260040160405180910390
+
+eth_estimateGas -> {"jsonrpc":"2.0","id":1,"result":"0x52e9"}
+

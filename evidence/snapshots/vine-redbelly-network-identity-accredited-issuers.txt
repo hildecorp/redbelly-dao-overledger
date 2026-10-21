@@ -1,0 +1,75 @@
+URL: https://vine.redbelly.network/identity/accredited-issuers/
+TITLE: Accredited issuers - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Accredited issuers
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Receptor (ID protocol)
+Verifiable credentials
+Eligibility
+User access
+Accredited issuers
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Accredited issuers¶
+
+On Redbelly, all network participants must prove they are who they say they are in order to get network access. There is thus a special class of network accredited issuers who are responsible for helping users and businesses through this process.
+
+Accredited issuers play an important role in not only helping to onboard users and businesses to the network, but also by issuing and maintaining relevant credentials. As such, accredited issuers receive a percentage of gas fees to recognise the value they bring to the network by establishing a baseline of accountability.
+
+To become accredited, issuers have to prove they meet the minimum onboarding requirements. For users this is a valid photo ID document with biometric verification. For businesses at least one officeholder must have onboarded as a user and prove that they are an officeholder of the business they want to register.
+
+Important
+
+All accredited issuers are listed in an on chain registry. The contract addresses are:
+
+Environment	Contract address
+Mainnet	0x2d68f1C50a057a310EeF28DF3199F95A65cE4ac5
+Testnet	0x6aEe06F4052ff6d01Ed7E13Fa5Ab53675756A057
+DevNet	0xC1c5a8b8aF35196DF5F363F0DCaF56C3E9392ecF
+Growing the number of accredited issuers¶
+
+As the network grows and matures, additional accredited issuers will be added to the network. It is crucial to provide a robust diversity of accredited issuers to give users choice and control over who they wish to use to vouch for their identity and to decentralise this crucial network function.
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

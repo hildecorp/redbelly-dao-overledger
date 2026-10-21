@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1506" role="img" aria-labelledby="routes-n-title routes-n-desc">
+  <title id="routes-n-title">Two ways a chain reaches Overledger</title>
+  <desc id="routes-n-desc">The self-serve route, where a chain in one of six supported families registers a public or private node, passes a health check and becomes reachable through the Gateway, shown above the managed engagement route for permissioned networks and brand-new chain families.</desc>
+  <defs>
+    <marker id="routes-n-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0.5 L10 5 L0 9.5 Z" fill="#8fa1ad"/>
+    </marker>
+  </defs>
+
+  <!-- self-serve heading -->
+  <rect x="8" y="17" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="40" y="26" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="700" fill="#ffb3ae">Self-serve</text>
+  <line x1="5" y1="40" x2="392" y2="40" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- step 1: chain family -->
+  <rect x="40" y="58" width="352" height="116" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="87" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Chain family is</text>
+  <rect x="56" y="100" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="97" y="117.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">EVM</text>
+  <rect x="146" y="100" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="187" y="117.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Solana</text>
+  <rect x="236" y="100" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="277" y="117.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Cosmos</text>
+  <rect x="56" y="134" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="97" y="151.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">SUI</text>
+  <rect x="146" y="134" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="187" y="151.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Hedera</text>
+  <rect x="236" y="134" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="277" y="151.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Aptos</text>
+  <path d="M216 174 V202" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- step 2: register a node -->
+  <rect x="40" y="202" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="230" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Register a node</text>
+  <text x="56" y="252" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">one API call or one form</text>
+
+  <!-- fork: either a public node or a private node -->
+  <path d="M216 272 V282 Q216 288 210 288 H60 Q54 288 54 294 V343 Q54 349 60 349 H82" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+  <path d="M54 343 V539 Q54 545 60 545 H82" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- approved providers, under the public node -->
+  <rect x="90" y="384" width="256" height="100" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+  <text x="104" y="416" font-family="JetBrains Mono, monospace" font-size="14" font-weight="400" fill="#8fa1ad">
+    <tspan x="104" dy="0">alchemy.com infura.io</tspan>
+    <tspan x="104" dy="19">quiknode.pro chainstack.com</tspan>
+    <tspan x="104" dy="19">getblock.io blockdaemon.com</tspan>
+    <tspan x="104" dy="19">ankr.com</tspan>
+  </text>
+
+  <!-- step 3: public node -->
+  <rect x="82" y="306" width="272" height="86" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="98" y="334" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Public node</text>
+  <text x="98" y="356" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">
+    <tspan x="98" dy="0">approved provider, API key in</tspan>
+    <tspan x="98" dy="19">the URL, in a shared pool</tspan>
+  </text>
+
+  <!-- step 3: private node -->
+  <rect x="82" y="502" width="272" height="86" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="98" y="530" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Private node</text>
+  <text x="98" y="552" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">
+    <tspan x="98" dy="0">any HTTPS address,</tspan>
+    <tspan x="98" dy="19">only you can use it</tspan>
+  </text>
+
+  <!-- fan in to the health check -->
+  <path d="M354 545 H370 Q376 545 376 551" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M354 349 H370 Q376 349 376 355 V600 Q376 606 370 606 H222 Q216 606 216 612 V630" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- step 4: health check -->
+  <rect x="40" y="630" width="352" height="52" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="662" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Health check</text>
+  <path d="M216 682 V710" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- step 5: reachable through the Gateway -->
+  <rect x="40" y="710" width="352" height="52" rx="6" fill="#1d3140" stroke="#EF5350" stroke-width="2"/>
+  <text x="56" y="742" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#ffb3ae">Reachable through the Gateway</text>
+
+  <!-- self-serve step rail -->
+  <line x1="17" y1="116" x2="17" y2="736" stroke="#223039" stroke-width="1.5"/>
+  <circle cx="17" cy="116" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="120.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">1</text>
+  <circle cx="17" cy="237" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="241.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">2</text>
+  <circle cx="17" cy="447" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="451.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">3</text>
+  <circle cx="17" cy="656" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="660.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">4</text>
+  <circle cx="17" cy="736" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="740.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">5</text>
+
+  <!-- panel: the self-serve test -->
+  <rect x="5" y="792" width="387" height="140" rx="6" fill="#141f26" stroke="#223039" stroke-width="1.5"/>
+  <rect x="21" y="816.96" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="53" y="824" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">THE SELF-SERVE TEST</text>
+  <circle cx="31" cy="855" r="10" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M26.82 855.18 L29.73 858.09 L35.36 851.91" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="51" y="860" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Nodes answer over HTTPS</text>
+  <circle cx="31" cy="884" r="10" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M26.82 884.18 L29.73 887.09 L35.36 880.91" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="51" y="889" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Nothing needed beyond an API key</text>
+  <circle cx="31" cy="913" r="10" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M26.82 913.18 L29.73 916.09 L35.36 909.91" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="51" y="918" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">It does not matter which node you use</text>
+
+  <!-- managed engagement heading -->
+  <rect x="8" y="965" width="18" height="4" rx="2" fill="#8fa1ad"/>
+  <text x="40" y="974" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="700" fill="#f1f5f8">Managed engagement</text>
+  <line x1="5" y1="988" x2="392" y2="988" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- managed step 1 -->
+  <rect x="40" y="1006" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="1034" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">
+    <tspan x="56" dy="0">Permissioned, consortium or</tspan>
+    <tspan x="56" dy="23">operator-gated networks</tspan>
+  </text>
+  <path d="M216 1076 V1104" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- managed step 2 -->
+  <rect x="40" y="1104" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="1132" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">
+    <tspan x="56" dy="0">Project engagement</tspan>
+    <tspan x="56" dy="23">with Quant</tspan>
+  </text>
+  <path d="M216 1174 V1202" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- managed step 3 -->
+  <rect x="40" y="1202" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="1230" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">
+    <tspan x="56" dy="0">Connector set up with the</tspan>
+    <tspan x="56" dy="23">network's own configuration</tspan>
+  </text>
+
+  <!-- managed engagement step rail -->
+  <line x1="17" y1="1041" x2="17" y2="1237" stroke="#223039" stroke-width="1.5"/>
+  <circle cx="17" cy="1041" r="12" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="17" y="1045.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6" text-anchor="middle">1</text>
+  <circle cx="17" cy="1139" r="12" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="17" y="1143.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6" text-anchor="middle">2</text>
+  <circle cx="17" cy="1237" r="12" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="17" y="1241.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6" text-anchor="middle">3</text>
+
+  <!-- panel: brand-new chain family -->
+  <rect x="5" y="1302" width="387" height="196" rx="6" fill="#141f26" stroke="#223039" stroke-width="1.5"/>
+  <rect x="21" y="1326.96" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="53" y="1334" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">BRAND-NEW CHAIN FAMILY</text>
+  <text x="21" y="1368" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Health and chain identity checker</text>
+  <rect x="21" y="1379" width="121.14" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="81.57" y="1396.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">about 2 days</text>
+  <line x1="21" y1="1423" x2="376" y2="1423" stroke="#223039" stroke-width="1.5"/>
+  <text x="21" y="1444" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Each app that uses it</text>
+  <rect x="21" y="1455" width="180.13" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="111.07" y="1472.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">about 1 day per app</text>
+</svg>

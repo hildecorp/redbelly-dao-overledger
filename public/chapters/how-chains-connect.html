@@ -1,0 +1,305 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>3. How chains connect | Could Redbelly connect to Quant Overledger?</title><meta name="description" content="How a chain reaches Overledger today: the self-serve route for six chain families, the managed route with Quant, and the health check."><meta name="theme-color" content="#0c1317"><link rel="canonical" href="https://overledger.vercel.app/chapters/how-chains-connect"><meta property="og:title" content="3. How chains connect | Could Redbelly connect to Quant Overledger?"><meta property="og:description" content="How a chain reaches Overledger today: the self-serve route for six chain families, the managed route with Quant, and the health check."><meta property="og:type" content="article"><meta property="og:url" content="https://overledger.vercel.app/chapters/how-chains-connect"><meta property="og:site_name" content="Redbelly DAO community research"><meta property="og:image" content="https://overledger.vercel.app/brand/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Could Redbelly connect to Quant Overledger? Feasibility research, sources last verified 15 Oct 2026."><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/png" sizes="32x32" href="/brand/icon-32.png"><link rel="icon" type="image/png" sizes="512x512" href="/brand/icon.png"><link rel="apple-touch-icon" href="/brand/icon-180.png"><link rel="preload" href="/fonts/be-vietnam-pro-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/site.css?v=5aecd75dc2"><link rel="prev" href="/chapters/what-is-overledger"><link rel="next" href="/chapters/redbelly-facts-that-matter"><link rel="prefetch" href="/chapters/redbelly-facts-that-matter"></head><body><a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"><span></span></div><header class="top"><a class="brand" href="/"><img src="/brand/dao-logo.png" alt="Redbelly DAO, home" width="62" height="44"></a><nav aria-label="Pages"><a href="/" aria-current="page">Report</a><a href="/sources">Sources</a><a href="/evidence">Evidence</a></nav></header><main id="main" tabindex="-1"><div class="layout"><aside class="toc rnav" aria-label="Report contents"><p class="toc-head">Report</p><ol class="rn"><li><a class="rn-item" href="/#findings" data-t="findings"><span class="rn-l">A</span><span class="rn-t">Key findings</span></a></li><li class="rn-group open"><div class="rn-row"><a class="rn-item here" href="/#chapters" data-t="chapters"><span class="rn-l">B</span><span class="rn-t">Chapters</span><span class="cnt">11</span></a><button class="rn-tog" type="button" aria-expanded="true" aria-controls="rn-sub" aria-label="Show or hide the chapters"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="rn-subw" id="rn-sub"><ol class="rn-sub"><li><a href="/chapters/why-now"><span class="n">01</span><span>Why now?</span></a></li><li><a href="/chapters/what-is-overledger"><span class="n">02</span><span>What is Overledger?</span></a></li><li><a href="/chapters/how-chains-connect" class="active" aria-current="page"><span class="n">03</span><span>How chains connect</span></a></li><li><a href="/chapters/redbelly-facts-that-matter"><span class="n">04</span><span>Redbelly facts that matter</span></a></li><li><a href="/chapters/can-redbelly-connect-now"><span class="n">05</span><span>Can Redbelly connect now?</span></a></li><li><a href="/chapters/the-work-it-would-take"><span class="n">06</span><span>The work it would take</span></a></li><li><a href="/chapters/what-it-could-offer"><span class="n">07</span><span>What it could offer</span></a></li><li><a href="/chapters/credentials-and-assets-across-chains"><span class="n">08</span><span>Credentials and assets across chains</span></a></li><li><a href="/chapters/not-possible-yet-and-unknown"><span class="n">09</span><span>Not possible yet, and unknown</span></a></li><li><a href="/chapters/how-this-was-made"><span class="n">10</span><span>How this was made</span></a></li><li><a href="/chapters/community-summary"><span class="n">11</span><span>Community summary</span></a></li></ol></div></li></ol><div class="toc-links"><a href="/downloads/redbelly-overledger-feasibility-report.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download PDF</a><a href="/downloads/redbelly-overledger-feasibility-report.docx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Word file</a><a href="/sources"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.1M4.5 12h.1M4.5 18h.1"/></svg>Source list</a></div></aside><div class="content chapter"><section class="s" id="how-connect" aria-labelledby="h-how-connect"><div class="chap-top"><a class="chap-all" href="/#chapters"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All chapters</a><span class="chap-of" aria-hidden="true">Chapter <b>3</b> of 11</span><span class="chap-meter" aria-hidden="true"><span style="width:27.3%"></span></span><span class="chap-slide" style="--p:20.00%"><span class="chap-ticks" aria-hidden="true"><span style="left:0.00%"></span><span style="left:10.00%"></span><span style="left:20.00%"></span><span style="left:30.00%"></span><span style="left:40.00%"></span><span style="left:50.00%"></span><span style="left:60.00%"></span><span style="left:70.00%"></span><span style="left:80.00%"></span><span style="left:90.00%"></span><span style="left:100.00%"></span></span><input class="chap-range" type="range" min="1" max="11" step="1" value="3" aria-label="Chapter 3 of 11. Slide to open another chapter" aria-valuetext="Chapter 3 of 11: How chains connect" data-urls="/chapters/why-now|/chapters/what-is-overledger|/chapters/how-chains-connect|/chapters/redbelly-facts-that-matter|/chapters/can-redbelly-connect-now|/chapters/the-work-it-would-take|/chapters/what-it-could-offer|/chapters/credentials-and-assets-across-chains|/chapters/not-possible-yet-and-unknown|/chapters/how-this-was-made|/chapters/community-summary" data-titles="Why now?|What is Overledger?|How chains connect|Redbelly facts that matter|Can Redbelly connect now?|The work it would take|What it could offer|Credentials and assets across chains|Not possible yet, and unknown|How this was made|Community summary"></span><span class="chap-tip" aria-live="polite" hidden></span></div><div class="rv"><p class="kicker"><span class="bar"></span><span class="num">03</span>Overledger</p><h1 id="h-how-connect">How chains connect to Overledger today</h1></div><div class="card rv"><div class="chead"><span class="pill confirmed"><span class="dot" aria-hidden="true"></span>Confirmed</span></div><p>There are two routes. The self-serve route covers six chain families, including EVM, where an account can register a node and use the network without talking to Quant&#x27;s account <span class="nw">team<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-six" aria-label="Source 3">S3</a></sup></span>. The self-serve EVM family is described as covering every EVM-compatible <span class="nw">chain<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-evm" aria-label="Source 3">S3</a></sup></span>, but self-serve Connectors are for public, permissionless chain <span class="nw">families<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-selfserve-scope" aria-label="Source 3">S3</a></sup></span>, and permissioned EVM networks such as permissioned Hyperledger Besu are on the engagement <span class="nw">route<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-besu" aria-label="Source 3">S3</a></sup></span>. The managed engagement route is for private or consortium networks, and for chain families Quant does not support <span class="nw">yet<sup class="cite"><a href="/sources#s13" data-n="13" data-f="ol-two-paths" aria-label="Source 13">S13</a></sup></span>.</p></div><figure class="fig rv" id="fig-routes"><div class="fhead"><div><div class="fk">Figure 2</div><p class="ft">Two ways a chain reaches Overledger</p></div><button class="zoom" type="button" aria-label="Open figure 2 full screen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Full screen</button></div><div class="art wide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 884" role="img" aria-labelledby="routes-w-title routes-w-desc">
+  <title id="routes-w-title">Two ways a chain reaches Overledger</title>
+  <desc id="routes-w-desc">Two columns compare the self-serve route, where a chain in one of six supported families registers a public or private node, passes a health check and becomes reachable through the Gateway, with the managed engagement route for permissioned networks and brand-new chain families.</desc>
+  <defs>
+    <marker id="routes-w-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0.5 L10 5 L0 9.5 Z" fill="#8fa1ad"/>
+    </marker>
+  </defs>
+
+  <!-- column headings -->
+  <rect x="10" y="21" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="46" y="30" font-family="Be Vietnam Pro, sans-serif" font-size="20" font-weight="700" fill="#ffb3ae">Self-serve</text>
+  <line x1="6" y1="46" x2="590" y2="46" stroke="#223039" stroke-width="1.5"/>
+  <rect x="629" y="21" width="18" height="4" rx="2" fill="#8fa1ad"/>
+  <text x="664" y="30" font-family="Be Vietnam Pro, sans-serif" font-size="20" font-weight="700" fill="#f1f5f8">Managed engagement</text>
+  <line x1="625" y1="46" x2="954" y2="46" stroke="#223039" stroke-width="1.5"/>
+  <line x1="609" y1="68" x2="609" y2="878" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- self-serve step rail -->
+  <line x1="19" y1="114" x2="19" y2="654" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- step 1: chain family -->
+  <rect x="46" y="68" width="544" height="92" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="64" y="99" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">Chain family is</text>
+  <rect x="64" y="114" width="49.09" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="88.55" y="133.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#f1f5f8" text-anchor="middle">EVM</text>
+  <rect x="121.09" y="114" width="76.18" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="159.18" y="133.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#f1f5f8" text-anchor="middle">Solana</text>
+  <rect x="205.27" y="114" width="76.18" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="243.36" y="133.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#f1f5f8" text-anchor="middle">Cosmos</text>
+  <rect x="289.45" y="114" width="49.09" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="314.0" y="133.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#f1f5f8" text-anchor="middle">SUI</text>
+  <rect x="346.54" y="114" width="76.18" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="384.63" y="133.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#f1f5f8" text-anchor="middle">Hedera</text>
+  <rect x="430.72" y="114" width="67.15" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="464.29" y="133.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#f1f5f8" text-anchor="middle">Aptos</text>
+  <path d="M318 160 V192" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+
+  <!-- step 2: register a node -->
+  <rect x="46" y="192" width="544" height="76" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="64" y="223" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">Register a node</text>
+  <text x="64" y="247" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#c2ced6">one API call or one form</text>
+
+  <!-- fork into public or private node -->
+  <path d="M318 268 V282 Q318 288 312 288 H227 Q221 288 221 294 V312" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+  <path d="M318 282 Q318 288 324 288 H495 Q501 288 501 294 V312" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+
+  <!-- approved providers, under the public node -->
+  <rect x="54" y="400" width="334" height="92" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+  <text x="68" y="434" font-family="JetBrains Mono, monospace" font-size="15" font-weight="400" fill="#8fa1ad">
+    <tspan x="68" dy="0">alchemy.com infura.io quiknode.pro</tspan>
+    <tspan x="68" dy="20">chainstack.com getblock.io</tspan>
+    <tspan x="68" dy="20">blockdaemon.com ankr.com</tspan>
+  </text>
+
+  <!-- step 3: public node -->
+  <rect x="46" y="312" width="350" height="96" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="64" y="343" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">Public node</text>
+  <text x="64" y="367" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#c2ced6">
+    <tspan x="64" dy="0">approved provider, API key in the URL,</tspan>
+    <tspan x="64" dy="21">in a shared pool</tspan>
+  </text>
+
+  <!-- step 3: private node -->
+  <rect x="412" y="312" width="178" height="96" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="428" y="343" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">Private node</text>
+  <text x="428" y="367" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#c2ced6">
+    <tspan x="428" dy="0">any HTTPS address,</tspan>
+    <tspan x="428" dy="21">only you can use it</tspan>
+  </text>
+
+  <!-- merge into health check -->
+  <path d="M221 492 V504 Q221 510 227 510 H312 Q318 510 318 516 V538" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+  <path d="M501 408 V504 Q501 510 495 510 H324 Q318 510 318 516" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- step 4: health check -->
+  <rect x="46" y="538" width="544" height="56" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="64" y="572" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">Health check</text>
+  <path d="M318 594 V626" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+
+  <!-- step 5: reachable through the Gateway -->
+  <rect x="46" y="626" width="544" height="56" rx="6" fill="#1d3140" stroke="#EF5350" stroke-width="2"/>
+  <text x="64" y="660" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#ffb3ae">Reachable through the Gateway</text>
+  <circle cx="19" cy="114" r="13" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="19" y="119.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">1</text>
+  <circle cx="19" cy="230" r="13" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="19" y="235.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">2</text>
+  <circle cx="19" cy="360" r="13" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="19" y="365.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">3</text>
+  <circle cx="19" cy="566" r="13" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="19" y="571.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">4</text>
+  <circle cx="19" cy="654" r="13" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="19" y="659.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">5</text>
+
+  <!-- panel: the self-serve test -->
+  <rect x="6" y="718" width="584" height="160" rx="6" fill="#141f26" stroke="#223039" stroke-width="1.5"/>
+  <rect x="24" y="746.6" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="58" y="754" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">THE SELF-SERVE TEST</text>
+  <circle cx="35" cy="790" r="11" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M30.4 790.2 L33.6 793.4 L39.8 786.6" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="795.5" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="400" fill="#f1f5f8">Nodes answer over HTTPS</text>
+  <circle cx="35" cy="824" r="11" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M30.4 824.2 L33.6 827.4 L39.8 820.6" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="829.5" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="400" fill="#f1f5f8">Nothing needed beyond an API key</text>
+  <circle cx="35" cy="858" r="11" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M30.4 858.2 L33.6 861.4 L39.8 854.6" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="58" y="863.5" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="400" fill="#f1f5f8">It does not matter which node you use</text>
+
+  <!-- managed engagement step rail -->
+  <line x1="638" y1="110" x2="638" y2="354" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- managed step 1 -->
+  <rect x="664" y="68" width="290" height="84" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="682" y="104" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">
+    <tspan x="682" dy="0">Permissioned, consortium or</tspan>
+    <tspan x="682" dy="24">operator-gated networks</tspan>
+  </text>
+  <path d="M809 152 V192" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+
+  <!-- managed step 2 -->
+  <rect x="664" y="192" width="290" height="84" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="682" y="228" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">
+    <tspan x="682" dy="0">Project engagement</tspan>
+    <tspan x="682" dy="24">with Quant</tspan>
+  </text>
+  <path d="M809 276 V312" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-w-arrow)"/>
+
+  <!-- managed step 3 -->
+  <rect x="664" y="312" width="290" height="84" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="682" y="348" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="600" fill="#f1f5f8">
+    <tspan x="682" dy="0">Connector set up with the</tspan>
+    <tspan x="682" dy="24">network's own configuration</tspan>
+  </text>
+  <circle cx="638" cy="110" r="13" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="638" y="115.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#c2ced6" text-anchor="middle">1</text>
+  <circle cx="638" cy="234" r="13" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="638" y="239.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#c2ced6" text-anchor="middle">2</text>
+  <circle cx="638" cy="354" r="13" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="638" y="359.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#c2ced6" text-anchor="middle">3</text>
+
+  <!-- panel: brand-new chain family -->
+  <rect x="625" y="458" width="329" height="224" rx="6" fill="#141f26" stroke="#223039" stroke-width="1.5"/>
+  <rect x="643" y="486.6" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="677" y="494" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">BRAND-NEW CHAIN FAMILY</text>
+  <text x="643" y="532" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="400" fill="#f1f5f8">Health and chain identity checker</text>
+  <rect x="643" y="544" width="130.36" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="708.18" y="563.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">about 2 days</text>
+  <line x1="643" y1="592" x2="936" y2="592" stroke="#223039" stroke-width="1.5"/>
+  <text x="643" y="618" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="400" fill="#f1f5f8">Each app that uses it</text>
+  <rect x="643" y="630" width="193.57" height="28" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="739.78" y="649.25" font-family="JetBrains Mono, monospace" font-size="15" font-weight="500" fill="#ffb3ae" text-anchor="middle">about 1 day per app</text>
+</svg></div><div class="art narrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1506" role="img" aria-labelledby="routes-n-title routes-n-desc">
+  <title id="routes-n-title">Two ways a chain reaches Overledger</title>
+  <desc id="routes-n-desc">The self-serve route, where a chain in one of six supported families registers a public or private node, passes a health check and becomes reachable through the Gateway, shown above the managed engagement route for permissioned networks and brand-new chain families.</desc>
+  <defs>
+    <marker id="routes-n-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0.5 L10 5 L0 9.5 Z" fill="#8fa1ad"/>
+    </marker>
+  </defs>
+
+  <!-- self-serve heading -->
+  <rect x="8" y="17" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="40" y="26" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="700" fill="#ffb3ae">Self-serve</text>
+  <line x1="5" y1="40" x2="392" y2="40" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- step 1: chain family -->
+  <rect x="40" y="58" width="352" height="116" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="87" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Chain family is</text>
+  <rect x="56" y="100" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="97" y="117.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">EVM</text>
+  <rect x="146" y="100" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="187" y="117.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Solana</text>
+  <rect x="236" y="100" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="277" y="117.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Cosmos</text>
+  <rect x="56" y="134" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="97" y="151.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">SUI</text>
+  <rect x="146" y="134" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="187" y="151.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Hedera</text>
+  <rect x="236" y="134" width="82" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="277" y="151.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8" text-anchor="middle">Aptos</text>
+  <path d="M216 174 V202" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- step 2: register a node -->
+  <rect x="40" y="202" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="230" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Register a node</text>
+  <text x="56" y="252" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">one API call or one form</text>
+
+  <!-- fork: either a public node or a private node -->
+  <path d="M216 272 V282 Q216 288 210 288 H60 Q54 288 54 294 V343 Q54 349 60 349 H82" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+  <path d="M54 343 V539 Q54 545 60 545 H82" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- approved providers, under the public node -->
+  <rect x="90" y="384" width="256" height="100" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+  <text x="104" y="416" font-family="JetBrains Mono, monospace" font-size="14" font-weight="400" fill="#8fa1ad">
+    <tspan x="104" dy="0">alchemy.com infura.io</tspan>
+    <tspan x="104" dy="19">quiknode.pro chainstack.com</tspan>
+    <tspan x="104" dy="19">getblock.io blockdaemon.com</tspan>
+    <tspan x="104" dy="19">ankr.com</tspan>
+  </text>
+
+  <!-- step 3: public node -->
+  <rect x="82" y="306" width="272" height="86" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="98" y="334" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Public node</text>
+  <text x="98" y="356" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">
+    <tspan x="98" dy="0">approved provider, API key in</tspan>
+    <tspan x="98" dy="19">the URL, in a shared pool</tspan>
+  </text>
+
+  <!-- step 3: private node -->
+  <rect x="82" y="502" width="272" height="86" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="98" y="530" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Private node</text>
+  <text x="98" y="552" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">
+    <tspan x="98" dy="0">any HTTPS address,</tspan>
+    <tspan x="98" dy="19">only you can use it</tspan>
+  </text>
+
+  <!-- fan in to the health check -->
+  <path d="M354 545 H370 Q376 545 376 551" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M354 349 H370 Q376 349 376 355 V600 Q376 606 370 606 H222 Q216 606 216 612 V630" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- step 4: health check -->
+  <rect x="40" y="630" width="352" height="52" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="662" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">Health check</text>
+  <path d="M216 682 V710" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- step 5: reachable through the Gateway -->
+  <rect x="40" y="710" width="352" height="52" rx="6" fill="#1d3140" stroke="#EF5350" stroke-width="2"/>
+  <text x="56" y="742" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#ffb3ae">Reachable through the Gateway</text>
+
+  <!-- self-serve step rail -->
+  <line x1="17" y1="116" x2="17" y2="736" stroke="#223039" stroke-width="1.5"/>
+  <circle cx="17" cy="116" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="120.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">1</text>
+  <circle cx="17" cy="237" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="241.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">2</text>
+  <circle cx="17" cy="447" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="451.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">3</text>
+  <circle cx="17" cy="656" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="660.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">4</text>
+  <circle cx="17" cy="736" r="12" fill="#0c1317" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="17" y="740.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">5</text>
+
+  <!-- panel: the self-serve test -->
+  <rect x="5" y="792" width="387" height="140" rx="6" fill="#141f26" stroke="#223039" stroke-width="1.5"/>
+  <rect x="21" y="816.96" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="53" y="824" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">THE SELF-SERVE TEST</text>
+  <circle cx="31" cy="855" r="10" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M26.82 855.18 L29.73 858.09 L35.36 851.91" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="51" y="860" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Nodes answer over HTTPS</text>
+  <circle cx="31" cy="884" r="10" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M26.82 884.18 L29.73 887.09 L35.36 880.91" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="51" y="889" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Nothing needed beyond an API key</text>
+  <circle cx="31" cy="913" r="10" fill="#0c1317" stroke="#86EFAC" stroke-width="1.5"/>
+  <path d="M26.82 913.18 L29.73 916.09 L35.36 909.91" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="51" y="918" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">It does not matter which node you use</text>
+
+  <!-- managed engagement heading -->
+  <rect x="8" y="965" width="18" height="4" rx="2" fill="#8fa1ad"/>
+  <text x="40" y="974" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="700" fill="#f1f5f8">Managed engagement</text>
+  <line x1="5" y1="988" x2="392" y2="988" stroke="#223039" stroke-width="1.5"/>
+
+  <!-- managed step 1 -->
+  <rect x="40" y="1006" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="1034" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">
+    <tspan x="56" dy="0">Permissioned, consortium or</tspan>
+    <tspan x="56" dy="23">operator-gated networks</tspan>
+  </text>
+  <path d="M216 1076 V1104" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- managed step 2 -->
+  <rect x="40" y="1104" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="1132" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">
+    <tspan x="56" dy="0">Project engagement</tspan>
+    <tspan x="56" dy="23">with Quant</tspan>
+  </text>
+  <path d="M216 1174 V1202" fill="none" stroke="#8fa1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#routes-n-arrow)"/>
+
+  <!-- managed step 3 -->
+  <rect x="40" y="1202" width="352" height="70" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="56" y="1230" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="600" fill="#f1f5f8">
+    <tspan x="56" dy="0">Connector set up with the</tspan>
+    <tspan x="56" dy="23">network's own configuration</tspan>
+  </text>
+
+  <!-- managed engagement step rail -->
+  <line x1="17" y1="1041" x2="17" y2="1237" stroke="#223039" stroke-width="1.5"/>
+  <circle cx="17" cy="1041" r="12" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="17" y="1045.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6" text-anchor="middle">1</text>
+  <circle cx="17" cy="1139" r="12" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="17" y="1143.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6" text-anchor="middle">2</text>
+  <circle cx="17" cy="1237" r="12" fill="#0c1317" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="17" y="1241.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6" text-anchor="middle">3</text>
+
+  <!-- panel: brand-new chain family -->
+  <rect x="5" y="1302" width="387" height="196" rx="6" fill="#141f26" stroke="#223039" stroke-width="1.5"/>
+  <rect x="21" y="1326.96" width="18" height="4" rx="2" fill="#EF5350"/>
+  <text x="53" y="1334" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">BRAND-NEW CHAIN FAMILY</text>
+  <text x="21" y="1368" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Health and chain identity checker</text>
+  <rect x="21" y="1379" width="121.14" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="81.57" y="1396.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">about 2 days</text>
+  <line x1="21" y1="1423" x2="376" y2="1423" stroke="#223039" stroke-width="1.5"/>
+  <text x="21" y="1444" font-family="Be Vietnam Pro, sans-serif" font-size="15" font-weight="400" fill="#f1f5f8">Each app that uses it</text>
+  <rect x="21" y="1455" width="180.13" height="26" rx="4" fill="#0c1317" stroke="#263641" stroke-width="1"/>
+  <text x="111.07" y="1472.9" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" text-anchor="middle">about 1 day per app</text>
+</svg></div><figcaption>Self-serve covers public permissionless networks in six chain families and needs no talk with Quant&#x27;s account team: one API call or form registers a node and, for a new network, the network <span class="nw">itself<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-six con-one-call con-new-network" aria-label="Source 3">S3</a></sup></span>. Networks where node identity matters, and new chain families, go through an <span class="nw">engagement<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-engagement con-family-cost con-app-cost" aria-label="Source 3">S3</a><a href="/sources#s13" data-n="13" data-f="ol-two-paths" aria-label="Source 13">S13</a></sup></span>.</figcaption></figure><div class="card rv"><div class="chead"><span class="pill confirmed"><span class="dot" aria-hidden="true"></span>Confirmed</span></div><p>A chain family qualifies for self-serve when its nodes offer an interface over HTTPS, need nothing beyond an API key, and it does not matter which node a client <span class="nw">uses<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-criteria" aria-label="Source 3">S3</a></sup></span>. Networks where node identity matters, such as permissioned consortium chains and operator-gated public chains, are not self-serve <span class="nw">today<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-engagement" aria-label="Source 3">S3</a></sup></span>.</p></div><div class="card rv"><div class="chead"><span class="pill confirmed"><span class="dot" aria-hidden="true"></span>Confirmed</span></div><p>For public permissionless networks, a chain that is not listed yet but belongs to one of the six self-serve families is added with the same registration call that adds a <span class="nw">node<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-one-call con-new-network" aria-label="Source 3">S3</a></sup></span>. The first registration creates the network, and it then becomes available to other Overledger <span class="nw">users<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-new-network" aria-label="Source 3">S3</a></sup></span>.</p></div><div class="card rv"><div class="chead"><span class="pill confirmed"><span class="dot" aria-hidden="true"></span>Confirmed</span></div><p>Each node is registered as public or private. A public node must come from an approved provider and joins the shared pool for that <span class="nw">network<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-public-private con-node-public-shared" aria-label="Source 3">S3</a></sup></span>, while a private node can be at any address but is scoped to the account that added <span class="nw">it<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-public-private con-node-private-scope" aria-label="Source 3">S3</a></sup></span>. The approved providers are Alchemy, Infura, QuickNode, Chainstack, GetBlock, Blockdaemon and <span class="nw">Ankr<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-providers" aria-label="Source 3">S3</a></sup></span>, and a public node URL must carry the provider&#x27;s API <span class="nw">key<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-key" aria-label="Source 3">S3</a></sup></span>. A private node can be any reachable HTTPS <span class="nw">address<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-private-url" aria-label="Source 3">S3</a></sup></span>. Every node must pass a health check before it is <span class="nw">used<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-health" aria-label="Source 3">S3</a></sup></span>.</p></div><div class="card rv"><div class="chead"><span class="pill confirmed"><span class="dot" aria-hidden="true"></span>Confirmed</span></div><p>When a brand-new chain family is needed, the documented effort is about 2 days for a health and chain identity checker, plus about 1 day for each app that needs to use <span class="nw">it<sup class="cite"><a href="/sources#s3" data-n="3" data-f="con-family-cost con-app-cost" aria-label="Source 3">S3</a></sup></span>.</p></div><nav class="chap-nav" aria-label="Chapters"><a class="chap-prev" href="/chapters/what-is-overledger" rel="prev"><span class="dir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Previous</span><span class="t">What is Overledger?</span></a><a class="chap-next" href="/chapters/redbelly-facts-that-matter" rel="next"><span class="dir">Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="t">Redbelly facts that matter</span></a></nav></section><footer class="foot"><div><p>Feasibility research only. Redbelly and Quant have no announced partnership or talks, and nothing on this site suggests otherwise.</p><p>Sources last verified 15 Oct 2026. Every claim links to the source list. Saved copies of every source and our test logs are under <a href="/evidence">/evidence</a>.</p></div><div><p>Fonts: Be Vietnam Pro and JetBrains Mono, SIL Open Font License 1.1. Logo and icon: Redbelly DAO, from the Task Board brand kit.</p><p>Diagrams drawn for this report. No third-party images.</p></div></footer></div></div></main><div class="viewer" aria-hidden="true" role="dialog" aria-label="Figure, full screen"><button class="close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="vin"></div></div><nav class="dock" aria-label="Quick navigation"><button class="dk dk-chap" type="button" aria-expanded="false" aria-controls="sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.1M4.5 12h.1M4.5 18h.1"/></svg><span class="dl">Chapters</span></button><span class="dk-mid"><a class="dk dk-prev" href="/chapters/what-is-overledger" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a><span class="dk-pos">3 / 11</span><a class="dk dk-next" href="/chapters/redbelly-facts-that-matter" aria-label="Next: Redbelly facts that matter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></span><span class="dk-sep" aria-hidden="true"></span><a class="dk dk-src" href="/sources"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14z"/><path d="M8 7h8"/></svg><span class="dl">Sources</span></a><button class="dk dk-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button></nav><div class="sheet" id="sheet" hidden><p class="sh-head">Chapters</p><ol><li><a href="/chapters/why-now"><span class="n">01</span>Why now?</a></li><li><a href="/chapters/what-is-overledger"><span class="n">02</span>What is Overledger?</a></li><li><a href="/chapters/how-chains-connect" class="active" aria-current="page"><span class="n">03</span>How chains connect</a></li><li><a href="/chapters/redbelly-facts-that-matter"><span class="n">04</span>Redbelly facts that matter</a></li><li><a href="/chapters/can-redbelly-connect-now"><span class="n">05</span>Can Redbelly connect now?</a></li><li><a href="/chapters/the-work-it-would-take"><span class="n">06</span>The work it would take</a></li><li><a href="/chapters/what-it-could-offer"><span class="n">07</span>What it could offer</a></li><li><a href="/chapters/credentials-and-assets-across-chains"><span class="n">08</span>Credentials and assets across chains</a></li><li><a href="/chapters/not-possible-yet-and-unknown"><span class="n">09</span>Not possible yet, and unknown</a></li><li><a href="/chapters/how-this-was-made"><span class="n">10</span>How this was made</a></li><li><a href="/chapters/community-summary"><span class="n">11</span>Community summary</a></li></ol></div><div class="toast" role="status" aria-live="polite"></div><script type="application/json" id="cite-data">{"sources": {"3": {"p": "Quant, Overledger documentation", "t": "Chapter 5: Connectors"}, "13": {"p": "Quant, Overledger documentation", "t": "Chapter 1: Overview"}}, "facts": {"con-app-cost": "Add per-DLT handling in any apps that need to consume it ~1 day per app", "con-besu": "Hyperledger Besu (permissioned) Permissioned EVM Used in regulated EVM deployments.", "con-criteria": "A DLT family is considered eligible for self-serve if (a) its nodes expose RPC or REST over HTTPS, (b) the RPC requires no security factor beyond an API key, and (c) node identity does not matter to other tenants (so a pool of equivalent nodes can be load-balanced safely).", "con-engagement": "For networks where node identity matters, typically permissioned DLTs used by regulated consortia and operator-gated public chains, Overledger does not self-serve currently.", "con-evm": "Covers every EVM-compatible chain", "con-family-cost": "Implement a DLT checker (health validation + chain identifer lookup) ~2 days", "con-health": "The Gateway runs a health check using the DLT's standard validation from section 5.1 and, on success, adds the node to the network's load-balancing pool.", "con-key": "Required, embedded in the URL path (the Gateway forwards the URL as-is), not a header.", "con-new-network": "New network within a supported DLT family, the network is not yet listed by Overledger, but its DLT family is one Overledger already supports for self-serve (EVM, Solana, Cosmos, SUI, Hedera, Aptos). The first POST /nodes call registers both the network and your node for it. This new network will then be available for Overledger users.", "con-node-private-scope": "the node is scoped to your user identity", "con-node-public-shared": "Any tenant with access to the network, the node joins the shared load-balancing pool for that network.", "con-one-call": "For networks where it does not matter which node a client connects to, i.e. public permissionless networks, Quant Connect lets you register a managed-provider node URL via a single UI form and Overledger lets you register a managed-provider node URL via a single API call. The network then becomes immediately reachable through the Overledger Gateway.", "con-private-url": "Any reachable HTTPS URL, self-hosted, custom-provider, on your own infrastructure, anywhere.", "con-providers": "alchemy.com, infura.io, quiknode.pro, chainstack.com, getblock.io, blockdaemon.com, ankr.com", "con-public-private": "If public is selected then the user can only add nodes from whitelisted providers. If private is selected then the user can add nodes from any domain.", "con-selfserve-scope": "Self-serve Connectors for public, permissionless DLT families.", "con-six": "Six DLT families are available for self-serve onboarding today, you can register a node and call the network without an account-team conversation", "ol-two-paths": "Managed engagement: you work with Quant's team to onboard a private / consortium network (e.g. Corda, Canton, Fabric) or to add a brand-new DLT family Quant doesn't yet support."}}</script><script src="/site.js?v=5aecd75dc2"></script></body></html>

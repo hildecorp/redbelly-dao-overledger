@@ -1,0 +1,537 @@
+[
+ {
+  "id": "no-talks",
+  "source": "brief",
+  "quote": "This is feasibility research only. Redbelly and Quant have no announced partnership or talks"
+ },
+ {
+  "id": "no-bridge-position",
+  "source": "brief",
+  "quote": "Redbelly has not published an official position on bridging"
+ },
+ {
+  "id": "tch-select",
+  "source": "tch",
+  "quote": "The Clearing House announced the selection of Quant, a leading provider of programmable money infrastructure, to power its On-Chain Money Initiative, a new interoperable payments network that will enable financial institutions of all sizes to clear and settle tokenized deposit transactions."
+ },
+ {
+  "id": "tch-layer",
+  "source": "tch",
+  "quote": "Quant's technology will enable the network's interoperability, orchestration, and transaction-management layer that coordinates the clearing and settlement of tokenized deposit transactions"
+ },
+ {
+  "id": "tch-fiat",
+  "source": "tch",
+  "quote": "providing connectivity to existing fiat payment systems that financial institutions and their customers use every day, including the RTP® and CHIPS® networks"
+ },
+ {
+  "id": "tch-date",
+  "source": "tch",
+  "quote": "The network is expected to become available to participating institutions in the first half of 2027, with additional details on participation and use cases to be announced as development progresses."
+ },
+ {
+  "id": "quant-use",
+  "source": "quant-pr",
+  "quote": "The Clearing House will use Quant's technology to bring on-chain capabilities to its tokenised deposit clearing and settlement network for financial institutions."
+ },
+ {
+  "id": "ol-what",
+  "source": "ol-start",
+  "quote": "Overledger is Quant's multi-DLT platform for building applications that span more than one blockchain"
+ },
+ {
+  "id": "ol-gateway",
+  "source": "ol-overview",
+  "quote": "A Gateway that authenticates clients, routes requests, and orchestrates higher-level workflows."
+ },
+ {
+  "id": "ol-connectors",
+  "source": "ol-overview",
+  "quote": "A set of Connectors that abstract individual DLT RPC protocols behind a common interface."
+ },
+ {
+  "id": "ol-fusion",
+  "source": "ol-overview",
+  "quote": "A Multi-ledger rollup (the Fusion Rollup) that anchors to multiple blockchains simultaneously, providing one EVM-compatible execution environment with deposits, withdrawals, and cross-chain messaging across every connected L1."
+ },
+ {
+  "id": "ol-external-apps",
+  "source": "ol-overview",
+  "quote": "Customers and partners can host their own Flow Apps externally, stand up an HTTPS service that implements the Flow App contract, register its URL with the Gateway, and your bespoke regulated workflow becomes a first-class app in Overledger."
+ },
+ {
+  "id": "ol-two-paths",
+  "source": "ol-overview",
+  "quote": "Managed engagement: you work with Quant's team to onboard a private / consortium network (e.g. Corda, Canton, Fabric) or to add a brand-new DLT family Quant doesn't yet support."
+ },
+ {
+  "id": "con-six",
+  "source": "ol-connectors",
+  "quote": "Six DLT families are available for self-serve onboarding today, you can register a node and call the network without an account-team conversation"
+ },
+ {
+  "id": "con-evm",
+  "source": "ol-connectors",
+  "quote": "Covers every EVM-compatible chain"
+ },
+ {
+  "id": "con-criteria",
+  "source": "ol-connectors",
+  "quote": "A DLT family is considered eligible for self-serve if (a) its nodes expose RPC or REST over HTTPS, (b) the RPC requires no security factor beyond an API key, and (c) node identity does not matter to other tenants (so a pool of equivalent nodes can be load-balanced safely)."
+ },
+ {
+  "id": "con-new-network",
+  "source": "ol-connectors",
+  "quote": "New network within a supported DLT family, the network is not yet listed by Overledger, but its DLT family is one Overledger already supports for self-serve (EVM, Solana, Cosmos, SUI, Hedera, Aptos). The first POST /nodes call registers both the network and your node for it. This new network will then be available for Overledger users."
+ },
+ {
+  "id": "con-public-private",
+  "source": "ol-connectors",
+  "quote": "If public is selected then the user can only add nodes from whitelisted providers. If private is selected then the user can add nodes from any domain."
+ },
+ {
+  "id": "con-providers",
+  "source": "ol-connectors",
+  "quote": "alchemy.com, infura.io, quiknode.pro, chainstack.com, getblock.io, blockdaemon.com, ankr.com"
+ },
+ {
+  "id": "con-key",
+  "source": "ol-connectors",
+  "quote": "Required, embedded in the URL path (the Gateway forwards the URL as-is), not a header."
+ },
+ {
+  "id": "con-private-url",
+  "source": "ol-connectors",
+  "quote": "Any reachable HTTPS URL, self-hosted, custom-provider, on your own infrastructure, anywhere."
+ },
+ {
+  "id": "con-health",
+  "source": "ol-connectors",
+  "quote": "The Gateway runs a health check using the DLT's standard validation from section 5.1 and, on success, adds the node to the network's load-balancing pool."
+ },
+ {
+  "id": "con-engagement",
+  "source": "ol-connectors",
+  "quote": "For networks where node identity matters, typically permissioned DLTs used by regulated consortia and operator-gated public chains, Overledger does not self-serve currently."
+ },
+ {
+  "id": "con-family-cost",
+  "source": "ol-connectors",
+  "quote": "Implement a DLT checker (health validation + chain identifer lookup) ~2 days"
+ },
+ {
+  "id": "con-app-cost",
+  "source": "ol-connectors",
+  "quote": "Add per-DLT handling in any apps that need to consume it ~1 day per app"
+ },
+ {
+  "id": "con-forward",
+  "source": "ol-connectors",
+  "quote": "Forwards the payload, returns the native response unchanged."
+ },
+ {
+  "id": "flow-internal",
+  "source": "ol-flow",
+  "quote": "today every shipped app is internal"
+ },
+ {
+  "id": "flow-not-listed",
+  "source": "ol-flow",
+  "quote": "The Flow App catalogue is intentionally not enumerated in these docs"
+ },
+ {
+  "id": "flow-byo",
+  "source": "ol-flow",
+  "quote": "The calling Flow App and the Gateway routing the sub-flow never see private keys. Key material is always under your control."
+ },
+ {
+  "id": "flow-own-keys",
+  "source": "ol-flow",
+  "quote": "You hold the keys (BYO signing, see chapter 7.2)."
+ },
+ {
+  "id": "fus-connected",
+  "source": "ol-fusion",
+  "quote": "Connected DLT networks on testnet launch are: Ethereum Sepolia, Polygon Amoy, Quant's permissioned Besu testnet. The full live list comes from GET /networks/fusion."
+ },
+ {
+  "id": "fus-bridge-contracts",
+  "source": "ol-fusion",
+  "quote": "The bridge and dispute contracts deployed on each connected DLT network. Standard OP Stack contracts, one deployment per chain."
+ },
+ {
+  "id": "fus-roots",
+  "source": "ol-fusion",
+  "quote": "Compute Fusion Rollup state roots and post them to all connected DLT networks for settlement"
+ },
+ {
+  "id": "fus-dispute",
+  "source": "ol-fusion",
+  "quote": "Because Fusion is an optimistic rollup, a withdrawal is not immediately final, there is a dispute window during which a challenger can prove the Fusion Rollup state root invalid."
+ },
+ {
+  "id": "fus-unify",
+  "source": "ol-fusion",
+  "quote": "Fusion can map several token contracts to a single rollup-side ERC-20, so deposits from any of those source chains land in one unified balance."
+ },
+ {
+  "id": "fus-net-version",
+  "source": "ol-fusion",
+  "quote": "Network ID. Exposed for wallets and tools that predate eth_chainId."
+ },
+ {
+  "id": "fw-binding",
+  "source": "ol-firewall",
+  "quote": "Overledger maintains the binding between each user and their authorised on-chain address(es) off-chain, so policies expressed against a user translate into on-chain address allowlists at the contracts that enforce them."
+ },
+ {
+  "id": "fw-permissioned",
+  "source": "ol-firewall",
+  "quote": "If permissioned, the user must appear in the network's allowlist."
+ },
+ {
+  "id": "fw-token-gov",
+  "source": "ol-firewall",
+  "quote": "Token allowlist entries are governance-controlled (Quant Safe signers), not per-deployer, they apply to all users of the bridge."
+ },
+ {
+  "id": "api-networks",
+  "source": "ol-api",
+  "quote": "List Fusion Rollup connected networks"
+ },
+ {
+  "id": "rb-l1",
+  "source": "rb-docs",
+  "quote": "The Redbelly Network is a layer 1 blockchain, built and optimised for real world asset tokenisation."
+ },
+ {
+  "id": "rb-evm",
+  "source": "vine-evm",
+  "quote": "Redbelly is compatible with the Ethereum Virtual Machine (EVM) and can execute smart contracts written for the EVM."
+ },
+ {
+  "id": "rb-mainnet",
+  "source": "vine-env",
+  "quote": "Network name: Redbelly Network Mainnet RPC URL: https://governors.mainnet.redbelly.network Chain ID: 151"
+ },
+ {
+  "id": "rb-ankr",
+  "source": "vine-env",
+  "quote": "Ankr https://rpc.ankr.com/redbelly_mainnet"
+ },
+ {
+  "id": "rb-testnet",
+  "source": "vine-env",
+  "quote": "RPC URL: https://governors.testnet.redbelly.network Chain ID: 153"
+ },
+ {
+  "id": "rb-access",
+  "source": "vine-access",
+  "quote": "Before being granted access to Redbelly Network, each user must claim their access credential from a network accredited issuer before they self enable their account with write access to the network through a specific network smart contract."
+ },
+ {
+  "id": "rb-all-prove",
+  "source": "vine-identity",
+  "quote": "all network participants MUST prove they are who they say they are before gaining access"
+ },
+ {
+  "id": "rb-registry",
+  "source": "vine-issuers",
+  "quote": "All accredited issuers are listed in an on chain registry."
+ },
+ {
+  "id": "rb-business",
+  "source": "vine-business",
+  "quote": "To be verified, businesses need to prove they are an incorporated entity to a network accredited issuer."
+ },
+ {
+  "id": "rb-operator",
+  "source": "vine-operator",
+  "quote": "Node operators MUST have network access for 2 accounts and provide their public address when applying to run a node."
+ },
+ {
+  "id": "rec-what",
+  "source": "rb-receptor",
+  "quote": "Receptor is Redbelly's native digital identity and verifiable credential protocol."
+ },
+ {
+  "id": "rec-w3c",
+  "source": "rb-receptor",
+  "quote": "Receptor is built on the W3C verifiable credential data model, providing a standardised and interoperable foundation for identity verification and eligibility criteria assurance."
+ },
+ {
+  "id": "rec-two-methods",
+  "source": "vine-eligibility",
+  "quote": "Redbelly supports two distinct credential types, or methods, that can be used to perform eligibility criteria checks:"
+ },
+ {
+  "id": "pbq-contract",
+  "source": "rb-pbq",
+  "quote": "a zero knowledge proof based verifier smart contract"
+ },
+ {
+  "id": "pbq-publish",
+  "source": "rb-pbq",
+  "quote": "State verification and transition, with subsequent publication to the blockchain."
+ },
+ {
+  "id": "sd-offchain",
+  "source": "rb-sd",
+  "quote": "As selective disclosure involves disclosing information to the Verifier, it can only be used off-chain."
+ },
+ {
+  "id": "rec-did",
+  "source": "rb-esdk",
+  "quote": "Redbelly Mainnet did:receptor:redbelly:mainnet:31AAH8sSaGd6fpnG1TcB6yQ4UZnNeyHzTk5aM2P7rjv"
+ },
+ {
+  "id": "rec-checks",
+  "source": "vine-checks",
+  "quote": "Eligibility checks can be used to control access to your dApp or smart contract's functions or when specific smart contract functions are called to help meet your compliance requirements."
+ },
+ {
+  "id": "br-celer-out",
+  "source": "vine-celer",
+  "quote": "RBNT bridges out from Redbelly to Ethereum and BNB Chain, not back."
+ },
+ {
+  "id": "br-lz",
+  "source": "vine-lz",
+  "quote": "Tokens on Redbelly Network that can be bridged to other chains via LayerZero, using Stargate, and vice versa."
+ },
+ {
+  "id": "br-lucid",
+  "source": "vine-lucid",
+  "quote": "Tokens on Redbelly Network that can be bridged to other chains via Lucid Labs, and vice versa. Powered by Polymer and LayerZero."
+ },
+ {
+  "id": "br-wrbnt-lucid",
+  "source": "vine-lucid",
+  "quote": "Ethereum 0xb45fFB51984d626Ee758b336C61Cf20990c6bF13 WRBNT Wrapped RBNT 18"
+ },
+ {
+  "id": "br-wrbnt-celer",
+  "source": "vine-celer",
+  "quote": "Ethereum 0x063a1D5BFEAb213c9c12f47b704fccf81D60983e wRBNT Wrapped RBNT 18"
+ },
+ {
+  "id": "br-celer-pegged",
+  "source": "celer",
+  "quote": "Celer is supporting asset and token bridging initially via a pegged bridge method"
+ },
+ {
+  "id": "br-x",
+  "source": "x-wrbnt",
+  "quote": "Wrapped RBNT Token is now live on Ethereum Mainnet."
+ },
+ {
+  "id": "br-x-ca",
+  "source": "x-wrbnt",
+  "quote": "0xb45ffb51984d626ee758b336c61cf20990c6bf13"
+ },
+ {
+  "id": "tk-point",
+  "source": "tk-tech",
+  "quote": "Eligibility, identity and your target market determination are enforced at the point of transfer, every time."
+ },
+ {
+  "id": "tk-final",
+  "source": "tk-tech",
+  "quote": "Deterministic finality settles a transaction in a single round, final the moment it completes."
+ },
+ {
+  "id": "tk-150",
+  "source": "tk-tech",
+  "quote": "full EVM compatibility connects you to more than 150 networks out of the box"
+ },
+ {
+  "id": "tk-checks",
+  "source": "tk-compliance",
+  "quote": "Before any trade proceeds, the investor's identity, eligibility (including wholesale or sophisticated status where required) and your limits are verified automatically."
+ },
+ {
+  "id": "tk-register",
+  "source": "tk-secondary",
+  "quote": "every transfer is recorded on your register in real time"
+ },
+ {
+  "id": "tk-locked",
+  "source": "tk-collateral",
+  "quote": "Investors pledge units as security, and the units remain locked until the loan is repaid."
+ },
+ {
+  "id": "t08-pattern",
+  "source": "task08",
+  "quote": "Redbridge is a lock-and-mint bridge"
+ },
+ {
+  "id": "t08-lz",
+  "source": "task08",
+  "quote": "Yes, on Mainnet dedicated \"Redbelly Mainnet\" deployment"
+ },
+ {
+  "id": "t08alt-testnet",
+  "source": "task08-alt",
+  "quote": "as of this writing no major interoperability protocol has deployed core messaging infrastructure (endpoints, gateways, or guardian sets) to Redbelly Testnet specifically"
+ },
+ {
+  "id": "t16-routes",
+  "source": "task16",
+  "quote": "Because the official Redbelly bridges (Reddex and Lucid) currently only support bridging USDC and USDT from BNB Chain"
+ },
+ {
+  "id": "t-chainid",
+  "source": "test-rpc",
+  "quote": "https://governors.mainnet.redbelly.network eth_chainId -> {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0x97\"}"
+ },
+ {
+  "id": "t-ankr",
+  "source": "test-rpc",
+  "quote": "https://rpc.ankr.com/redbelly_mainnet eth_chainId -> {\"id\":1,\"jsonrpc\":\"2.0\",\"result\":\"0x97\"}"
+ },
+ {
+  "id": "t-netversion",
+  "source": "test-rpc",
+  "quote": "https://governors.mainnet.redbelly.network net_version -> {\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{\"code\":-32601,\"message\":\"the method net_version does not exist/is not available\"}}"
+ },
+ {
+  "id": "t-blocks",
+  "source": "test-rpc",
+  "quote": "eth_getBlockByNumber -> {\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"baseFeePerGas\":\"0xe0fbb4df40c0\""
+ },
+ {
+  "id": "t-ol-auth",
+  "source": "test-ol",
+  "quote": "GET https://fusion-rollup.quant.dev/networks/fusion -> HTTP 401 {\"status\":401,\"error\":\"Missing authorization header.\""
+ },
+ {
+  "id": "tk-runs",
+  "source": "tk-tech",
+  "quote": "Underneath it runs Redbelly Network"
+ },
+ {
+  "id": "flow-what",
+  "source": "ol-start",
+  "quote": "Flow Applications turn multi-step business logic (signing, smart-contract deployment, compliance check, payment"
+ },
+ {
+  "id": "con-selfserve-scope",
+  "source": "ol-connectors",
+  "quote": "Self-serve Connectors for public, permissionless DLT families."
+ },
+ {
+  "id": "con-permissionless",
+  "source": "ol-connectors",
+  "quote": "For networks where it does not matter which node a client connects to, i.e. public permissionless networks"
+ },
+ {
+  "id": "ol-permissioned",
+  "source": "ol-overview",
+  "quote": "A network with controlled write access; \"public permissioned\" means anyone can read but only allowlisted parties can write."
+ },
+ {
+  "id": "con-besu",
+  "source": "ol-connectors",
+  "quote": "Hyperledger Besu (permissioned) Permissioned EVM Used in regulated EVM deployments."
+ },
+ {
+  "id": "con-live-list",
+  "source": "ol-connectors",
+  "quote": "Run GET /networks to retrieve the live list."
+ },
+ {
+  "id": "t-ol-auth-all",
+  "source": "test-ol",
+  "quote": "GET https://fusion-rollup.quant.dev/networks -> HTTP 401 {\"status\":401,\"error\":\"Missing authorization header.\""
+ },
+ {
+  "id": "con-one-call",
+  "source": "ol-connectors",
+  "quote": "For networks where it does not matter which node a client connects to, i.e. public permissionless networks, Quant Connect lets you register a managed-provider node URL via a single UI form and Overledger lets you register a managed-provider node URL via a single API call. The network then becomes immediately reachable through the Overledger Gateway."
+ },
+ {
+  "id": "con-node-public-shared",
+  "source": "ol-connectors",
+  "quote": "Any tenant with access to the network, the node joins the shared load-balancing pool for that network."
+ },
+ {
+  "id": "con-node-private-scope",
+  "source": "ol-connectors",
+  "quote": "the node is scoped to your user identity"
+ },
+ {
+  "id": "ol-subset",
+  "source": "ol-overview",
+  "quote": "The Rollup connects to a subset of these networks."
+ },
+ {
+  "id": "fw-every",
+  "source": "ol-overview",
+  "quote": "It applies to every public or permissioned DLT network that the Gateway reaches"
+ },
+ {
+  "id": "ol-no-rpc",
+  "source": "ol-start",
+  "quote": "You don't manage RPC providers, node failover, or chain-specific clients."
+ },
+ {
+  "id": "sd-bbs",
+  "source": "rb-sd",
+  "quote": "Selective Disclosure involves using credentials that implement BBS+ signatures."
+ },
+ {
+  "id": "rb-business-optional",
+  "source": "vine-identity",
+  "quote": "business verification is also available on the network"
+ },
+ {
+  "id": "ol-fronts-fusion",
+  "source": "ol-overview",
+  "quote": "Single entry point. Authenticates, routes traffic, hosts Orchestration, fronts the Fusion Rollup."
+ },
+ {
+  "id": "ol-connector-family",
+  "source": "ol-overview",
+  "quote": "There is one Connector per DLT family"
+ },
+ {
+  "id": "con-identity-bound",
+  "source": "ol-connectors",
+  "quote": "DLTs that need consortium membership, MSP enrolment, channel agreement, notary trust, privacy-group setup, or any other identity-bound configuration are onboarded through the engagement path"
+ },
+ {
+  "id": "rb-operator-select",
+  "source": "vine-operator",
+  "quote": "Applicants will be selected based upon their previous experience, location and commitment to the Redbelly Project."
+ },
+ {
+  "id": "flow-account-registry",
+  "source": "ol-flow",
+  "quote": "Discover what's available for your account through one of two channels"
+ },
+ {
+  "id": "tk-150-faq",
+  "source": "tk-tech",
+  "quote": "Full EVM compatibility gives connection to more than 150 networks out of the box, with permissioned or permissionless access as your mandate allows."
+ },
+ {
+  "id": "t08alt-lz",
+  "source": "task08-alt",
+  "quote": "LayerZero went live on Redbelly Mainnet"
+ },
+ {
+  "id": "fus-sbs",
+  "source": "ol-fusion",
+  "quote": "Supports both public and permissioned DLTs side by side"
+ },
+ {
+  "id": "fus-da",
+  "source": "ol-fusion",
+  "quote": "The Fusion rollups can post transaction data to a single permissioned chain and only state roots to the others"
+ },
+ {
+  "id": "rb-passport",
+  "source": "vine-access",
+  "quote": "prove they possess a valid photo identity document (passport) which is verified via biometric checks"
+ }
+]

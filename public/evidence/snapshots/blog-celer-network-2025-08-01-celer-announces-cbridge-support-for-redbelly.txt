@@ -1,0 +1,24 @@
+URL: https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/
+TITLE: Celer Announces cBridge Support for Redbelly
+(fetched with curl; the browser view shows a bot check)
+
+Celer is delighted to share that we’ve launched cBridge support for Redbelly Network, a compliance‑first L1 purpose‑built for tokenised real‑world assets (RWAs). This development improves the cross-chain compatibility layer, enabling seamless interactions between ecosystems! This integration opens smooth token bridging for value to flow between Ethereum, BNB Chain and Redbelly, giving global RWA markets the deep, multi‑chain liquidity they deserve.
+What’s live on cBridge
+From → ToAssets supportedEthereum → RedbellyUSDT, USDC, WBTC, ETHBNB Chain → RedbellyLQDXRedbelly → EthereumRBNTRedbelly → BNB ChainRBNT
+Founded by University of Sydney professor Vincent Gramoli, Redbelly is engineered from the ground up for regulated finance and large‑scale asset tokenisation. Its deterministic consensus, formal verification, and integrated identity framework make it an institutional‑grade home for RWAs. Redbelly’s credibility was cemented when the Reserve Bank of Australia selected it for Project Acacia, a wholesale‑CBDC and tokenised‑asset settlement pilot.
+Celer is supporting asset and token bridging initially via a pegged bridge method, for token transfers between the chains and assets listed above. Additionally, there is potential to integrate Celer’s Inter-chain Messaging Framework, a generic message passing protocol, to seamlessly enable developers to build dApps with cross-chain application logics on Redbelly in the future. This would enable existing dApps to not only create smooth cross-chain UXs between Redbelly and various external blockchains, but would lay down the foundation to support NFT bridges, the ability to purchase and bid on NFTs across different chains, and cross-chain reward claiming. All of these and more are not only possible to accomplish with Celer IM, but can be offered to users as a single-click, single-transaction UX.
+Celer is extremely proud to be helping with Redbelly’s part in the future of RWAs! Jump in, move your assets, and be part of the next era of compliant, cross‑chain finance—bridge now on cBridge and stay tuned for more updates!
+About Redbelly
+Redbelly is a high-performance L1 built for regulated and open capital markets. With fast finality, high throughput, and fault tolerance at the core, it enables compliant, identity-aware transactions without sacrificing decentralization or programmability.
+Redbelly brings real-world assets (e.g. asset-backed securities, commodities, bonds and more) on-chain with the speed and security needed for institutional-grade adoption. It’s the only blockchain with a formally verified, scientifically proven, and patented consensus protocol, ensuring safety and liveness even under adversarial conditions.
+About Celer Network
+Celer is a blockchain interoperability protocol enabling a one-click user experience accessing tokens, DeFi, GameFi, NFTs, governance, privacy solutions and more across multiple chains. Developers can build inter-chain-native dApps using the Celer Inter-chain Message SDK to gain access to efficient liquidity utilization, coherent application logic, and shared states. Users of Celer-enabled dApps will enjoy the benefits of a diverse multi-blockchain ecosystem with the simplicity of a single-transaction UX, all from a single chain.
+Follow Celer Network:
+Website | Telegram | Twitter | Github | Discord |Are you interested in working with or integrating Celer’s tech? Let us know! We are always interested in exploring new projects and opportunities!
+分享此文：
+Share on X (Opens in new window)
+X
+Share on Facebook (Opens in new window)
+Facebook
+Like this:
+Like Loading…

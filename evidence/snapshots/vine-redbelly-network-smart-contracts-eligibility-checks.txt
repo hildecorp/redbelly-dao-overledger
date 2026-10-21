@@ -1,0 +1,76 @@
+URL: https://vine.redbelly.network/smart-contracts/eligibility-checks/
+TITLE: Eligibility checks - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Eligibility checks
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Setup environment
+Eligibility checks
+Testing
+Deployment
+Interaction
+Environments
+Nodes
+Network status
+Support
+Eligibility checks¶
+
+Add eligibility checks to control access to your dApp or smart contract's functions to help meet compliance requirements.
+
+On Redbelly, Receptor allows you to program eligibility checks into your smart contracts and dApps using verifiable credentials. Eligibility checks can be used to control access to your dApp or smart contract's functions or when specific smart contract functions are called to help meet your compliance requirements.
+
+Developer docs¶
+
+To add eligibility checks to your smart contracts or dApps, you'll need to:
+
+Ensure your users have access to the required credentials from a trusted issuer, or issue them yourself
+Program the criteria into your smart contract or dApp
+Identify an existing credential schema, or define your own
+Establish your eligibility requirements
+
+The details of the steps above will differ depending on your application topology, chosen credential type, and specific compliance requirements. To help with implementation, review the Receptor technical documentation.
+
+Receptor documentation
+
+Next up: Testing smart contracts →
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

@@ -1,0 +1,14 @@
+Overledger API check: 2026-10-15T08:34:04Z (UTC)
+GET https://fusion-rollup.quant.dev/health -> HTTP 200 {"status":"degraded","runtimeVersion":"1.0.0","supportedSdkVersions":["^1.0.0"],"checks":{"webhookWorker":"ok","withdrawalIndexer":"ok","trackerPoller":"stalled","mongo":"connected","rpcProxy":"ok","rollupRpc":"ok"}}
+GET https://fusion-rollup.quant.dev/networks -> HTTP 401 {"status":401,"error":"Missing authorization header.","path":"/networks","timestamp":"2026-10-15T08:34:05.681Z"}
+GET https://fusion-rollup.quant.dev/networks/fusion -> HTTP 401 {"status":401,"error":"Missing authorization header.","path":"/networks/fusion","timestamp":"2026-10-15T08:34:05.875Z"}
+GET https://fusion-rollup.quant.dev/networks/count -> HTTP 404 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /networks/count</pre>
+</body>
+</html>

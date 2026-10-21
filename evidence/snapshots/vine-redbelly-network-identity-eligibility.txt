@@ -1,0 +1,117 @@
+URL: https://vine.redbelly.network/identity/eligibility/
+TITLE: Eligibility - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Eligibility
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Receptor (ID protocol)
+Verifiable credentials
+Eligibility
+User access
+Accredited issuers
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Eligibility on Redbelly¶
+
+The Receptor protocol enables developers to program eligibility criteria into their products or services deployed on the Redbelly Network. Many real world asset use cases will require users to prove they are eligible to participate in the product or service on offer as part of meeting their compliance requirements, such as Know Your Customer (KYC) or sophisticated investor checks.
+
+Currently, most dApps either do not perform any eligibility criteria checks, or they are performed in a siloed and expensive manner, off chain. Receptor shares the cost of conducting eligibility criteria checks across the network, reducing the cost for any one specific use case. This is achieved through its W3C based verifiable credential data model for issuing, holding (using), and verifying information about users. The approach, referred to as the "Trinity of Trust", symbolises the interdependence and trust relationship between the Identity Holder, Issuer and Verifier. It empowers users with control of their data, and minimises their data exposure.
+
+Eligibility criteria checks can be used to ensure that only users that can prove they meet the criteria can interact with a smart contract's functions. Depending on the developer's needs and specific compliance requirements, there are different approaches and credential types that can be used. In each case the user will require a distinct credential of the specified type.
+
+Credential types¶
+
+Redbelly supports two distinct credential types, or methods, that can be used to perform eligibility criteria checks:
+
+Proof by Query (on chain)¶
+
+Leveraging Iden3 and PolygonID, allows users to prove claims about their eligibility for products or services on chain using zero knowledge proofs and proof-by-query specific credentials.
+
+Learn more about Proof by Query via the Redbelly Network technical documentation.
+
+Proof by Query docs
+
+Selective disclosure (off chain)¶
+
+Leveraging Mattr Labs's BBS+ implementation, allows users to selectively disclose necessary, and sometimes sensitive, information off chain to meet compliance requirements whilst minimising data exposure.
+
+Learn more Selective Disclosure via the Redbelly Network technical documentation.
+
+Selective Disclosure docs
+
+Enabling the Trinity of Trust¶
+
+To fulfil the verifiable credential model form the "Trinity of Trust", Receptor enables the issuance of credentials, holding of credentials, and verifying of claims accordingly.
+
+Issuing credentials¶
+
+To be issued a credential, a user will have to submit relevant, required information and documentation to an issuer for verification. This could include a passport, driver's licence, or bank statement. Once verified, the issuer will issue the user an applicable verifiable credential of the required type.
+
+While anyone can issue credentials by implementing the Issuer module of Receptor, some Issuers are accredited by Redbelly Network governance in order to issue network access credentials.
+
+Learn more about the Receptor Issuer module via the Redbelly technical documentation.
+
+Issuer module docs
+
+Verifying claims¶
+
+A use case can use the Receptor Verifier module to define and embed their eligibility criteria into their use case. The module enables the use case to verify the integrity of claims presented by users.
+
+The process of verifying a claim made by a user will vary depending on the eligibility criteria check and therefore the type of credential the user has. A developer will also need to determine which issuers they trust in the context of their specific compliance requirements.
+
+Learn more about the Receptor Verifier module via the Redbelly technical documentation.
+
+Verifier module docs
+
+Holding (using) Credentials¶
+
+A user will be able to use their credentials to interact with dApps to make claims about their eligibility which are then verified by the dApp.
+
+The user will need a wallet that supports the relevant credential type(s). Developers can use the Receptor Holder module to build the required Holder functionality.
+
+Learn more about the Receptor Holder module via the Redbelly technical documentation.
+
+Holder module docs
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

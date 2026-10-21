@@ -1,0 +1,53 @@
+URL: https://docs.redbelly.network/pages/methods/selective-disclosure/
+TITLE: Selective Disclosure - Redbelly Network Technical Documentation
+
+Skip to content
+Redbelly Network Technical Documentation
+Selective Disclosure
+Type to start searching
+Home
+Receptor
+Onboarding and Eligibility Kit
+Methods
+Proof By Query
+Selective Disclosure
+Modules
+Issuer
+Holder
+Verifier
+API
+Proof By Query
+Selective Disclosure
+Reference
+JSON-LD
+Iden3 Circuits
+Redbelly Environment
+Consideration for usage
+BBS-Signatures Package
+High Level Diagram
+Selective Disclosure¶
+
+Selective Disclosure involves using credentials that implement BBS+ signatures. BBS+ signatures offer the unique capability of multi-message signing while generating a single output signature. This means that a comprehensive proof of knowledge can be established, allowing the prover to reveal only specific messages from the originally signed set.
+
+Using this method, you will be able to prove that a piece of information revealed by the user is based on a valid verifiable credential (issued by the relevant Issuer) without needing to see the entirety of the credential. For example, a user can reveal that the birth date on their passport is 01/01/1994 without disclosing the rest of the details of their passport.
+
+This ability, to selectively reveal only the minimum possible required information to meet a given eligibility criteria, minimises data exposure for users and empowers them with greater agency and control of their data.
+
+Consideration for usage¶
+
+As selective disclosure involves disclosing information to the Verifier, it can only be used off-chain. Therefore, it's is important to consider the needs of your use case and the nature of your compliance requirements when selecting a method that best serves them.
+
+BBS-Signatures Package¶
+
+Selective Disclosure requires using the npm package developed by Mattr Labs, @mattrglobal/bbs-signatures. This package comes with its own internal methods that can be used out of the box to issue and hold verifiable credentials of this type and ultimately to verify disclosed information based on those credentials.
+
+The Issuer module uses generateBls12381G2KeyPair to generate the key-pair that will be used to sign and generate the selective disclosure verifiable credential and blsSign to sign it.
+
+The Holder module uses blsVerify to verify the issued credential from the Issuer and then uses blsCreateProof to create the proofs with selective information that is requested by the Verifier.
+
+The Verifier module uses blsVerifyProof to verify the proof presented by the Holder in line with their request.
+
+High Level Diagram¶
+ Back to top
+© Redbelly Network 2025
+Made with Material for MkDocs

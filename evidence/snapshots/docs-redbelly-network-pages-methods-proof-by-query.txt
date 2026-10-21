@@ -1,0 +1,86 @@
+URL: https://docs.redbelly.network/pages/methods/proof-by-query/
+TITLE: Proof by Query - Redbelly Network Technical Documentation
+
+Skip to content
+Redbelly Network Technical Documentation
+Proof by Query
+Type to start searching
+Home
+Receptor
+Onboarding and Eligibility Kit
+Methods
+Proof By Query
+RHS
+Contract Example
+Selective Disclosure
+Modules
+Issuer
+Holder
+Verifier
+API
+Proof By Query
+Selective Disclosure
+Reference
+JSON-LD
+Iden3 Circuits
+Redbelly Environment
+Key Components
+Identity Wallet
+Key Management Store (KMS)
+Data Storage interface
+Credential Wallet
+Proof Service
+Reverse Hash Service (RHS)
+Circuits Storage
+High Level Diagram
+Proof by Query¶
+
+The Proof by Query method involves using; credentials that implement Baby Jubjub key pairs & signatures, a zero knowledge proof based verifier smart contract, and a zk-query language to surface eligibility criteria and verify claims made by users based on their verifiable credentials without revealing the information on chain.
+
+By using this method, you will be able to prove that a user meets defined logical conditions without knowing the information. For example, a user can prove to you that they are above 18 years of age, because their date of birth—stored in their passport credential—can be queried against a relative date, rather than being revealed. Therefore, the proof of age can be made without disclosing their exact birth date, nor any other information contained within the passport.
+
+Proof by Query is maximally privacy preserving for users since only the eligibility criteria are public. The information that proves the user meets that criteria however, remains private. The method increases data security because any Personally Identifiable Information (PII), which is normally passed between all entities, is never seen or stored by the Verifier.
+
+Key Components¶
+Identity Wallet¶
+
+The Identity Wallet serves as the cornerstone of user identity management.
+
+Key Management Store (KMS)¶
+
+Allows users to sign data securely using keys, coordinating communication between various key storage systems.
+
+Data Storage interface¶
+
+Serves as a gateway to essential storage components, including Credential storage, Identity storage, Merkle tree storage, and State interfaces. This interface plays a pivotal role in creating and managing user identities within the system.
+
+Credential Wallet¶
+
+Dedicated to preserving credentials issued by Issuers, the Credential Wallet operates through a specialised Credential Interface. This interface facilitates interactions between the credential storage, ensuring efficient management and retrieval of issued credentials.
+
+Proof Service¶
+
+The Proof Service class is a multifaceted component that plays a central role in the protocol. Its functionalities include:
+
+Verification of zero-knowledge proofs for specified circuit IDs.
+Generation of proofs in response to protocol proof requests.
+Authentication inputs generation.
+State verification and transition, with subsequent publication to the blockchain.
+Reverse Hash Service (RHS)¶
+
+As a specialised service, the Reverse Hash Service (RHS) is purpose-built to streamline the construction of proofs of existence or non-existence within sparse Merkle trees. Its focused functionality enhances the overall robustness of the protocol.
+
+Circuits Storage¶
+
+Central to the protocol's operations, Circuits Storage houses critical circuit components, each playing a dedicated role:
+
+stateTransition.circom: Validates the execution of identity state transitions.
+authV2.circom: Ensures the ownership validation of an identity.
+credentialAtomicQueryMTPV2.circom: Validates claims against queries set by verifiers.
+credentialAtomicQueryMTPV2OnChain.circom: Extends claim validation for smart contract verifiers.
+credentialAtomicQuerySigV2.circom: Validates claims signed by issuers against verifier queries.
+credentialAtomicQuerySigV2OnChain.circom: Extends claim validation for smart contract verifiers using issuer signatures.
+High Level Diagram¶
+ Back to top
+© Redbelly Network 2025
+Made with Material for MkDocs

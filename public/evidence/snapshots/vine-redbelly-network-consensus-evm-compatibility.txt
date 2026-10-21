@@ -1,0 +1,65 @@
+URL: https://vine.redbelly.network/consensus/evm-compatibility/
+TITLE: EVM compatibility - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+EVM compatibility
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+EVM compatibility and version details¶
+
+Redbelly is compatible with the Ethereum Virtual Machine (EVM) and can execute smart contracts written for the EVM. There are, however, a few things to keep in mind and detailed below.
+
+EVM version¶
+Prague
+
+Solidity version¶
+v0.8.30
+
+Gas prices¶
+
+Gas prices on Redbelly are fixed in USD terms. See Network fees for more information.
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

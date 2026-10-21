@@ -1,0 +1,81 @@
+URL: https://vine.redbelly.network/identity/user-access/
+TITLE: User access - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+User access
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Receptor (ID protocol)
+Verifiable credentials
+Eligibility
+User access
+Accredited issuers
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Accessing Redbelly Network¶
+
+Claim the access credential and enable your account today.
+
+Before being granted access to Redbelly Network, each user must claim their access credential from a network accredited issuer before they self enable their account with write access to the network through a specific network smart contract.
+
+To successfully claim a Redbelly Network Access Credential, users must work with their chosen accredited issuer to prove they possess a valid photo identity document (passport) which is verified via biometric checks.
+
+Getting access¶
+
+Start by selecting the network (see environments) you need access to.
+
+Redbelly Mainnet & Testnet¶
+OFFICIAL REDBELLY ACCESS DAPP¶
+
+Connect your EVM compatible wallet to the Redbelly access dApp and follow the prompts to get Redbelly access.
+
+Access Redbelly
+
+Redbelly Devnet¶
+OFFICIAL REDBELLY DEVNET ACCESS DAPP (DEPRECATED)¶
+
+Redbelly DevNet has been deprecated. To test your applications, please use Redbelly Testnet.
+
+Looking for information on business access? Verify a business
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

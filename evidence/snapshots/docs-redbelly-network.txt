@@ -1,0 +1,18 @@
+URL: https://docs.redbelly.network
+TITLE: Redbelly Network Technical Documentation
+
+Redbelly Network Technical Documentation
+Home
+Type to start searching
+Home
+Receptor
+Onboarding and Eligibility Kit
+Home
+
+The Redbelly Network is a layer 1 blockchain, built and optimised for real world asset tokenisation. It consists of a global network of nodes running an innovative democratic byzantine fault tolerant consensus algorithm and a scalable EVM implementation. In addition to the network infrastructure, Redbelly provides real world asset tokenisation protocols and SDKs for developers to use to build their use case.
+
+Receptor (ID Protocol)
+
+ Back to top
+© Redbelly Network 2025
+Made with Material for MkDocs

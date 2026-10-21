@@ -1,0 +1,63 @@
+URL: https://docs.overledger.dev/docs/start-here
+TITLE: Start Here
+
+Jump to Content
+Quant Connect Login
+Talk to us
+Home
+Guides
+API Reference
+Release Notes
+Search
+CTRL-K
+OVERLEDGER
+Start Here
+Overview
+QuickStart
+Authentication
+Overledger Gateway
+Connectors
+Flow Apps
+Signing
+Fusion Rollup
+Overledger Firewall
+Tutorials
+Troubleshooting
+Staking
+Powered by 
+Start Here
+
+Welcome to the Overledger documentation. Overledger is Quant's multi-DLT platform for building applications that span more than one blockchain, one set of credentials, one API surface, one execution environment that connects to many DLT networks.
+
+The docs are organised as a twelve-chapter manual. Most readers don't need all of it. Pick the entry point that matches what you're trying to do.
+
+Pick your path
+If you're…	Start here
+New, want to see what Overledger feels like in 30 minutes	Chapter 2: QuickStart
+Building a client integration, calling Overledger from your own service	Chapter 4: Overledger Gateway, then Chapter 5: Connectors
+Integrating with a Flow App, driving a Quant-built workflow (bridge, swap, signer, …)	Chapter 6: Flow Apps
+Attaching your own node or network, bringing a managed-provider node onto a public network, or connecting a private permissioned network	Chapter 5.2: Self-serve networks (public providers) · Chapter 5.3: Engagement networks (private / consortium)
+Deploying a smart contract on Fusion Rollup, bridge, deploy, expose	Chapter 8: Fusion Rollup and Chapter 9: Overledger Firewall
+An AI agent / agent integrator, driving Overledger from Claude Desktop, Cursor, custom MCP host	Chapter 6.7: Agent integration (MCP)
+Researching the architecture, multi-ledger rollup, dispute games, anchoring	Chapter 1: Overview, then Chapter 8: Fusion Rollup
+Staking QNT, earning rewards, unlocking higher tiers	Chapter 12: Staking
+Debugging a 4xx / 5xx	Chapter 11: Troubleshooting
+Why Overledger
+
+Three things tie the platform together:
+
+One Gateway, many DLTs. A single authenticated endpoint for a growing number of DLT networks across many public and permissioned DLT families (e.g. Canton, Corda, Cosmos, EVM, Hedera, Hyperledger Fabric, Oracle blockchain, Solana, and more). You don't manage RPC providers, node failover, or chain-specific clients.
+The world's first multi-ledger Layer 2. The Fusion Rollup is an OP Stack fork that anchors to multiple L1s simultaneously. Deposits, withdrawals, and cross-chain messaging are native primitives, not third-party bridges.
+Workflows, not just RPC, with bring-your-own apps. Flow Applications turn multi-step business logic (signing, smart-contract deployment, compliance check, payment, …) into typed sessions that human users (via the Quant Connect UI), AI agents (via MCP), and client services (via the Gateway HTTPS API) all drive against the same step specifications. Quant ships a first-party catalogue covering common workflows; on top of that, customers and partners can host their own Flow Applications externally and register them with the Gateway. Whether Quant-built or partner-built, every app inherits the same authentication, Overledger Firewall, content filtering, payment-gate, and per-user data-isolation guarantees. No fork of the Gateway required.
+
+The complete architecture is in chapter 1.2, read it once before diving anywhere else.
+
+Updated 4 months ago
+
+Overview
+Did this page help you?
+Yes
+No
+Copy Page
+Pick your path
+Why Overledger

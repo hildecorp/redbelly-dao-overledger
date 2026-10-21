@@ -1,0 +1,200 @@
+[
+ {
+  "id": "stack",
+  "section": "overledger",
+  "title": "Overledger in one picture",
+  "caption": "The Gateway, Connectors and Flow Apps are the switchboard {ol-gateway ol-connectors flow-what}. The Fusion Rollup is a separate layer, reached through the Gateway {ol-fronts-fusion}, whose deposits, withdrawals and cross-chain messages run with the networks connected to it {ol-fusion}, and Redbelly is not among the networks documented at testnet launch {fus-connected}.",
+  "facts": [
+   "ol-gateway",
+   "ol-connectors",
+   "ol-fusion",
+   "flow-what",
+   "con-six",
+   "con-evm",
+   "ol-two-paths",
+   "con-engagement",
+   "fus-connected",
+   "fw-permissioned",
+   "ol-fronts-fusion"
+  ],
+  "content": [
+   "Top box: 'Institution or app' with small line 'uses one login and one interface'.",
+   "Arrow down into a large box titled 'Overledger Gateway' (accent box: brand red 2px border).",
+   "Inside the Gateway, three equal sub-boxes side by side: 'Connectors' / 'one interface to each chain family'; 'Flow Apps' / 'multi-step workflows'; 'Firewall' / 'who may do what'.",
+   "Below the Gateway, left area labelled 'Reached through Connectors': a row of chips 'EVM chains', 'Solana', 'Cosmos', 'SUI', 'Hedera', 'Aptos' under a small heading 'Self-serve families', and one wider chip 'Permissioned networks' with small text 'by engagement with Quant'.",
+   "Below the Gateway, right area: a box titled 'Fusion Rollup' with sub line 'a separate layer, via the Gateway', with an arrow down to it from the Gateway. Under it three small chips joined to it by lines: 'Ethereum Sepolia', 'Polygon Amoy', 'Quant permissioned Besu testnet', with a tiny label 'connected at testnet launch'.",
+   "Next to the Fusion chips, one dashed outline chip in muted text: 'Redbelly: not in launch list'.",
+   "Status pills: none needed inside this diagram (the caption carries the sources). Every element here is Confirmed."
+  ]
+ },
+ {
+  "id": "routes",
+  "section": "how-connect",
+  "title": "Two ways a chain reaches Overledger",
+  "caption": "Self-serve covers public permissionless networks in six chain families and needs no talk with Quant's account team: one API call or form registers a node and, for a new network, the network itself {con-six con-one-call con-new-network}. Networks where node identity matters, and new chain families, go through an engagement {con-engagement ol-two-paths con-family-cost con-app-cost}.",
+  "facts": [
+   "con-six",
+   "con-criteria",
+   "con-new-network",
+   "con-public-private",
+   "con-providers",
+   "con-key",
+   "con-private-url",
+   "con-health",
+   "con-engagement",
+   "ol-two-paths",
+   "con-family-cost",
+   "con-app-cost",
+   "con-one-call",
+   "con-node-public-shared",
+   "con-node-private-scope"
+  ],
+  "content": [
+   "Two columns with a heading each. Left column heading 'Self-serve' (accent), right column heading 'Managed engagement'.",
+   "Left column, a vertical flow of steps joined by arrows: (1) 'Chain family is EVM, Solana, Cosmos, SUI, Hedera or Aptos'; (2) 'Register a node' / 'one API call or one form'; (3) a split into two side-by-side boxes: 'Public node' / 'approved provider, API key in the URL, in a shared pool' and 'Private node' / 'any HTTPS address, only you can use it'; (4) 'Health check'; (5) 'Reachable through the Gateway'.",
+   "Under the left column, a small panel titled 'The self-serve test' with three check rows: 'Nodes answer over HTTPS', 'Nothing needed beyond an API key', 'It does not matter which node you use'.",
+   "Right column, vertical flow: (1) 'Permissioned, consortium or operator-gated networks'; (2) 'Project engagement with Quant'; (3) 'Connector set up with the network's own configuration'. Then a separate small panel 'Brand-new chain family' with two rows: 'Health and chain identity checker' + mono 'about 2 days'; 'Each app that uses it' + mono 'about 1 day per app'.",
+   "Approved providers line under the Public node box, small mono text: 'alchemy.com infura.io quiknode.pro chainstack.com getblock.io blockdaemon.com ankr.com' (it can wrap to two lines; in the narrow version wrap to three or four lines)."
+  ]
+ },
+ {
+  "id": "access",
+  "section": "redbelly",
+  "title": "Reading Redbelly is open, writing needs an access credential",
+  "caption": "Every account must claim an access credential from an accredited issuer before it can write {rb-access rb-registry}. Reading through the public RPC needs no key, and both RPC addresses answered with chain ID 151 in our test {rb-mainnet rb-ankr t-chainid t-ankr}. Redbelly's developer portal lists three bridge routes {br-celer-out br-lz br-lucid}.",
+  "facts": [
+   "rb-access",
+   "rb-registry",
+   "rb-all-prove",
+   "rb-mainnet",
+   "rb-ankr",
+   "t-chainid",
+   "t-ankr",
+   "t-netversion",
+   "br-celer-out",
+   "br-lz",
+   "br-lucid"
+  ],
+  "content": [
+   "Two lanes. Upper lane titled 'Read' with a small 'Tested' pill (green, filled): one box 'Public RPC' with two mono lines 'governors.mainnet.redbelly.network' and 'rpc.ankr.com/redbelly_mainnet', an arrow to a box 'Chain ID 151' / 'answered on 15 Oct 2026', and a third small muted box 'net_version' / 'not supported'.",
+   "Lower lane titled 'Write' with a small 'Confirmed' pill (green outline): a flow of three boxes joined by arrows: 'Accredited issuer' / 'listed in an on-chain registry'; 'Access credential' / 'claimed by the user'; 'Write access' / 'account self-enables it through a network contract' (this last box is the accent box). Before the first box, a small node 'Wallet'.",
+   "Bottom strip titled 'Bridge routes listed by Redbelly': three chips 'Celer cBridge', 'LayerZero with Stargate', 'Lucid Labs'."
+  ]
+ },
+ {
+  "id": "levels",
+  "section": "now",
+  "title": "Three meanings of 'connect', three answers",
+  "caption": "Level 1 rests on Redbelly's EVM compatibility and Overledger's self-serve EVM route {rb-evm con-evm con-new-network}, with open points: whether self-serve applies to a network where writing needs a credential, the health check, a keyed provider endpoint and the live lists {con-selfserve-scope ol-permissioned con-health t-netversion con-key t-ol-auth-all}. Level 2 cannot be checked from public sources, because the app catalogue is shown only to account holders {flow-not-listed flow-account-registry flow-internal}. Level 3 is not possible yet as far as public sources show {fus-connected fus-bridge-contracts fus-roots rb-access fw-token-gov}.",
+  "facts": [
+   "rb-evm",
+   "con-evm",
+   "con-new-network",
+   "con-providers",
+   "rb-ankr",
+   "t-chainid",
+   "con-health",
+   "t-netversion",
+   "con-key",
+   "t-ol-auth",
+   "con-engagement",
+   "flow-not-listed",
+   "flow-internal",
+   "fus-connected",
+   "fus-bridge-contracts",
+   "fus-roots",
+   "rb-access",
+   "fw-token-gov",
+   "con-selfserve-scope",
+   "ol-permissioned",
+   "t-ol-auth-all",
+   "flow-account-registry"
+  ],
+  "content": [
+   "Three stacked level cards, top to bottom, each a full-width row. Left part of each card: a large mono number ('1', '2', '3'), the level title, and a status pill. Right part: two short columns 'In place' and 'Missing or open' (Level 2 has only 'Open').",
+   "Level 1. Title 'Gateway access' / sub 'read data, send self-signed transactions'. Status pill 'Possibly, unconfirmed' in warn yellow (outline). In place: 'Redbelly is EVM compatible'; 'Ankr, an approved provider, runs a Redbelly RPC'; 'RPC answers chain ID 151'. Missing or open: 'Self-serve status not confirmed'; 'Health check method not documented'; 'net_version not supported on Redbelly'; 'Keyed Ankr endpoint not confirmed'; 'Live network lists need an API key'.",
+   "Level 2. Title 'Flow Apps' / sub 'Quant workflows such as signing'. Status pill 'Unknown' in brand red outline with accent text. Open: 'Catalogue shown only to account holders'; 'Every shipped app is built by Quant'.",
+   "Level 3. Title 'Fusion Rollup' / sub 'deposits, unified balances, cross-chain messages'. Status pill 'Not possible yet' (filled brand red, white text). In place: 'Nothing documented for Redbelly'. Missing: 'Not in the documented list'; 'Bridge and dispute contracts on Redbelly'; 'Rollup state roots posted to Redbelly from accounts with Redbelly access'; 'Each token added by Quant governance'.",
+   "Use small check marks (green) before 'In place' items and small open circles (muted) or small red crosses before 'Missing or open' items. Draw them as SVG shapes, not text characters."
+  ]
+ },
+ {
+  "id": "work",
+  "section": "work",
+  "title": "The work, step by step",
+  "caption": "Level 1 would use the self-serve route, with no account-team conversation, only if Overledger treats Redbelly as a self-serve network, which its docs do not confirm, and the node passes the health check {con-six con-new-network con-selfserve-scope con-identity-bound con-health rb-access}. Level 3 depends on Quant, and no such work has been announced {fus-bridge-contracts fus-roots fw-token-gov tk-point fw-binding no-talks}.",
+  "facts": [
+   "con-new-network",
+   "con-public-private",
+   "con-health",
+   "con-family-cost",
+   "rb-access",
+   "rb-business",
+   "flow-own-keys",
+   "fus-bridge-contracts",
+   "fus-roots",
+   "fw-token-gov",
+   "tk-point",
+   "fw-binding",
+   "no-talks",
+   "con-six",
+   "con-selfserve-scope",
+   "con-identity-bound"
+  ],
+  "content": [
+   "Two horizontal lanes (in the narrow version, two vertical lists). Each lane is a row of numbered step nodes joined by a line, in the style of a timeline: a numbered circle above or beside each step text.",
+   "Lane 1 heading 'Level 1' with a tag 'small, if self-serve applies'. Steps: '1 Register a Redbelly node' / 'official RPC as private, or an approved provider (not confirmed)'; '2 Pass the health check' / 'if it fails, the node is not added'; '3 Give every sending address Redbelly access' / 'institutions can keep their own keys'.",
+   "Lane 2 heading 'Level 3' with a tag 'depends on Quant, none announced' (accent text). Steps: '1 Deploy the rollup's bridge and dispute contracts on Redbelly'; '2 Post rollup state roots to Redbelly'; '3 Add each token through Quant governance'; '4 Issuers decide if the bridge contract may hold their tokens'; '5 Keep Overledger allowlists in step with Receptor'.",
+   "Use the brand red only for the numbered circles of Level 3 and for the Level 3 tag; Level 1 circles are steel with white numbers."
+  ]
+ },
+ {
+  "id": "receptor",
+  "section": "compliance",
+  "title": "Which Receptor checks could work off Redbelly",
+  "caption": "Receptor has two methods {rec-two-methods}. Proof by Query runs in a verifier contract against identity state on Redbelly {pbq-contract pbq-publish}. Selective Disclosure uses BBS+ signatures and is checked off-chain {sd-bbs sd-offchain}, so in principle it could be checked anywhere, including by an externally hosted Overledger app {ol-external-apps}, but the app catalogue is not public, so whether one does this is unknown {flow-not-listed}. The access credential unlocks write access on Redbelly, and no source shows another chain reading it {rb-access}.",
+  "facts": [
+   "rec-two-methods",
+   "rec-w3c",
+   "pbq-contract",
+   "pbq-publish",
+   "sd-offchain",
+   "ol-external-apps",
+   "flow-internal",
+   "rb-access",
+   "sd-bbs",
+   "flow-not-listed"
+  ],
+  "content": [
+   "Header row: a small box 'Receptor credential' / 'W3C verifiable credential held by the user', splitting with two arrows into two cards below.",
+   "Left card 'Proof by Query' / 'zero knowledge proof'. Rows: 'Checked by' + 'a verifier smart contract'; 'Relies on' + 'identity state published on Redbelly'. Bottom verdict strip (accent, brand red outline): 'Another chain: only if the setup is rebuilt there'.",
+   "Right card 'Selective Disclosure' / 'reveals chosen details'. Rows: 'Checked by' + 'a verifier, off-chain only'; 'Relies on' + 'the issuer's BBS+ signature'. Bottom verdict strip (warn yellow outline): 'Could be checked anywhere in principle, no public list of Overledger apps'. Put a small 'Analysis' pill (yellow outline) on both verdict strips.",
+   "Footer line across the bottom, muted: 'The access credential unlocks write access on Redbelly. No source shows another chain reading it.'"
+  ]
+ },
+ {
+  "id": "breaks",
+  "section": "compliance",
+  "title": "Where compliance could break",
+  "caption": "Tokeniser enforces its rules on Redbelly at every transfer {tk-point tk-checks}. A bridge, such as the TASK-08 lock-and-mint pattern {t08-pattern} or the Fusion Rollup's bridge contracts {fus-bridge-contracts}, locks the asset and issues a copy elsewhere; in our analysis the copy then follows the rules on that chain. Break points 5 and 7 apply to the Fusion Rollup {fw-token-gov fus-dispute}. The numbers match the list below.",
+  "facts": [
+   "tk-point",
+   "tk-checks",
+   "tk-register",
+   "tk-locked",
+   "rb-access",
+   "t08-pattern",
+   "fw-binding",
+   "fus-unify",
+   "fw-token-gov",
+   "fus-dispute",
+   "tk-final",
+   "fus-bridge-contracts"
+  ],
+  "content": [
+   "Three columns left to right joined by arrows. Left column box titled 'On Redbelly' (accent box) with rows: 'Tokeniser asset'; 'Identity, eligibility and limits checked at every transfer'; 'Issuer register updated in real time'; 'Receptor access credential'. Middle column box 'Bridge' with rows 'Locks the asset on Redbelly'; 'Issues a copy on the other chain'. Right column box 'On another chain' with rows: 'The copy follows only that chain's rules'; 'Overledger firewall uses its own allowlists'.",
+   "Seven numbered red markers (filled brand red circles with dark mono numbers 1 to 7) placed at the points they refer to: 1 on the right box row about the copy's rules; 2 between the 'Receptor access credential' row and the 'own allowlists' row (put it on the right box near the allowlists row); 3 on the arrow from left to middle (revocation does not travel); 4 on the right box (merged balances); 5 on the middle box (token list set by Quant governance); 6 on the left box near 'Issuer register updated in real time'; 7 on the arrow from middle to right (dispute window vs single round).",
+   "Under the three columns, a compact legend in two columns listing: '1 Copy without eligibility checks'; '2 Two lists of who is allowed'; '3 Revocation does not reach the copy'; '4 Merged balances can mix assets'; '5 Fusion token list set by Quant governance'; '6 Register must show units held elsewhere'; '7 Rollup dispute window, not single round settlement'. A small 'Analysis' pill (yellow outline) beside the legend heading 'Break points'."
+  ]
+ }
+]

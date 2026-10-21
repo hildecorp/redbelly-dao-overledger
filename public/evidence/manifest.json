@@ -1,0 +1,232 @@
+[
+ {
+  "file": "evidence/snapshots/blog-celer-network-2025-08-01-celer-announces-cbridge-support-for-redbelly.txt",
+  "url": "https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/",
+  "captured_utc": "2026-10-15T08:29:22Z",
+  "sha256": "0e9232f407518a6a87ad11103f7a63c66e4ce78032a138bfc99a54dce17aa535"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-docs-connectors.txt",
+  "url": "https://docs.overledger.dev/docs/connectors",
+  "captured_utc": "2026-10-15T08:26:21Z",
+  "sha256": "e3ef2467cd02d560ed0393d55e330a1f2c070ba9b8a9f4da1be40948bf8c6066"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-docs-flow-apps.txt",
+  "url": "https://docs.overledger.dev/docs/flow-apps",
+  "captured_utc": "2026-10-15T08:26:26Z",
+  "sha256": "0befb6a621ccc8996b1d1335a1c957d3f580ee5e8d61635d78fd0f14a491f103"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-docs-fusion-rollup.txt",
+  "url": "https://docs.overledger.dev/docs/fusion-rollup",
+  "captured_utc": "2026-10-15T08:26:37Z",
+  "sha256": "2f87ede0e7cfeb866b76d918563c1e91bc621455a405ab6259cd83eaae13cac2"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-docs-overledger-firewall.txt",
+  "url": "https://docs.overledger.dev/docs/overledger-firewall",
+  "captured_utc": "2026-10-15T08:26:43Z",
+  "sha256": "f10f9ebcd1c73ecb0eb3a068f5167cfdda0841583d0f3890a4e6e5eaab446dcb"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-docs-overview.txt",
+  "url": "https://docs.overledger.dev/docs/overview",
+  "captured_utc": "2026-10-15T08:26:00Z",
+  "sha256": "7aa5cb0b55ab04dcbf93ee5887fc82a4250f752d1a48d88df1d84e4a0b2a3222"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-docs-start-here.txt",
+  "url": "https://docs.overledger.dev/docs/start-here",
+  "captured_utc": "2026-10-15T08:23:22Z",
+  "sha256": "ab1e0f06d2fc660ffb83e472ebd8f39c456854bf889331f9f6b21fa7f43467db"
+ },
+ {
+  "file": "evidence/snapshots/docs-overledger-dev-reference.txt",
+  "url": "https://docs.overledger.dev/reference",
+  "captured_utc": "2026-10-15T08:23:29Z",
+  "sha256": "6826b4c45b0cec65083c67831758c5469c017d8fca43c82ed659fe29f9236ec4"
+ },
+ {
+  "file": "evidence/snapshots/docs-redbelly-network-pages-eligibility-sdk-eligibility-sdk.txt",
+  "url": "https://docs.redbelly.network/pages/eligibility-sdk/eligibility-sdk/",
+  "captured_utc": "2026-10-15T08:28:07Z",
+  "sha256": "1bf00c17a4600e1de7f887065238b38375520287e7c55a8aa28511fd5506bb96"
+ },
+ {
+  "file": "evidence/snapshots/docs-redbelly-network-pages-methods-proof-by-query.txt",
+  "url": "https://docs.redbelly.network/pages/methods/proof-by-query/",
+  "captured_utc": "2026-10-15T08:28:45Z",
+  "sha256": "20f6b9850f1b64c9d2652722f0b86b0cfb7b6a631c308a9d9d1cbf5188f790a2"
+ },
+ {
+  "file": "evidence/snapshots/docs-redbelly-network-pages-methods-selective-disclosure.txt",
+  "url": "https://docs.redbelly.network/pages/methods/selective-disclosure/",
+  "captured_utc": "2026-10-15T08:28:49Z",
+  "sha256": "5cd946484c00d126cad8a20408ae0b6eeb00bef7e2064aa34a9edef3642b37d2"
+ },
+ {
+  "file": "evidence/snapshots/docs-redbelly-network-pages-receptor.txt",
+  "url": "https://docs.redbelly.network/pages/receptor/",
+  "captured_utc": "2026-10-15T08:23:37Z",
+  "sha256": "ba63b2f2ec2e25fdfd4d65e0db7ce6533aa6d160004f982454e2f28ac73f2956"
+ },
+ {
+  "file": "evidence/snapshots/docs-redbelly-network.txt",
+  "url": "https://docs.redbelly.network",
+  "captured_utc": "2026-10-15T08:23:34Z",
+  "sha256": "d416e84d3dbd41aea31b80b1b518cc589f9ea6451cd2e53960eb6eb22436e004"
+ },
+ {
+  "file": "evidence/snapshots/github-com-redbelly-dao-community-taskboard-task-08-bridge-integration-guide.txt",
+  "url": "https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide",
+  "captured_utc": "2026-10-15T08:24:03Z",
+  "sha256": "7222052fe1ef2c434f477b980cb38a5d01352165d1695b0bb958e2b1b4c6f171",
+  "note": "contributor names and links in this copy were replaced with [name removed] and [link removed], because the Task Board does not allow personal credit inside a deliverable. Nothing else was changed."
+ },
+ {
+  "file": "evidence/snapshots/quant-network-press-releases-the-clearing-house-partners-with-quant-to-advance-the-on-chai.txt",
+  "url": "https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/",
+  "captured_utc": "2026-10-15T08:23:16Z",
+  "sha256": "3426731526944099cd5a574614f296e7694ae04f0fa73a573ae530305b42f65c"
+ },
+ {
+  "file": "evidence/snapshots/raw-tycayomide-redbelly-testnet-bridge-main-technical_guide.md.txt",
+  "url": "https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/TECHNICAL_GUIDE.md",
+  "captured_utc": "2026-10-15T08:42:54Z",
+  "sha256": "36d2747c8fc9003429996d9064daa0fd8137d600b4cfb8fbb7cb6f8aac12eaf2"
+ },
+ {
+  "file": "evidence/snapshots/task16-playbook.txt",
+  "url": "https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook/blob/main/deliverable/Redbelly-task-16-revised.pdf",
+  "captured_utc": "2026-10-15T08:33:53Z",
+  "sha256": "e5f46ec6077b5901971538bf6bb6978ec9f45d3cf29f53dd62bd864856637d11"
+ },
+ {
+  "file": "evidence/snapshots/taskboard-redbellydao-network-tasks-task-29.txt",
+  "url": "https://taskboard.redbellydao.network/tasks/TASK-29",
+  "captured_utc": "2026-10-15T08:23:02Z",
+  "sha256": "390725df61047d31bd85c79637ae79e6284023e5aa09559be1e1f27893cd722c",
+  "note": "a contributor link in this copy was replaced with [link removed], because the Task Board does not allow personal credit inside a deliverable. Nothing else was changed."
+ },
+ {
+  "file": "evidence/snapshots/tokeniser-com-product-superpowers-automated-compliance.txt",
+  "url": "https://tokeniser.com/product/superpowers/automated-compliance",
+  "captured_utc": "2026-10-15T08:30:03Z",
+  "sha256": "bf50a642b7ed8282a9c59b92c7e4d9dafd4c2f3cda5073254db4cb5371a2a175"
+ },
+ {
+  "file": "evidence/snapshots/tokeniser-com-product-superpowers-collateral-mobility.txt",
+  "url": "https://tokeniser.com/product/superpowers/collateral-mobility",
+  "captured_utc": "2026-10-15T08:30:10Z",
+  "sha256": "dc809c4593c04a00cb651d477705c9c4f3386fd4b3603312ff37fb8be7e183cb"
+ },
+ {
+  "file": "evidence/snapshots/tokeniser-com-product-superpowers-secondary-transfer.txt",
+  "url": "https://tokeniser.com/product/superpowers/secondary-transfer",
+  "captured_utc": "2026-10-15T08:30:06Z",
+  "sha256": "8107304d4a7a101505b2f0eb7245a27333e67fe741b9d6fe1f088c338b1b7167"
+ },
+ {
+  "file": "evidence/snapshots/tokeniser-com-technology.txt",
+  "url": "https://tokeniser.com/technology",
+  "captured_utc": "2026-10-15T08:29:56Z",
+  "sha256": "54f11ee36e7ad8a28f4f41bb4afd8952dd2037e6b2ce0c1e69466bf609758b24"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-bridged-tokens-celer.txt",
+  "url": "https://vine.redbelly.network/bridged-tokens/celer/",
+  "captured_utc": "2026-10-15T08:31:09Z",
+  "sha256": "55774e70f883edf958b933616a39b94ad887c84b197557ed87c6f1d7e6057ed3"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-bridged-tokens-layerzero.txt",
+  "url": "https://vine.redbelly.network/bridged-tokens/layerzero/",
+  "captured_utc": "2026-10-15T08:31:12Z",
+  "sha256": "2451986b57d2133770e5812e2ac0be0f4f1a86a5316df41688f3a0598469adb3"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-bridged-tokens-lucidlabs.txt",
+  "url": "https://vine.redbelly.network/bridged-tokens/lucidlabs/",
+  "captured_utc": "2026-10-15T08:31:16Z",
+  "sha256": "e05315313b0af97017f67baad4f76be508f31ae40eede54b88d76be1fa619b8b"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-business-verification.txt",
+  "url": "https://vine.redbelly.network/business-verification/",
+  "captured_utc": "2026-10-15T08:32:32Z",
+  "sha256": "a97327a1dfaae3210df6139f45170bc24bcb34b529d5b2ab23111a9c8ae9b6b1"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-consensus-evm-compatibility.txt",
+  "url": "https://vine.redbelly.network/consensus/evm-compatibility/",
+  "captured_utc": "2026-10-15T08:31:22Z",
+  "sha256": "ee41e3d6327597fed170cfd15263421e78c4f2fb0ee529444585102dade50e8b"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-environments.txt",
+  "url": "https://vine.redbelly.network/environments/",
+  "captured_utc": "2026-10-15T08:31:26Z",
+  "sha256": "31cf0f92a66c35a0ea7998915433f7e20055411ddaaf1db3c720d663a89bcbc4"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-identity-accredited-issuers.txt",
+  "url": "https://vine.redbelly.network/identity/accredited-issuers/",
+  "captured_utc": "2026-10-15T08:31:37Z",
+  "sha256": "fa90060ba096eb3eca53efada7d09d590fac2185659917d82cd699fd3896b22b"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-identity-eligibility.txt",
+  "url": "https://vine.redbelly.network/identity/eligibility/",
+  "captured_utc": "2026-10-15T08:31:40Z",
+  "sha256": "2b646f2166816eec4d61fc07612892c03dec11fe257df255f519637309412b84"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-identity-user-access.txt",
+  "url": "https://vine.redbelly.network/identity/user-access/",
+  "captured_utc": "2026-10-15T08:31:47Z",
+  "sha256": "db646f79b876db8b8415b4fe78451682f859d1cd02e85ae6de90ba5e5ff26407"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-identity.txt",
+  "url": "https://vine.redbelly.network/identity/",
+  "captured_utc": "2026-10-15T08:31:33Z",
+  "sha256": "cb7a76aa65aa81d62d8df106c4cde6f89be6e62f65263bff34a87d63e6d8fe75"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-nodes-become-operator.txt",
+  "url": "https://vine.redbelly.network/nodes/become-operator/",
+  "captured_utc": "2026-10-15T08:32:04Z",
+  "sha256": "4efe62a847e32eccce57c62e6db2580062b24a1b163f4dd4dfcb81d9dd0f8ba0"
+ },
+ {
+  "file": "evidence/snapshots/vine-redbelly-network-smart-contracts-eligibility-checks.txt",
+  "url": "https://vine.redbelly.network/smart-contracts/eligibility-checks/",
+  "captured_utc": "2026-10-15T08:32:18Z",
+  "sha256": "2a61b3177066da0939469bcdcaffcdbcf075fc60abf2e003d72f254598024711"
+ },
+ {
+  "file": "evidence/snapshots/www-theclearinghouse-org-payment-systems-articles-2026-09-the-clearing-house-partners-with.txt",
+  "url": "https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative",
+  "captured_utc": "2026-10-15T08:23:10Z",
+  "sha256": "77bcde910db708350020032374f8dcafbcf11bb696835024c71c6373fc269a74"
+ },
+ {
+  "file": "evidence/snapshots/x-com-redbellynetwork-status-1890340030197166112.txt",
+  "url": "https://x.com/RedbellyNetwork/status/1890340030197166112",
+  "captured_utc": "2026-10-15T08:29:31Z",
+  "sha256": "791211cfaa6debb124cd664887787d41520b762d6cd91ad31ac0c3a7978d1c27"
+ },
+ {
+  "file": "evidence/tests/overledger-api-check.txt",
+  "url": null,
+  "captured_utc": "2026-10-15T08:34:06Z",
+  "sha256": "01d1d6a13dc8d881177ae8ac52c2834162ab8be57934bc11078042b680f03c2e"
+ },
+ {
+  "file": "evidence/tests/rpc-check.txt",
+  "url": null,
+  "captured_utc": "2026-10-15T08:33:16Z",
+  "sha256": "f43f056e7180aa7c19231cec74953c235c8bbb3096837718b2d5cf08916d29bb"
+ }
+]

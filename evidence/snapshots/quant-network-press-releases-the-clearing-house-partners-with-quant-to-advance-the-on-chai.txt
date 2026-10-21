@@ -1,0 +1,147 @@
+URL: https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/
+TITLE: The Clearing House Partners with Quant to Advance the On-Chain Money Initiative | Quant
+
+We and selected third parties use cookies or similar technologies for technical purposes and, with your consent, for other purposes as specified in the cookie policy. Denying consent may make related features unavailable.
+
+Use the “Accept” button to consent.
+
+Necessary
+Functionality
+Experience
+Measurement
+Marketing
+Sale of my personal information
+Sharing of my personal information
+Processing of my personal information for targeted advertising
+Manage Settings
+Reject all
+Accept all
+Who we serve
+Who we serve
+
+We empower banks, financial institutions and capital markets to unlock new revenue streams, deploy new services and future-proof their infrastructure with programmable money. This is the money of the future.
+
+Banks
+Financial Institutions
+Capital Markets
+Solutions
+Solutions
+
+Global programmable money enables businesses to transform and modernise their existing bank accounts and treasury management systems with money that thinks, reacts and automates transactions.
+
+Overledger
+Quant Flow Platform
+QuantNet
+Quant Fusion
+Discover PayScript®
+Insights
+Insights
+
+Quant Flow leverages our patented technology, technical expertise and extensive experience to deliver the money of the future via a platform that can seamlessly connect, orchestrate and program money like never before.
+
+Use cases
+Blogs and articles
+Reports and Media
+Discover PayScript®
+Company
+Company
+
+As pioneers in programmability and champions of interoperability, we’re the world leader in next-generation payments. We make today’s money work in new ways. For banks, for corporates, for everyone – wherever they are and whenever they need it.
+
+About us
+Partners
+Associations
+Careers
+Get in touch
+Get in touch
+Contact
+Media and Press
+Book a meeting
+Press releases
+24 September 2026
+The Clearing House Partners with Quant to Advance the On-Chain Money Initiative
+By Quant Network
+BANKS ON-CHAIN MONEY INITIATIVE THE CLEARING HOUSE
+Back to media centre
+Share:
+
+The Clearing House will use Quant’s technology to bring on-chain capabilities to its tokenised deposit clearing and settlement network for financial institutions.
+
+NEW YORK, September 24, 2026 – The Clearing House announced the selection of Quant, a leading provider of programmable money infrastructure, to power its On-Chain Money Initiative, a new interoperable payments network that will enable financial institutions of all sizes to clear and settle tokenised deposit transactions. 
+
+Quant’s technology will enable the network’s interoperability, orchestration, and transaction-management layer that coordinates the clearing and settlement of tokenised deposit transactions, while providing connectivity to existing fiat payment systems that financial institutions and their customers use every day, including the RTP® and CHIPS® networks.
+
+Announced in June, the On-Chain Money Initiative responds to growing demand from businesses and financial institutions for greater speed, automation, and flexibility in how money moves. It aims to enable payments that settle immediately and transactions that trigger automatically once agreed conditions are met, reducing manual work and delays for banks and their customers. Quant has a proven track record of delivering on-chain capabilities in production and at scale. Its technology has already been deployed in regulated environments, working with central and commercial banks in the UK and around the world. 
+
+“Building interbank infrastructure for tokenised deposits requires proven technology that can scale,” said Sal Karakaplan, Chief Strategy Officer of The Clearing House. “The Clearing House has a long history of building and operating trusted payment networks that serve the banking industry. Quant brings the technology and expertise needed to support the network, giving financial institutions of all sizes a path to participate.” 
+
+“This marks a defining step in the global transition to programmable money,” said Gilbert Verdian, Founder and Chief Executive Officer of Quant. “Tokenised deposits are now the de facto way banks move money on-chain, and The Clearing House sits at the heart of the US banking system, meaning this partnership sets a standard for the rest of the world to follow. Quant is uniquely positioned to lead this transition. We’ve been building the technology that connects blockchain networks and regulated financial institutions since the earliest days of this industry. Together with The Clearing House, we’re changing how money works in America, and laying the foundation for programmable money that moves seamlessly across the financial system.” 
+
+Tokenised deposits are digital representations of a financial institution’s deposit, which retain the protections and regulatory oversight of a traditional deposit, but are recorded and moved differently. Tokenised deposits move automatically within rules institutions set in advance. For businesses, this means liquidity and payments processed around the clock. For financial institutions, it means joining a shared network rather than building one alone. 
+
+The On-Chain Money Initiative is designed to create new opportunities across corporate treasury, liquidity management, cross-border payments, and digital asset settlement. The network is expected to become available to participating institutions in the first half of 2027, with additional details on participation and use cases to be announced as development progresses. 
+
+About The Clearing House
+
+The Clearing House operates US-based payments networks that clear and settle more than $2 trillion each day through wire, ACH, check image, and real-time payments. It is the nation’s most experienced payments company, with a long track record of providing secure and reliable systems, payments innovation, and strategic thought leadership to financial institutions. The Clearing House revolutionised US payments by introducing the RTP® network, which supports the immediate clearing and settlement of payments, along with the ability to exchange related payment information across the same secure channel. These RTP capabilities enable all financial institutions to offer safer, faster, and smarter digital transaction services for their corporate and retail customers. 
+
+Learn more at www.theclearinghouse.org.
+
+About Quant
+
+Quant is the only company with proven, production-grade capability to connect blockchain networks and regulated financial institutions at scale. Our technology makes money programmable, enabling banks, capital markets firms, and financial institutions to coordinate money and asset flows around the clock, settling tokenised deposits seamlessly, automatically and securely. Quant operates across regulated programmes worldwide and, through our Tokenised Deposits-as-a-Service solution, commercial banks of any size can issue and move tokenised deposits without building new infrastructure themselves. Built on a decade of blockchain heritage and deep expertise across global payments and capital markets, Quant is defining the future of money. 
+
+For more information, visit quant.network.
+
+Media Contacts:
+
+Greg MacSweeney
+The Clearing House
+Gregory.MacSweeney@theclearinghouse.org 
+
+Chris Buscombe
+Quant
+Buscombe@arenaadvisorygroup.com 
+
+BANKS ON-CHAIN MONEY INITIATIVE THE CLEARING HOUSE TOKENISED DEPOSITS
+Back to media centre
+Share:
+Subscribe and be the first to know
+
+By submitting your email address, you agree to receive occasional marketing messages from Quant, from which you can unsubscribe at any time. For more information please see our privacy policy.
+
+Related posts
+Events
+8 October 2026
+From pilots to production: Five takeaways from Sibos 2026
+INTEROPERABILITY PROGRAMMABILITY PROGRAMMABLE MONEY
+News
+24 September 2026
+Quant powers The Clearing House’s On-Chain Money Initiative in the US
+BANKS ON-CHAIN MONEY INITIATIVE THE CLEARING HOUSE
+More
+WHO WE SERVE
+Banks
+Capital Markets
+Financial Institutions
+SOLUTIONS
+Quant Flow Platform
+QuantNet
+Quant Fusion
+Discover PayScript®
+INSIGHTS
+Use cases
+Blogs and articles
+Reports and Media
+COMPANY
+About Us
+Partners
+Associations
+Careers
+GET IN TOUCH
+Contact
+Media and Press
+© 2026 Quant Network Limited. All rights reserved.
+Privacy policy
+Legal
+Making money work.

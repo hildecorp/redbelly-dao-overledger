@@ -1,0 +1,69 @@
+URL: https://vine.redbelly.network/business-verification/
+TITLE: Business verification - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Business verification
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Business verification
+Verify business
+Identifier contract
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Business verification¶
+
+Business verification ensures that other network participants know they're interacting with official representatives and smart contracts on chain. This helps to reduce the risk of impersonation and misleading customers.
+
+Verifying a business¶
+
+To be verified, businesses need to prove they are an incorporated entity to a network accredited issuer.
+
+Get started
+
+Already verified?¶
+MANAGING A BUSINESS IDENTIFIER CONTRACT¶
+
+If you have already registered your business via an accredited issuer and want to amend the details on the network to reflect organisational changes, review our business identifier contract guide.
+
+Manage business identifier contract
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

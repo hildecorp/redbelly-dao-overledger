@@ -1,0 +1,132 @@
+URL: https://vine.redbelly.network/nodes/become-operator/
+TITLE: Become an operator - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Become an operator
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Become an operator
+Governance
+Reconfiguration
+Rules of engagement
+Node hosting agreement
+Technical specs
+Rewards and incentives
+Signup bonuses
+Staking
+Stake top up
+Operator guide
+Network status
+Support
+Becoming a node operator¶
+
+Node Operators contribute the networking, compute, and storage resources necessary to process transactions and update the state of the network. To do this, each node runs an instance of the DBFT consensus and SEVM processes.
+
+The node operators core responsibility is to run a node that maintains a copy of the blockchain's ledger, validates and records transactions, and contributes to the network's security and decentralisation by participating in DBFT consensus. In return, nodes are compensated through incentives, staking rewards, and transaction fees.
+
+Want to become a node operator on Redbelly Network?
+
+Apply
+
+Why run a node?¶
+
+Becoming a Redbelly Node Operator allows you to participate in our innovative and disruptive network that is revolutionising the adoption of blockchain technology as we know it through compliant asset tokenisation.
+
+Incentives¶
+
+Redbelly Node Operators are incentivised to participate through an ongoing staking reward as well as a portion of all gas fees. These incentives are paid in the native coin of the Redbelly Network, RBNT.
+
+Review reward and incentive structure →
+
+Requirements¶
+
+Set yourself up for success before applying to become a node operator by reviewing the requirements.
+
+Redbelly Network access¶
+
+Node operators MUST have network access for 2 accounts and provide their public address when applying to run a node. One account will be used to sign transactions, the other will be to receive rewards and incentives.
+
+Get Redbelly access
+
+Fund accounts¶
+
+Node operators are responsible for ensuring their signing address account is appropriately funded to sign transactions (e.g. request network reconfiguration).
+
+Get RBNT →
+
+Staking¶
+
+As outlined in the Network Governance, all nodes must stake 100,000 RBNT in order to participate. This acts as a disincentive to malicious behaviour. If a node is found to have acted maliciously, its stake can be slashed.
+
+Stake RBNT →
+
+Technical requirements¶
+
+Specific hardware and system requirements must be met to run a node successfully.
+
+Review technical requirements →
+
+Experience and expertise¶
+
+Setting up and operating a Redbelly node requires knowledge and experience with applicable hardware and software management, such as; DNS (Domain Name System) configuration, VPS (Virtual Private Server) setup and Linux command line syntax.
+
+The Redbelly community, and support team provide guidance on how to setup and onboard nodes onto the network but may only offer limited assistance for issues not directly related to the network infrastructure, or Redbelly specific technology.
+
+Rules of engagement¶
+
+Review the Rules of Engagement for becoming a Node Operator for Redbelly Network.
+
+Read rules of engagement →
+
+Apply¶
+Submissions currently closed¶
+
+Thank for your interest in our Node Operator Program. We have been overwhelmed with responses and will now take some time to work through them.
+
+Please join our community channels for updates on when we will open Node Operator submissions in the future.
+
+Selection process¶
+Successful applicants will receive full details of the Program and Incentives and next steps.
+Applicants will be notified by email on the outcome of their application.
+Applicants will be selected based upon their previous experience, location and commitment to the Redbelly Project.
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

@@ -1,0 +1,73 @@
+URL: https://vine.redbelly.network/bridged-tokens/celer/
+TITLE: Celer cBridge - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Celer cBridge
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Business verification
+Consensus
+Native currency
+Bridged tokens
+LayerZero
+Celer cBridge
+Lucid Labs
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Celer cBridge¶
+
+Bridge via Celer cBridge. Redbelly chain ID: 151.
+
+RBNT¶
+
+Redbelly address: 0x0000000000000000000000000000000000000000 (native)
+
+RBNT bridges out from Redbelly to Ethereum and BNB Chain, not back.
+
+Chain	Address	Symbol	Name	Decimals
+Ethereum	0x063a1D5BFEAb213c9c12f47b704fccf81D60983e	wRBNT	Wrapped RBNT	18
+BNB Chain	0x91623d90B33f181E6F5436fE0fB8b81932462f83	wRBNT	Wrapped RBNT	18
+wRBNT¶
+
+Redbelly address: 0x6ed1F491e2d31536D6561f6bdB2AdC8F092a6076 ↗
+
+Chain	Address	Symbol	Name	Decimals
+Ethereum	0x063a1D5BFEAb213c9c12f47b704fccf81D60983e	wRBNT	Wrapped RBNT	18
+BNB Chain	0x91623d90B33f181E6F5436fE0fB8b81932462f83	wRBNT	Wrapped RBNT	18
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

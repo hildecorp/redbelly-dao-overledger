@@ -1,0 +1,187 @@
+URL: https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook/blob/main/deliverable/Redbelly-task-16-revised.pdf
+TITLE: TASK-16 Cross-Chain Recovery Playbook (PDF text)
+
+1. Pre-Flight Warning.
+Match the network on the exchange deposit page before you send.
+
+Before you deposit RBNT to any centralized exchange, open its RBNT deposit page, read
+the network it credits, and send on exactly that network. Exchanges listing RBNT credit it
+on the redbelly network as native RBNT, not as an Ethereum erc-20 token. Sending the
+wrong form to the wrong network is how deposits are lost.
+
+The correct deposit procedure:
+
+   1. Open the exchange, go to the RBNT deposit page, and read the network or chain
+      selector
+   2. If it says Redbelly Network, send native RBNT on the Redbelly Network to the
+       address shown.
+
+   3. If it says Ethereum (ERC-20), do not send native RBNT. Bridge native RBNT to
+       wRBNT on Ethereum using Reddex or Lucid Labs first, then deposit the ERC-20
+       wRBNT over Ethereum.
+
+   4. Send 1 RBNT as a test amount first, confirm the exchange credits the deposit, then
+       send the remaining balance.
+
+2. Verified Reference Table
+
+Every value below is checked against an official source at time of writing. Treat any
+contract or bridge not listed here as unverified.
+
+   1. Redbelly network settings: Chain ID 151, RPC
+       governors.mainnet.redbelly.network, currency symbol RBNT, explorer
+       redbelly.routescan.io. Source: redbelly.network.
+   2. WRBNT token on Ethereum:
+       0xb45fFB51984d626Ee758b336C61Cf20990c6bF13. Source:
+       https://x.com/RedbellyNetwork/status/1890340030197166112?s=20
+   3. Swap venue for wRBNT: Uniswap, wRBNT/ETH pool. Source:
+       x.com/RedbellyNetwork/status/1890340030197166112.
+   4. Official Bridges: Reddex (reddex.io) or Lucid Labs (app.lucidlabs.fi/bridge).
+      Source: reddex.io referenced by
+      x.com/RedbellyNetwork/status/1862434915691729253; Lucid Labs announced in
+      July 2025 Month in Review (https://medium.com/@redbellyblockchain/redbelly-
+      network-month-in-review-july-2025-2412b13b1e22)
+
+Note: Redbelly has officially announced the Ethereum wRBNT contract. It has not
+officially verified any wrapped RBNT contract address for BNB Chain or Base. Treat any
+token on those chains claiming to be RBNT as unverified until a direct Redbelly source
+publishes the contract.
+
+3. Failure Mode 1: Wrapped RBNT Shows Zero Value or Fails to Swap
+
+Bridge the tokens back to Redbelly Network or swap in the official Ethereum pool. A zero
+dollar value means your wallet lacks a price feed, not that the balance is empty. Swaps
+fail because you are trying them on a venue that has no wRBNT liquidity.
+
+To swap wRBNT on Ethereum:
+
+   1. Open app.uniswap.org in your browser.
+
+   2. Click the top token dropdown, paste
+      0xb45fFB51984d626Ee758b336C61Cf20990c6bF13, and select wRBNT.
+   3. Click the bottom token dropdown and select ETH.
+
+
+
+
+   4. Enter 1 or more in the wRBNT amount field.
+
+   5. Click Swap.
+
+   6. Click Confirm Swap and approve the transaction in your wallet.
+
+Success Condition: The transaction succeeds, and your Ethereum wallet balance
+reflects the received ETH.
+
+4. Failure Mode 2: Stablecoins Stranded on Ethereum.
+
+Use Reddex or Lucid Labs to move the stablecoins to Redbelly Network. A failed or
+abandoned bridge attempt leaves the funds on the source chain.
+To bridge stranded stablecoins to Redbelly:
+
+   1. Open reddex.io in your browser.
+
+   2. Click Connect Wallet and approve the connection.
+
+   3. Click the Source Network dropdown and select Ethereum.
+
+
+
+
+   4. Click the Destination Network dropdown and select Redbelly Network.
+
+
+
+
+   5. Click the Token dropdown and select USDC or USDT.
+   6. Enter the amount to bridge.
+
+   7. Click Approve and sign the request in your wallet.
+
+   8. Click Bridge and confirm the transaction in your wallet.
+
+Success Condition: The stablecoins appear in your wallet on the Redbelly Network,
+verifiable on redbelly.routescan.io.
+
+5. Failure Mode 3: Stuck Bridge Transfers and Quote Errors.
+
+Manually execute the transfer or retry the quote. Transfers bridged to Ethereum via
+Polymer do not automatically relay. Many stuck transfers to Ethereum are just waiting on
+this step.
+
+To resolve stuck Ethereum transfers:
+
+   1. Open app.lucidlabs.fi and connect the exact wallet you bridged from.
+
+   2. Open Bridge History and find your transfer.
+
+   3. Click Claim inside the Action column next to the transfer.
+
+   4. Confirm the transaction in your wallet and pay the Ethereum gas fee.
+
+Success Condition: The Bridge History status updates to Complete, and the
+destination explorer shows the expected RBNT or wRBNT balance.
+
+To resend a failed transfer or fix a quote error:
+   1. Refresh the app.lucidlabs.fi page and enter 1 RBNT to test if the quote failure is
+        due to route limits.
+
+   2. If a transfer failed completely, open Bridge History and select the affected transfer.
+
+   3. Click Resend Transaction.
+
+   4. Choose a different bridge adapter from the available options and confirm the
+        transaction in your wallet.
+
+6. Handling BNB Chain RBNT
+
+   1.   Confirm the exact token address in your wallet. Redbelly has not officially verified
+        any RBNT contract on BNB Chain.
+
+   2.   Do not attempt to swap it on a BSC decentralized exchange. There is no official
+        RBNT liquidity, meaning you risk interacting with copycat pools.
+
+   3.   Because the official Redbelly bridges (Reddex and Lucid) currently only support
+        bridging USDC and USDT from BNB Chain, you cannot officially recover BNB
+        Chain RBNT to the Redbelly Network at this time.
+
+   4.   Hold the token safely in your wallet until Redbelly officially announces a BNB
+        Chain wRBNT contract and an active bridge route.
+
+7. Failure Mode 4: RBNT Sent to the Wrong Exchange Network
+
+Open a support ticket with the exchange immediately. Recovery depends entirely on the
+exchange manual-recovery policy. Do not send a second deposit to unlock the first.
+
+To request exchange recovery (MEXC Example):
+
+   1. Open redbelly.routescan.io and paste your wallet address into the search bar.
+   2. Click the sending transaction and copy the Transaction Hash.
+
+
+
+
+   3. Scroll to the bottom of the MEXC homepage and click Submit a Ticket under the
+      Resources category.
+
+   4. Select the Uncredited Deposit Return Application form.
+
+   5. Fill in the form with the Transaction Hash, deposit address, amount, token (RBNT),
+      and the incorrect network you sent on.
+
+   6. Submit the application and wait 1-2 business days for the review.
+
+Success Condition: The exchange manually credits the deposit to your account or
+returns the funds to your sending wallet.
+
+8. Testing and Verification Evidence
+
+The recovery steps documented above are verified on mainnet. Below is the on-chain
+proof of successful recovery for the documented failure modes.
+
+wRBNT Swap Verification:
+0x693df46d1c9e1c89f309a743d0e0f6e0f1d6b532f24e972cf140517986f7a36a
+
+USDC Bridge Verification:
+0x28f492cfff318efd0a55e0d006ecf22bbe0d2a4e7c4ef56dc1cfd1f2ab08bcf2
+

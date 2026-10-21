@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1314" role="img" aria-labelledby="levels-n-title levels-n-desc">
+<title id="levels-n-title">Three meanings of 'connect', three answers</title>
+<desc id="levels-n-desc">Three stacked cards show, for each meaning of connect, what is in place and what is missing or open. Level 1, Gateway access, is possibly, unconfirmed; Level 2, Flow Apps, is unknown; Level 3, Fusion Rollup, is not possible yet.</desc>
+<rect x="10" y="8" width="380" height="535" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+<text x="26" y="58" font-family="JetBrains Mono, monospace" font-size="44" font-weight="500" fill="#ffb3ae">1</text>
+<text x="66" y="36" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">LEVEL</text>
+<text x="66" y="58" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="700" fill="#f1f5f8">Gateway access</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="28" y="88">read data, send self-signed transactions</tspan></text>
+<circle cx="32.5" cy="117.0" r="4" fill="#FCD34D"/>
+<text x="43" y="122.04" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#FCD34D" letter-spacing="1.2">POSSIBLY, UNCONFIRMED</text>
+<rect x="28" y="150" width="344" height="375" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+<text x="44" y="178" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">IN PLACE</text>
+<line x1="44" y1="190" x2="356" y2="190" stroke="#263641" stroke-width="1"/>
+<path d="M46 212.5 l3.5 3.5 l7 -7.5" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="217">Redbelly is EVM compatible</tspan></text>
+<path d="M46 242.5 l3.5 3.5 l7 -7.5" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="247">Ankr, an approved provider,</tspan><tspan x="68" dy="19">runs a Redbelly RPC</tspan></text>
+<path d="M46 291.5 l3.5 3.5 l7 -7.5" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="296">RPC answers chain ID <tspan font-family="JetBrains Mono, monospace" font-weight="500">151</tspan></tspan></text>
+<line x1="28" y1="314" x2="372" y2="314" stroke="#263641" stroke-width="1.5"/>
+<text x="44" y="348" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">MISSING OR OPEN</text>
+<line x1="44" y1="360" x2="356" y2="360" stroke="#263641" stroke-width="1"/>
+<circle cx="51" cy="382" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="387">Self-serve status not confirmed</tspan></text>
+<circle cx="51" cy="412" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="417">Health check method not documented</tspan></text>
+<circle cx="51" cy="442" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="447"><tspan font-family="JetBrains Mono, monospace" font-weight="500">net_version</tspan> not supported on Redbelly</tspan></text>
+<circle cx="51" cy="472" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="477">Keyed Ankr endpoint not confirmed</tspan></text>
+<circle cx="51" cy="502" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="507">Live network lists need an API key</tspan></text>
+<g transform="translate(0 30)">
+<rect x="10" y="525" width="380" height="275" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+<text x="26" y="575" font-family="JetBrains Mono, monospace" font-size="44" font-weight="500" fill="#ffb3ae">2</text>
+<text x="66" y="553" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">LEVEL</text>
+<text x="66" y="575" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="700" fill="#f1f5f8">Flow Apps</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="28" y="605">Quant workflows such as signing</tspan></text>
+<circle cx="32.5" cy="634.0" r="4" fill="#ffb3ae"/>
+<text x="43" y="639.04" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" letter-spacing="1.2">UNKNOWN</text>
+<rect x="28" y="667" width="344" height="115" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+<text x="44" y="695" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">OPEN</text>
+<line x1="44" y1="707" x2="356" y2="707" stroke="#263641" stroke-width="1"/>
+<circle cx="51" cy="729" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="734">Catalogue shown only to account holders</tspan></text>
+<circle cx="51" cy="759" r="4.5" fill="none" stroke="#8fa1ad" stroke-width="1.5"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="764">Every shipped app is built by Quant</tspan></text>
+<rect x="10" y="812" width="380" height="464" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+<text x="26" y="862" font-family="JetBrains Mono, monospace" font-size="44" font-weight="500" fill="#ffb3ae">3</text>
+<text x="66" y="840" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">LEVEL</text>
+<text x="66" y="862" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="700" fill="#f1f5f8">Fusion Rollup</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="28" y="892">deposits, unified balances,</tspan><tspan x="28" dy="19">cross-chain messages</tspan></text>
+<circle cx="32.5" cy="940.0" r="4" fill="#EF5350"/>
+<text x="43" y="945.04" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae" letter-spacing="1.2">NOT POSSIBLE YET</text>
+<rect x="28" y="973" width="344" height="285" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+<text x="44" y="1001" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">IN PLACE</text>
+<line x1="44" y1="1013" x2="356" y2="1013" stroke="#263641" stroke-width="1"/>
+<line x1="46" y1="1035" x2="56" y2="1035" stroke="#8fa1ad" stroke-width="2" stroke-linecap="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="1040">Nothing documented for Redbelly</tspan></text>
+<line x1="28" y1="1058" x2="372" y2="1058" stroke="#263641" stroke-width="1.5"/>
+<text x="44" y="1092" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#8fa1ad" letter-spacing="1.5">MISSING</text>
+<line x1="44" y1="1104" x2="356" y2="1104" stroke="#263641" stroke-width="1"/>
+<path d="M46.75 1121.75 L55.25 1130.25 M55.25 1121.75 L46.75 1130.25" fill="none" stroke="#EF5350" stroke-width="1.75" stroke-linecap="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="1131">Not in the documented list</tspan></text>
+<path d="M46.75 1151.75 L55.25 1160.25 M55.25 1151.75 L46.75 1160.25" fill="none" stroke="#EF5350" stroke-width="1.75" stroke-linecap="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="1161">Bridge and dispute contracts on Redbelly</tspan></text>
+<path d="M46.75 1181.75 L55.25 1190.25 M55.25 1181.75 L46.75 1190.25" fill="none" stroke="#EF5350" stroke-width="1.75" stroke-linecap="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="1191">Rollup state roots posted to Redbelly</tspan><tspan x="68" dy="19">from accounts with Redbelly access</tspan></text>
+<path d="M46.75 1230.75 L55.25 1239.25 M55.25 1230.75 L46.75 1239.25" fill="none" stroke="#EF5350" stroke-width="1.75" stroke-linecap="round"/>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#f1f5f8"><tspan x="68" y="1240">Each token added by Quant governance</tspan></text>
+</g>
+</svg>

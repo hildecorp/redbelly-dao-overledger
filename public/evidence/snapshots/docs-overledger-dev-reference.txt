@@ -1,0 +1,238 @@
+URL: https://docs.overledger.dev/reference
+TITLE: Liveness check
+
+Jump to Content
+Quant Connect Login
+Talk to us
+Home
+Guides
+API Reference
+Release Notes
+Search
+CTRL-K
+CTRL-/
+OVERLEDGER SERVER
+Health
+Liveness check
+GET
+Readiness check
+GET
+Observability
+Prometheus metrics
+GET
+RPC
+Fusion L2 JSON-RPC
+POST
+User
+Get current user ID
+GET
+List user's deployed contracts on the Fusion Rollup
+GET
+Get deployed and permitted contracts for the user on the Fusion Rollup
+GET
+List user transactions on the Fusion Rollup
+GET
+List user's registered nodes connected to Overledger
+GET
+List user's registered RPC providers connected to Overledger
+GET
+Update provider reset policy
+PUT
+Reactivate a provider's nodes
+POST
+List user's QNT stake transactions
+GET
+Get total QNT staked amount for the user
+GET
+List the authenticated user's swaps on the Fusion Rollup
+GET
+List the user's combined deposit + swap history
+GET
+Deposits
+List the authenticated user's deposits onto the Fusion Rollup
+GET
+Get token deposit balances for a wallet
+GET
+Get token deposit allowances for a wallet
+GET
+Create a deposit record
+POST
+Get a deposit by ID
+GET
+Refresh + return a deposit's on-chain status
+GET
+Contracts
+Get contract details
+GET
+Update contract visibility
+PUT
+List permissions for a contract
+GET
+Grant permission to a user for a permissioned contract
+POST
+Revoke permission from a user for a contract
+DEL
+Stakes
+Record a QNT stake transaction
+POST
+Get the QNT staking address for this user
+GET
+Nodes
+Register a new DLT node
+POST
+Remove a registered node
+DEL
+Networks
+Get total network count
+GET
+List all networks
+GET
+List Fusion Rollup connected networks
+GET
+Flow Sessions
+Create a new Flow App session
+POST
+List sessions for the authenticated client
+GET
+Get session metadata
+GET
+Get the current step's StepSpec
+GET
+Submit field values and an action for the current step
+POST
+Flow Registry
+List available Flow Apps
+GET
+List allowed UI component types
+GET
+Get a Flow App's details and versions
+GET
+Flow Query
+Execute a read-only query against a Flow App
+GET
+Flow Webhooks
+Subscribe to webhook events for a Flow App
+POST
+List webhook subscriptions for a Flow App
+GET
+Delete a webhook subscription
+DEL
+List / replay webhook events for a Flow App
+GET
+Swaps
+List supported swap tokens + their metadata
+GET
+Get a swap quote (no on-chain effect)
+POST
+Record an executed swap transaction
+POST
+Get a swap by ID
+GET
+Refresh + return a swap's on-chain status
+GET
+Withdrawals
+Initiate an L2-to-L1 withdrawal
+POST
+List the caller's withdrawals awaiting a user action (prove / finalize)
+GET
+Get a single withdrawal by id
+GET
+Refresh and return a withdrawal's current status
+GET
+Record the L1 prove transaction hash for a withdrawal
+POST
+Record the L1 finalize transaction hash for a withdrawal
+POST
+List the authenticated user's withdrawals
+GET
+API Keys
+Mint a new API key for the authenticated user
+POST
+List the authenticated user's API keys
+GET
+Revoke one of the authenticated user's API keys
+DEL
+Tracker Address
+Subscribe to events involving an address
+POST
+Cancel an address subscription
+DEL
+List recorded events for an address
+GET
+Tracker Event
+Subscribe to a specific contract event signature
+POST
+Cancel a contract-event subscription
+DEL
+List recorded events for a contract-event subscription
+GET
+Tracker Transaction
+Watch a tx hash and POST a callback on confirmation
+POST
+Get the current status of a tracked transaction
+GET
+Powered by 
+Copy Page
+Liveness check
+GET
+https://fusion-rollup.quant.dev/health
+Response
+200
+
+Service is alive
+
+RESPONSE BODY
+object
+status
+string
+runtimeVersion
+string
+
+The Flow App runtime version that Overledger is running.
+
+supportedSdkVersions
+array of strings
+
+The Flow App SDK versions this runtime accepts.
+
+Updated 4 months ago
+
+Readiness check
+Did this page help you?
+Yes
+No
+LANGUAGE
+Shell
+Node
+Ruby
+PHP
+Python
+URL
+Base URL
+https://fusion-rollup.quant.dev
+/health
+cURL Request
+1
+curl --request GET \
+2
+     --url https://fusion-rollup.quant.dev/health \
+3
+     --header 'accept: application/json'
+Try It!
+200
+1
+{
+2
+  "status": "ok",
+3
+  "runtimeVersion": "1.0.0",
+4
+  "supportedSdkVersions": [
+5
+    "1.0.0",
+6
+    "1.1.0"
+7
+  ]
+8
+}

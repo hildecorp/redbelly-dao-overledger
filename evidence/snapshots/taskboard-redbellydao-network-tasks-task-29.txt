@@ -1,0 +1,118 @@
+URL: https://taskboard.redbellydao.network/tasks/TASK-29
+TITLE: Quant Overledger and Redbelly Interoperability Research (TASK-29) | Redbelly DAO Task Board
+NOTE: a contributor link in this copy was replaced with [link removed], because the Task Board does not allow personal credit inside a deliverable. Nothing else was changed.
+
+Skip to content
+Task Board
+Tasks
+Ledger
+Rules
+Sign in
+All tasks
+TASK-29
+Research
+Cycle 3
+Open
+Reviewed by Reviewer 6
+Quant Overledger and Redbelly Interoperability Research
+
+Research whether Redbelly could connect to Quant's Overledger, what that would take, and what it would offer institutions, in a fully sourced feasibility report.
+
+Brief
+
+On 24 September 2026 The Clearing House named Quant as the technology partner for its On-Chain Money Initiative, a tokenised deposit network for US banks expected in the first half of 2027. Overledger, Quant's interoperability platform, is becoming a route by which banks reach other chains. The community is already asking whether Redbelly could plug into it. This task answers that with research, not guesswork.
+
+This is feasibility research only. Redbelly and Quant have no announced partnership or talks, and the report must not suggest otherwise. Redbelly has not published an official position on bridging, so treat anything not in a public source as unknown.
+
+Scope of work
+Explain what Overledger is and how chains connect to it today, from Quant's public documentation.
+Assess whether Redbelly can connect now, and if not, what is missing.
+Describe the technical work a connection would need, at a level a non engineer can follow.
+Explain what a connection could offer institutions using Redbelly.
+Explain how Receptor credentials and Tokeniser assets would behave across chains, and where compliance could break.
+Say plainly where the answer is "not possible yet" or "unknown".
+Write a short plain language summary the DAO can share with the community.
+Deliverables
+All are required
+1.
+The report, as a Google Doc, Word file or PDF. Length is your call, but it should be readable in one sitting.
+2.
+A short community summary (an X thread or a few paragraphs).
+3.
+A source list with a link for every factual claim.
+Quality benchmarks
+Every factual claim has a working source link.
+Clear separation between what is confirmed, what is analysis and what is unknown.
+A non technical reader can follow the main findings.
+Neutral tone, neither hyping nor dismissing the idea.
+Failure criteria
+Any one fails the submission
+Any wording that suggests a partnership, talks or plans between Redbelly and Quant.
+Any factual claim without a source, or with a source that does not support it.
+Technical claims about Redbelly or Overledger that are wrong.
+Price talk, investment advice or promises of returns.
+AI generated text submitted without checking, including made up facts or sources.
+Personal credit inside the deliverable (names, handles, signatures, watermarks or "made by" lines). Contributors are credited by the DAO once the work is accepted, not inside the work itself.
+Resources
+The Clearing House announcement, 24 September 2026: https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative
+Quant's announcement: https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/
+Overledger documentation: https://docs.overledger.dev/docs/start-here
+Overledger API reference: https://docs.overledger.dev/reference
+Redbelly docs (Receptor, verifiable credentials, Eligibility SDK): https://docs.redbelly.network
+Receptor overview: https://docs.redbelly.network/pages/receptor/
+Tokeniser website (product, technology, why tokenise, knowledge hub): https://tokeniser.com
+Celer cBridge support for Redbelly (RBNT to and from Ethereum and BNB Chain): https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/
+Wrapped RBNT on Ethereum, official contract 0xb45ffb51984d626ee758b336c61cf20990c6bf13 as announced by Redbelly: https://x.com/RedbellyNetwork/status/1890340030197166112
+TASK-08 bridge integration guide (winning entry, Sepolia to Redbelly testnet bridge): [link removed]
+TASK-08 repositories: and https://github.com/ashrtonomica/task08: https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide
+Another TASK-08 testnet bridge, with research on which bridge protocols support Redbelly: https://github.com/tycayomide/redbelly-testnet-bridge
+TASK-16 cross chain recovery playbook (winning entry): https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook
+How submissions are scored
+7 criteria, 1 to 5 each, 35 in total
+1.
+Deliverable completeness
+Does the submission include everything listed in Required Deliverables?
+2.
+Quality Benchmarks met
+Does the submission satisfy each benchmark defined in the task spec?
+3.
+Technical accuracy
+Is the code, analysis, or content factually correct and free of critical errors?
+4.
+Documentation quality
+Is the companion documentation clear, complete, and deployment-ready?
+5.
+Test coverage / verification
+Are all claims, functions, or outputs verifiable and tested?
+6.
+Failure Criteria
+Does the submission avoid every defined failure condition?
+7.
+Overall standard
+Does the submission meet the bar expected for a paid, published deliverable?
+
+The highest scoring shortlisted submission is selected when the task completes. Only the selected submission is paid.
+
+Reward
+
+47,259 RBNT
+about $91 today
+
+100% RBNT
+
+Slots
+0 of 5 open
+Submissions close
+2 Nov 2026, 19 days left
+Paid
+The selected submission only
+Sign in to take partCreate an account
+
+Paid community work for Redbelly, reviewed against a published rubric and recorded on a public ledger.
+
+Rulebook
+Terms and Conditions
+Public ledger
+Brand kit
+
+Redbelly DAO Community Task Board

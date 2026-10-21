@@ -1,0 +1,81 @@
+URL: https://vine.redbelly.network/identity/
+TITLE: Identity and participation on the network - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Identity and participation on the network
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Receptor (ID protocol)
+Verifiable credentials
+Eligibility
+User access
+Accredited issuers
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Identity and participation on the network¶
+
+Redbelly is purpose built for compliant asset tokenisation. As such, accountability is one of the foundations of the network that has been built directly into the protocol.
+
+Network access¶
+
+To ensure a baseline of accountability, all network participants MUST prove they are who they say they are before gaining access, a process facilitated by Receptor, Redbelly's native identity protocol.
+
+Receptor¶
+
+Redbelly's native identity protocol, Receptor facilitates identity verification on the network, enabling both users and businesses to prove claims about their identity through verifiable credentials.
+
+Explore Receptor →
+
+User access¶
+
+Before users can self-enable their accounts with write access to the network, they must claim an access credential from a network accredited issuer.
+
+Get access
+
+Business participation¶
+
+To reduce the risks associated with the impersonation or misrepresentation of businesses which can mislead customers, business verification is also available on the network. Like users, organisations can be verified to ensure that other network parties can be confident that they're interacting with licensed entities, official representatives and official smart contracts on chain.
+
+Verify a business
+
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

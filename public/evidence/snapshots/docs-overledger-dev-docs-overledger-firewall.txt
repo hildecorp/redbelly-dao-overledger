@@ -1,0 +1,133 @@
+URL: https://docs.overledger.dev/docs/overledger-firewall
+TITLE: Overledger Firewall
+
+Jump to Content
+Quant Connect Login
+Talk to us
+Home
+Guides
+API Reference
+Release Notes
+Search
+CTRL-K
+OVERLEDGER
+Start Here
+Overview
+QuickStart
+Authentication
+Overledger Gateway
+Connectors
+Flow Apps
+Signing
+Fusion Rollup
+Overledger Firewall
+Tutorials
+Troubleshooting
+Staking
+Powered by 
+Overledger Firewall
+
+Audience: Smart-contract developers; operators managing per-tenant access. Reading time: ~8 minutes. Prerequisites: Chapter 8: Fusion Rollup for the Fusion Rollup architecture and how the firewall contracts sit alongside it. You'll learn: The two enforcement layers of the Overledger and Fusion Firewall — Connector-layer enforcement against the authenticated user (off-chain, every DLT) and the on-chain Fusion Firewall sub-component (against addresses on the Fusion Rollup and its connected L1s); the smart-contract visibility model; cross-domain message whitelisting; token whitelisting; and how to manage permissions via the API.
+
+The Overledger and Fusion Firewall is the policy enforcement layer that decides, for every request entering Overledger, whether the caller is allowed to do what it's trying to do. It has two layers:
+
+The Connector layer (Overledger-wide, off-chain, the umbrella) runs inside the Gateway and enforces against the authenticated user (resolved from a JWT, an X-API-Key header, or an API key in the URL path). It applies to every public or permissioned DLT network that the Gateway reaches, and to the Flow Application plane that runs above them. This is what decides whether the caller can send RPC to a given DLT and network, whether they can see and call a given Flow App, and whether they can drive a given session.
+The Rollup layer (Fusion Firewall sub-component) runs off-chain but also on-chain, inside Fusion-specific contracts on the Fusion Rollup itself and on the Rollup-connected L1 chains. It enforces against on-chain addresses, deciding which addresses can call which smart contracts, send which cross-chain messages, and bridge which tokens. The link to user accounts is indirect: Overledger maintains the binding between each user and their authorised on-chain address(es) off-chain, so policies expressed against a user translate into on-chain address allowlists at the contracts that enforce them. Setting a contract permission for user X is therefore equivalent to allowlisting X's addresses on the on-chain firewall contracts.
+9.1 What the firewall enforces
+
+The Connector layer (Overledger Firewall, off-chain) enforces against the authenticated user across every DLT the Gateway reaches and across the Flow Application plane. The Rollup layer (Fusion Firewall sub-component) maintains the address-to-user binding off-chain and enforces against on-chain addresses inside Fusion-specific contracts on the rollup and its connected L1s.
+
+The firewall protects five resources. "User" / "address" in the column below indicates what the layer actually checks against — Overledger's address↔user binding translates between the two.
+
+Resource	Layer	Question answered
+Networks	Overledger Firewall	Can this user send RPC to this DLT and network?
+Flow Applications	Overledger Firewall	Can this user see and call this Flow App, and are they authorised for this specific session / step?
+Smart contracts	Fusion Firewall	Can this address (mapped from a user account) call this contract on the Fusion Rollup?
+Cross-domain messages	Fusion Firewall	Can this L1 address (mapped from a user account) deliver a message to this L2 contract?
+Deposited tokens	Fusion Firewall	Is this token allowed to be deposited onto the Rollup? (Rollup token policy is set per token, not per caller.)
+
+Every firewall check produces a deterministic allow/deny outcome. Denials return HTTP 403. On /flow/* routes the body is a ProblemDetails with type: urn:fusion:error:unauthorized; on other routes it's a StandardError. See chapter 11 for the response shapes.
+
+9.2 Overledger Firewall (Connector layer, off-chain)
+
+The Connector layer is the Overledger Firewall itself: it runs inside the Gateway, applies to every DLT the Gateway reaches (public networks, engagement-onboarded permissioned networks, and the Fusion Rollup), and gates the orchestration plane (Flow Applications) above them. It does not depend on any rollup-specific contract being present.
+
+When you submit a multi-DLT RPC call, the Gateway runs three checks before forwarding to a backend node:
+
+Network visibility. If the destination network is public, any authenticated user can reach it. If permissioned, the user must appear in the network's allowlist. If private, only the network owner can reach it.
+Method allowlist. A set of administrative or destructive RPC methods is blocked at the Gateway (e.g. personal_*, admin_*, txpool_* on EVM, and DLT-specific equivalents).
+Rate budget. The call must fit within your tier's quota (chapter 4.5).
+
+For Flow Application traffic, the same Connector layer runs Flow Application access control:
+
+App visibility. Every Flow App in the registry has a visibility attribute — public (any user can see and call), permissioned (only users the owner has explicitly granted), private (only the owner). GET /flow/registry/apps already filters listings by this attribute against the authenticated user, and any attempt to open a session for an app the caller isn't authorised for is rejected at the Gateway.
+Session ownership. Every session is bound to the user who created it. Steps and queries on a session can only be driven by that same user, even if they have otherwise broad access to the underlying app.
+Per-user data isolation. App data, queries, and webhook subscriptions are scoped per user by default (chapter 6.1 — Per-user data isolation (default)), the firewall enforces the scope so one tenant cannot see another's records via the same Flow App.
+
+If you administer a permissioned network or own a permissioned Flow App, you manage who can reach it.
+
+9.3 Fusion Firewall (Rollup layer, on-chain)
+
+The Rollup layer is the Fusion Firewall, the on-chain sub-component of the Overledger Firewall. It is enforced by Fusion-specific contracts deployed both on the Fusion Rollup itself and on each connected L1's bridge, so the rules survive even if the Gateway were bypassed. Three independent sub-systems govern what happens once a request is permitted to reach the rollup.
+
+9.3.1 Smart contract visibility
+
+Every contract deployed on Fusion Rollup carries a visibility attribute. The firewall enforces it on every eth_call and eth_sendRawTransaction that targets the contract.
+
+Visibility	Who can call
+public	Any authenticated user.
+permissioned	Users explicitly granted access by the deployer.
+private	Only the deployer.
+
+The deployer sets the visibility at deployment time. They can change it later, moving a contract from permissioned to public is irreversible (a public contract cannot be re-restricted without redeployment).
+
+📘
+Info, What "user" means here
+
+The visibility check is enforced on-chain against the calling address, not against a user account — blockchains have no notion of a user account. The address↔user binding described in section 9.1 is the indirection: when you grant user X access to a permissioned contract, the Gateway translates that into an allowlist of X's authorised on-chain addresses on the contract. Talking about "users" in the rows above is therefore shorthand for "the addresses bound to those user accounts".
+
+9.3.2 Cross-domain message whitelist
+
+The OP Stack's standard configuration lets any address deliver a message to any Rollup contract via a transaction on the connected DLT network. The Fusion Firewall gates this: the transaction sender on the connected DLT network must be allowlisted for the specific Rollup recipient.
+
+Allowlists are managed per Rollup contract by the contract's deployer.
+
+A message from a non-allowlisted sender silently no-ops on the Rollup, it does not revert the cross-domain transaction on the connected DLT network, but it never produces a call to the Fusion Rollup contract.
+
+9.3.3 Token whitelist
+
+The TokenWhitelist contract decides which tokens can move through the bridge for which (L1 chain, token) pairs. Token allowlist entries are governance-controlled (Quant Safe signers), not per-deployer, they apply to all users of the bridge.
+
+If you try to deposit or withdraw a non-whitelisted token, the bridge transaction reverts with TOKEN_NOT_WHITELISTED. To request a new token, contact your account team, adding a token requires governance sign-off.
+
+9.4 Managing permissions
+
+The contract permission API on the Gateway is the canonical way to grant and revoke access to permissioned contracts.
+
+Only the contract's deployer can grant or revoke; attempting to do so with a different key returns 403. Permission changes take effect on the next RPC call to the contract, there is no propagation delay.
+
+Best-practice patterns
+Production tenants on permissioned. Deploy the production version of your contract as permissioned and explicitly allowlist your production callers. This prevents a leaked key from another tenant from accidentally reaching your contract.
+Public faucets and registries on public. When you genuinely want anyone to interact (e.g. a token faucet, a public registry), public removes the firewall cost from every call.
+Internal experiments on private. During development, leave new contracts at private so only your own key can call them. Promote to permissioned or public when you're ready.
+👍
+Tip, Auditing firewall decisions
+
+GET /users/me/history returns deposit + swap history but is not an audit log for firewall decisions. For per-call audit, mirror the relevant /users/me/* and /flow/sessions/* endpoints to your own log store and alert on 403 responses on routes you care about.
+
+Updated 4 months ago
+
+Fusion Rollup
+Tutorials
+Did this page help you?
+Yes
+No
+Copy Page
+9.1 What the firewall enforces
+9.2 Overledger Firewall (Connector layer, off-chain)
+9.3 Fusion Firewall (Rollup layer, on-chain)
+9.3.1 Smart contract visibility
+9.3.2 Cross-domain message whitelist
+9.3.3 Token whitelist
+9.4 Managing permissions
+Best-practice patterns

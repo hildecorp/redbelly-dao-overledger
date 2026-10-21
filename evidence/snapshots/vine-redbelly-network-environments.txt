@@ -1,0 +1,98 @@
+URL: https://vine.redbelly.network/environments/
+TITLE: Environments - Redbelly Developer Portal
+
+Skip to content
+Redbelly Developer Portal
+Environments
+Type to start searching
+Start building
+Home
+Getting started
+Identity and participation
+Business verification
+Consensus
+Native currency
+Bridged tokens
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Support
+Redbelly Network environments¶
+
+Redbelly Network environment details.
+
+Mainnet
+Network name:	Redbelly Network Mainnet
+RPC URL:	https://governors.mainnet.redbelly.network
+Chain ID:	151
+Currency symbol:	RBNT
+Block explorer:	https://redbelly.routescan.io/
+
+Public RPC providers
+
+Third-party public endpoints for Mainnet.
+
+Ankr	https://rpc.ankr.com/redbelly_mainnet	View docs
+Uniblock	https://api.uniblock.dev/uni/v1/json-rpc?chainId=151	View docs
+
+Note
+
+Uniblock requires an API key on the x-api-key header for this endpoint. Get a free key at uniblock.dev.
+
+Get RBNT
+Learn how to get RBNT →
+Testnet
+
+Important
+
+Redbelly Testnet should be used for testing purposes only and not for production applications.
+
+Network name:	Redbelly Testnet
+RPC URL:	https://governors.testnet.redbelly.network
+Chain ID:	153
+Currency symbol:	RBNT
+Block explorer:	https://redbelly.testnet.routescan.io/
+Testing coins
+Learn how to receive coins on Testnet →
+DevNet (Deprecated)
+
+Important
+
+Redbelly DevNet is now deprecated. Any testing of smart contracts should be done on the Redbelly Testnet.
+
+Network name:	RedbellyDevNet
+RPC URL:	Deprecated
+Chain ID:	152
+Currency symbol:	RBNT
+Block explorer:	Deprecated
+ Back to top
+
+Vine
+
+Redbelly Network developer portal
+
+© Redbelly Network 2026.
+
+Develop on Redbelly
+Start building
+Identity and participation
+Business verification
+Consensus
+EVM compatibility
+Native currency
+Network fees
+Smart contracts
+Environments
+Nodes
+Network status
+Policies
+Node hosting agreement
+Technical support and service level
+Redbelly Network Terms and Conditions
+Getting stuck?
+
+If you need some assistance developing on the network or hosting a node, there are support options which may help.
+
+Support

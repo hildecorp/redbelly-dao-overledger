@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1130" role="img" aria-labelledby="breaks-n-title breaks-n-desc">
+<title id="breaks-n-title">Where compliance could break</title>
+<desc id="breaks-n-desc">Three stacked boxes show an asset on Redbelly, a bridge that locks it and issues a copy on the other chain, and the copy on another chain, with seven numbered red markers where compliance could break. A legend of the seven break points sits below, marked as analysis; points 5 and 7 apply to the Fusion Rollup.</desc>
+<defs>
+<marker id="breaks-n-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8fa1ad"/></marker>
+</defs>
+<rect x="8" y="8" width="384" height="759" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+<rect x="20" y="22.0" width="360" height="265" rx="6" fill="#1d3140" stroke="#EF5350" stroke-width="2"/>
+<text x="36" y="54.0" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="700" fill="#ffb3ae">On Redbelly</text>
+<rect x="32" y="72.0" width="336" height="40" rx="6" fill="#17222a" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 83.5) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><circle cx="12" cy="12" r="3.4"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="97.0">Tokeniser asset</tspan></text>
+<rect x="32" y="120.0" width="336" height="59" rx="6" fill="#17222a" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 141.0) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.2c0 4.6-3.2 8.2-7.5 9.8-4.3-1.6-7.5-5.2-7.5-9.8V6z"/><path d="M8.6 12.2l2.4 2.4 4.4-4.6"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="145.0">Identity, eligibility and limits</tspan><tspan x="71" dy="19">checked at every transfer</tspan></text>
+<rect x="32" y="187.0" width="336" height="40" rx="6" fill="#17222a" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 198.5) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6.5h11M9 12h11M9 17.5h11"/><circle cx="4.6" cy="6.5" r="1.1"/><circle cx="4.6" cy="12" r="1.1"/><circle cx="4.6" cy="17.5" r="1.1"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="212.0">Issuer register updated in real time</tspan></text>
+<circle cx="345" cy="207.0" r="11" fill="#EF5350"/>
+<text x="345" y="211.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">6</text>
+<rect x="32" y="235.0" width="336" height="40" rx="6" fill="#17222a" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 246.5) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5" width="18.4" height="14" rx="2.4"/><circle cx="8.6" cy="11" r="2.2"/><path d="M5.4 16.2c.6-1.6 1.8-2.4 3.2-2.4s2.6.8 3.2 2.4M14.4 10h4M14.4 13.6h3"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="259.9">Receptor access credential</tspan></text>
+<rect x="20" y="351.0" width="360" height="150" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+<text x="36" y="383.0" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="700" fill="#f1f5f8">Bridge</text>
+<circle cx="345" cy="377.0" r="11" fill="#EF5350"/>
+<text x="345" y="381.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">5</text>
+<rect x="32" y="401.0" width="336" height="40" rx="6" fill="#141f26" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 412.5) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><rect x="4.6" y="10.6" width="14.8" height="10" rx="2.2"/><path d="M8 10.6V7.6a4 4 0 0 1 8 0v3"/><path d="M12 14.6v2.2"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="425.9">Locks the asset on Redbelly</tspan></text>
+<rect x="32" y="449.0" width="336" height="40" rx="6" fill="#141f26" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 460.5) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><rect x="8.6" y="8.6" width="12" height="12" rx="2.2"/><path d="M15.4 8.6V5.6a2.2 2.2 0 0 0-2.2-2.2H5.6a2.2 2.2 0 0 0-2.2 2.2v7.6a2.2 2.2 0 0 0 2.2 2.2h3"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="473.9">Issues a copy on the other chain</tspan></text>
+<rect x="20" y="565.0" width="360" height="188" rx="6" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+<text x="36" y="597.0" font-family="Be Vietnam Pro, sans-serif" font-size="17" font-weight="700" fill="#f1f5f8">On another chain</text>
+<circle cx="345" cy="591.0" r="11" fill="#EF5350"/>
+<text x="345" y="595.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">4</text>
+<rect x="32" y="615.0" width="336" height="59" rx="6" fill="#141f26" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 636.0) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8.4L19 7.6V21H6z"/><path d="M14.2 3.2v4.6h4.6M9.2 12.4h6.6M9.2 16.4h6.6"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="639.9">The copy follows only</tspan><tspan x="71" dy="19">that chain's rules</tspan></text>
+<circle cx="345" cy="644.5" r="11" fill="#EF5350"/>
+<text x="345" y="649.4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">1</text>
+<rect x="32" y="682.0" width="336" height="59" rx="6" fill="#141f26" stroke="#263641" stroke-width="1"/>
+<g transform="translate(44 703.0) scale(0.7083)" fill="none" stroke="#8fa1ad" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 7l2 2 3.4-3.6M3.6 15.6l2 2 3.4-3.6M12.4 7.6h8M12.4 16.2h8"/></g>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="71" y="706.9">Overledger firewall uses</tspan><tspan x="71" dy="19">its own allowlists</tspan></text>
+<circle cx="345" cy="711.5" r="11" fill="#EF5350"/>
+<text x="345" y="716.4" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">2</text>
+<circle cx="200" cy="287.0" r="3" fill="#8fa1ad"/>
+<line x1="200" y1="287.0" x2="200" y2="350.0" stroke="#8fa1ad" stroke-width="1.5" marker-end="url(#breaks-n-arrow)"/>
+<circle cx="200" cy="319.0" r="15" fill="#0c1317"/>
+<circle cx="200" cy="319.0" r="11" fill="#EF5350"/>
+<text x="200" y="323.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">3</text>
+<circle cx="200" cy="501.0" r="3" fill="#8fa1ad"/>
+<line x1="200" y1="501.0" x2="200" y2="564.0" stroke="#8fa1ad" stroke-width="1.5" marker-end="url(#breaks-n-arrow)"/>
+<circle cx="200" cy="533.0" r="15" fill="#0c1317"/>
+<circle cx="200" cy="533.0" r="11" fill="#EF5350"/>
+<text x="200" y="537.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">7</text>
+<rect x="8" y="781" width="384" height="341" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+<rect x="24" y="809.5" width="18" height="4" rx="2" fill="#EF5350"/>
+<text x="50" y="817" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" letter-spacing="1.5" fill="#8fa1ad">BREAK POINTS</text>
+<circle cx="188.5" cy="812.5" r="4" fill="#FCD34D"/>
+<text x="199" y="817" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" letter-spacing="1.2" fill="#FCD34D">ANALYSIS</text>
+<circle cx="36" cy="859.0" r="11" fill="#EF5350"/>
+<text x="36" y="863.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">1</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="864.0">Copy without eligibility checks</tspan></text>
+<circle cx="36" cy="895.0" r="11" fill="#EF5350"/>
+<text x="36" y="899.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">2</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="900.0">Two lists of who is allowed</tspan></text>
+<circle cx="36" cy="931.0" r="11" fill="#EF5350"/>
+<text x="36" y="935.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">3</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="936.0">Revocation does not reach the copy</tspan></text>
+<circle cx="36" cy="967.0" r="11" fill="#EF5350"/>
+<text x="36" y="971.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">4</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="972.0">Merged balances can mix assets</tspan></text>
+<circle cx="36" cy="1003.0" r="11" fill="#EF5350"/>
+<text x="36" y="1007.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">5</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="1008.0">Fusion token list set by Quant governance</tspan></text>
+<circle cx="36" cy="1039.0" r="11" fill="#EF5350"/>
+<text x="36" y="1043.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">6</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="1044.0">Register must show units held elsewhere</tspan></text>
+<circle cx="36" cy="1075.0" r="11" fill="#EF5350"/>
+<text x="36" y="1079.9" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">7</text>
+<text font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="58" y="1080.0">Rollup dispute window, not</tspan><tspan x="58" dy="19">single round settlement</tspan></text>
+</svg>

@@ -1,0 +1,68 @@
+URL: https://docs.redbelly.network/pages/receptor/
+TITLE: Receptor - Redbelly Network Technical Documentation
+
+Skip to content
+Redbelly Network Technical Documentation
+Receptor
+Type to start searching
+Home
+Receptor
+Onboarding and Eligibility Kit
+Methods
+Proof By Query
+Selective Disclosure
+Modules
+Issuer
+Holder
+Verifier
+API
+Proof By Query
+Selective Disclosure
+Reference
+JSON-LD
+Iden3 Circuits
+Redbelly Environment
+Modules
+Issuer Accreditation
+Methods
+Receptor¶
+
+Knowing who you’re transacting with is a vital part of ensuring accountability when transacting real world assets. Users need to know that businesses are appropriately licensed to offer a product or service, and businesses need to know that users are eligible for their product or service.
+
+Receptor is Redbelly's native digital identity and verifiable credential protocol. It facilitates network access, ensuring that all network participants are who they say they are, helps use case developers to surface the eligibility criteria for their real world asset tokenisation use case, and helps users to prove that they meet those criteria.
+
+Receptor leverages foundational work done by Iden3, Polygon ID and Mattr Labs to add additional layers of accountability to the Redbelly Network. Leveraging these technologies in the context of real world asset tokenisation allows use cases to program both on chain and off chain eligibility criteria, ensuring that only eligible users can access particular products and services. For more information on each of these technologies, please see the relevant project's documentation.
+
+Receptor is built on the W3C verifiable credential data model, providing a standardised and interoperable foundation for identity verification and eligibility criteria assurance.
+
+Modules¶
+
+The framework is composed of three essential modules; the Issuer, the Holder, and the Verifier. The modules are built using node.js and typescript. Depending on the nature of your use case and your specific compliance requirements, you may require using one or more of these modules.
+
+Issuer: Use to define and issue verifiable credentials to users.
+
+Holder: Use to create experiences for users to store, manage, and use credentials that are issued to them.
+
+Verifier: Use to define eligibility criteria, surface requests of those criteria to users, and verify the authenticity and validity of the claims made by users based on their verifiable credentials.
+
+Issuer Accreditation¶
+
+It is important to note that while anyone can issue arbitrary credentials on the network, Redbelly ensures that all issuers who provide network access are accredited. This is to ensure a consistent baseline of accountability. For situations where identity is a key component of eligibility criteria, you may need to rely on these accredited third parties.
+
+Methods¶
+
+The Receptor modules support two type of credentials. They have distinct methods of passing data between holder and verifier. Understanding the differences will help selecting the appropriate methodology for a specific use case and compliance requirements.
+
+Proof by Query
+
+Use this method when you want to surface eligibility criteria and validate claims on-chain.
+Learn more ›
+
+Selective Disclosure
+
+Use this method when you require users to reveal specified, verifiable information off-chain.
+Learn more ›
+
+ Back to top
+© Redbelly Network 2025
+Made with Material for MkDocs

@@ -1,0 +1,62 @@
+URL: https://docs.redbelly.network/pages/eligibility-sdk/eligibility-sdk/
+TITLE: Overivew - Redbelly Network Technical Documentation
+
+Skip to content
+Redbelly Network Technical Documentation
+Overivew
+Type to start searching
+Home
+Receptor
+Onboarding and Eligibility Kit
+Onboarding and Eligibility Kit
+Introduction
+Overview
+Getting Started
+Installation
+Choosing Your Proof Method
+EligibilitySdk
+Overivew
+Supported Wallets
+Configure Eligibility Criteria
+Example
+IndividualOnboardingSDK
+Overview
+BusinessOnboardingSDK
+Overview
+API Reference
+EligibilitySdk
+IndividualOnboardingSDK
+BusinessOnboardingSDK
+Hooks
+useHasChainPermission
+useBusinessDetails
+Authorized Issuer DIDs for Averer
+Eligibility SDK for Redbelly Network¶
+
+The Eligibility SDK provides a flexible, backend-agnostic widget for Real-World Asset (RWA) platforms to verify investor eligibility using Privado ID and the Iden3 zero-knowledge proof ecosystem. This SDK enables developers to perform eligibility checks (e.g., age, KYC) with privacy-preserving proof submissions using Privado-compatible wallets, while allowing full customization of the backend logic.
+
+Authorized Issuer DIDs for Averer¶
+
+To ensure that your application correctly verifies credentials issued by Averer within the Redbelly Network ecosystem, you must specify the corresponding authorized Issuer DID in your zero-knowledge proof requests. This is typically done within the allowedIssuers array of your query object.
+
+Below are the official DIDs for Averer for each Redbelly Network environment:
+
+Network	Issuer DID
+Redbelly Mainnet	did:receptor:redbelly:mainnet:31AAH8sSaGd6fpnG1TcB6yQ4UZnNeyHzTk5aM2P7rjv
+Redbelly Testnet	did:receptor:redbelly:testnet:31K82iKCtE6ciDc7oAr3T5EpjZb4S1EFM7c4xJaWkM2
+Redbelly Staging	did:receptor:redbelly:testnet:31K82iKCtE6ciDc7oAr3T5EpjZb4S1EFM7c4xJaWkM2
+
+This documentation walks you through:
+
+Installation and setup
+Supported identity wallets
+Backend verifier service configuration (Privado ID Off-Chain Verifier)
+Frontend integration examples
+
+⚠️ The SDK depends on specific backend routes: /auth-request, /callback, and /status/:sessionId. These must match exactly or the SDK's will not function properly.
+
+🧩 The verifier server must include Iden3 public verification keys generated from the trusted setup inside a folder called keys/. https://github.com/0xPolygonID/phase2ceremony
+
+ Back to top
+© Redbelly Network 2025
+Made with Material for MkDocs

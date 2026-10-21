@@ -1,0 +1,201 @@
+URL: https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/TECHNICAL_GUIDE.md
+TITLE: Bridging Ethereum Sepolia to Redbelly Testnet: technical guide (raw Markdown)
+
+# Bridging Ethereum Sepolia to Redbelly Testnet: A Working Integration Guide
+
+**Redbelly DAO — TASK-08 (Documentation)**
+
+## Research findings: what actually supports Redbelly right now
+
+Before touching code, this task asks a real question: which bridges support Redbelly today?
+
+Here's the honest answer, checked directly against each protocol's own documentation:
+
+| Bridge | Redbelly Mainnet | Redbelly Testnet |
+|---|---|---|
+| LayerZero | ✅ Live — connects Redbelly to 150+ chains | ❌ Not listed in LayerZero's deployment registry |
+| Axelar | Not confirmed | ❌ Not listed |
+| Wormhole | Not confirmed | ❌ Not listed |
+| Connext | Not confirmed | ❌ Not listed |
+| thirdweb Bridge | ✅ UI-level aggregator | ✅ UI-level aggregator (routes liquidity, not a message-verification protocol you integrate into) |
+
+LayerZero went live on Redbelly Mainnet, but as of this writing no major interoperability protocol has deployed core messaging infrastructure (endpoints, gateways, or guardian sets) to **Redbelly Testnet** specifically. That infrastructure typically isn't something an individual developer can permissionlessly deploy either — LayerZero's endpoint/DVN/executor stack is set up by LayerZero Labs and its partners per chain, not by third parties.
+
+**One more thing worth flagging:** the original task brief lists "Polygon Mumbai" as a possible source chain. Mumbai was deprecated and replaced by Polygon Amoy. Any guide written against Mumbai today would fail on step one. This guide uses Ethereum Sepolia, which is live and stable.
+
+**What this means practically:** rather than document integration steps for infrastructure that doesn't exist on Redbelly Testnet, this guide builds a minimal, transparent lock-and-mint bridge — the same fundamental pattern LayerZero, Axelar, and Wormhole are all built on top of, just without their decentralized verification layer. You'll understand bridge architecture by building the simplest version of one, and you'll have a real, testable, repeatable integration path that doesn't depend on a third party adding Redbelly Testnet to their config.
+
+---
+
+## 1. Bridge architecture basics
+
+Every token bridge, regardless of vendor, does the same three things:
+
+1. **Lock (or burn)** — the asset is taken out of circulation on the source chain, either held in a contract or destroyed.
+2. **Verify** — something has to prove to the destination chain that step 1 really happened. This is the part that differs between bridges: LayerZero uses Decentralized Verifier Networks, Wormhole uses a set of Guardian validators, Axelar uses its own proof-of-stake chain as a hub. Our bridge uses a single trusted relayer — the simplest possible verification method, and the one every bridge design starts from before adding decentralization.
+3. **Mint (or unlock)** — the destination chain creates a wrapped representation (mint) or releases funds it was already holding (unlock).
+
+Our bridge:
+- **Sepolia → Redbelly Testnet**: `SourceBridge.lock()` holds `TestToken`, emits a `Locked` event → relayer watches → `DestBridge.mint()` creates `WrappedToken`.
+- **Redbelly Testnet → Sepolia**: `DestBridge.burn()` destroys `WrappedToken`, emits a `Burned` event → relayer watches → `SourceBridge.unlock()` releases the original `TestToken`.
+
+Every lock/burn carries a sequential nonce. The destination contract records which nonces it has already processed, so even if the relayer (or an attacker with the relayer's key) tries to submit the same proof twice, the second attempt reverts. That's replay protection — a minimum bar for any bridge, and one of the first things a reviewer checks.
+
+## 2. Prerequisites
+
+- Node.js 18+
+- A MetaMask wallet (use a **fresh burner wallet** — you'll be putting a private key in a `.env` file for a relayer script)
+- Sepolia ETH — get from any public faucet (search "Sepolia faucet"; Alchemy and Google both run one)
+- Redbelly Testnet RBNT — from Redbelly's testnet faucet (0.01 RBNT/day)
+- RPC access: `https://ethereum-sepolia-rpc.publicnode.com` (public, no signup) for Sepolia, `https://rpc-testnet.redbelly.network` for Redbelly Testnet (chain ID 153)
+
+## 3. Setup
+
+```bash
+git clone <this-repo>
+cd redbelly-bridge
+npm install
+cp .env.example .env
+# edit .env: add your PRIVATE_KEY and RELAYER_ADDRESS (same wallet for both, for this demo)
+```
+
+Verify everything compiles before touching any network:
+```bash
+npm run compile
+```
+
+Run the full bridge logic against a local EVM — no testnet, no funded wallet needed — to prove correctness first:
+```bash
+npm run test:local
+```
+Expected output ends with:
+```
+✅ Full round-trip bridge flow (lock -> mint -> burn -> unlock) passed with correct balances and replay protection.
+```
+
+## 4. Step-by-step integration walkthrough
+
+### Step 1 — Deploy the Sepolia side
+
+```bash
+npm run deploy:sepolia
+```
+
+This deploys `TestToken` (an ERC20 you can mint freely for testing) and `SourceBridge`, and writes `deployment-sepolia.json` with both addresses.
+
+Relevant contract logic:
+```solidity
+function lock(address recipient, uint256 amount) external {
+    require(amount > 0, "SourceBridge: amount must be > 0");
+    bool ok = token.transferFrom(msg.sender, address(this), amount);
+    require(ok, "SourceBridge: transferFrom failed - did you approve() first?");
+
+    uint256 currentNonce = nonce;
+    nonce++;
+    emit Locked(msg.sender, recipient, amount, currentNonce);
+}
+```
+
+### Step 2 — Deploy the Redbelly Testnet side
+
+```bash
+npm run deploy:redbelly
+```
+
+Deploys `WrappedToken` and `DestBridge`, then transfers mint/burn authority on `WrappedToken` over to `DestBridge`. Writes `deployment-redbelly.json`.
+
+### Step 3 — Start the relayer
+
+```bash
+npm run relayer
+```
+
+Leave this running in its own terminal. It polls both chains every 8 seconds for new `Locked`/`Burned` events (polling, not WebSocket subscriptions — see Troubleshooting §2 for why) and relays them.
+
+### Step 4 — approve, bridge (lock), claim (mint)
+
+In a second terminal:
+```bash
+npm run bridge -- 10
+```
+
+This runs, in order:
+
+```javascript
+// approve — required before any ERC20 can be pulled by another contract
+const approveTx = await testToken.approve(sourceBridgeAddress, amount);
+await approveTx.wait();
+
+// bridge — locks tokens on Sepolia and emits the event the relayer watches for
+const lockTx = await sourceBridge.lock(wallet.address, amount);
+await lockTx.wait();
+```
+
+Watch the relayer's terminal. Within one polling cycle it will pick up the `Locked` event and submit the claim automatically:
+
+```javascript
+// claim — the relayer calls this on your behalf; you never call it directly in this design
+const tx = await destBridge.mint(recipient, amount, nonce);
+await tx.wait();
+```
+
+### Step 5 — Verify
+
+- Sepolia: `https://sepolia.etherscan.io/tx/<lock tx hash>`
+- Redbelly Testnet: `https://explorer.redbelly.network/tx/<mint tx hash>` (the relayer prints this)
+
+Check your `WrappedToken` balance on Redbelly Testnet to confirm it matches what you locked.
+
+## 5. Gas cost analysis
+
+Measured directly (local EVM, London/Cancun opcode pricing — Sepolia and Redbelly Testnet gas *unit* costs will match this closely; only gas *price* in RBNT/ETH differs):
+
+| Operation | Gas used (first time, cold storage) | Gas used (subsequent) |
+|---|---|---|
+| Deploy TestToken | 566,330 | — (one-time) |
+| Deploy SourceBridge | 568,920 | — (one-time) |
+| Deploy WrappedToken | 632,381 | — (one-time) |
+| Deploy DestBridge | 508,426 | — (one-time) |
+| `approve()` | 46,367 | ~46,380 |
+| `lock()` | 80,265 | ~46,080 |
+| `mint()` (claim) | 100,379 | ~66,210 |
+
+Two things worth understanding here, not just copying:
+
+- **The first `lock()`/`mint()` cost more than later ones.** That's because writing to a storage slot that's never been touched (`SSTORE` from zero) costs more gas than updating one that already has a value. The `nonce` and `processedMints` mappings are cheaper to update once they're "warm."
+- **Amount doesn't meaningfully affect gas.** Locking 1 token vs. 10,000 tokens costs almost the same gas — ERC20 transfers cost gas based on *state changes*, not the size of the number being moved. This surprises people new to EVM gas mechanics.
+
+On real networks: Sepolia gas price is typically 1-3 gwei; total cost for one full lock+mint cycle is well under $0.01 in testnet ETH. Redbelly Testnet gas is effectively free for testing purposes.
+
+## 6. Troubleshooting
+
+**1. `transferFrom failed - did you approve() first?`**
+You called `lock()` without approving `SourceBridge` to spend your tokens, or you approved a smaller amount than you're trying to lock. Fix: call `approve()` for at least the amount you intend to lock, and wait for that transaction to confirm before locking.
+
+**2. Relayer doesn't seem to pick up your transaction**
+The relayer polls every 8 seconds by default — it isn't instant. If it's been over a minute:
+- Check the relayer terminal for errors (RPC connection issues are the usual cause)
+- Confirm your `lock()` transaction actually confirmed (check the Sepolia explorer link)
+- Public RPCs sometimes silently rate-limit `eth_getLogs` calls over large block ranges — this is why the relayer caps ranges at 2,000 blocks per poll rather than using open-ended `eth_subscribe`, which many public RPCs drop after a few minutes anyway.
+
+**3. RPC timeouts / "could not detect network"**
+Public RPC endpoints occasionally go down or rate-limit aggressively. Swap `SEPOLIA_RPC_URL` in `.env` for a dedicated endpoint (Alchemy or Infura both offer free tiers) if `publicnode.com` is flaky for you.
+
+**4. Gas estimation failures on deploy or lock/mint**
+Usually means your wallet doesn't have enough native gas token on that chain (Sepolia ETH or Redbelly RBNT) — the deploy scripts print your balance before deploying specifically to catch this early. Fund the wallet and retry.
+
+**5. "Already processed" revert when bridging**
+This is replay protection working correctly, not a bug. It means the nonce you're trying to submit has already been minted/unlocked — usually because the relayer already handled it before you checked, or you accidentally ran the relayer twice against the same deployment.
+
+**6. Stuck transactions (pending forever)**
+Almost always a gas price issue on Sepolia during congestion. Cancel by sending a 0-value transaction to yourself with the same nonce and a higher gas price, or just wait — Sepolia rarely stays congested long.
+
+**7. Deploying but `mint()`/`unlock()` always revert with "caller is not the relayer"**
+`RELAYER_ADDRESS` in your `.env` at deploy time must exactly match the wallet address the relayer script signs with. If you regenerate a wallet or typo the address, redeploy or call `setRelayer()` (owner-only) to fix it.
+
+**8. Compiler download fails ("HH502" or similar)**
+Hardhat's default compiler downloader pulls the Solidity compiler binary from `binaries.soliditylang.org`, which is blocked on some corporate/campus/CI networks. This repo sidesteps that entirely by using the pure-JavaScript `solc` npm package (see `scripts/compile.js`) instead of Hardhat's native downloader — no external binary fetch required at any point.
+
+## 7. Trust model — the part most bridge tutorials skip
+
+This bridge uses a single trusted relayer to verify that a lock happened before allowing a mint. That's a real limitation: whoever holds the relayer's private key can, in principle, mint tokens on Redbelly Testnet without a corresponding lock. For a testnet demo and for learning bridge architecture, that's an acceptable and honest tradeoff — it's also exactly the starting point every production bridge evolves from. LayerZero adds Decentralized Verifier Networks, Wormhole adds a 19-member Guardian set requiring 13 signatures, Axelar adds a full proof-of-stake validator set. All three exist to remove the single point of trust this bridge still has. If Redbelly Testnet becomes a first-class citizen in one of those networks, migrating from this design to theirs is a matter of swapping the verification step — the lock/mint token logic stays the same.

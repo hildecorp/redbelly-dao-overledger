@@ -1,0 +1,93 @@
+/* PDF version: light pages for reading and printing; hero and diagrams stay on their slate panels. */
+@page { size: A4; }
+html, body.print { background: #fff; }
+body.print { color: #0c1317; font-size: 10.4pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.print main { max-width: none; padding: 0; }
+.print .toc, .print .chips, .print .to-top, .print .page-switch, .print .copy, .print .zoom, .print .toast, .print .viewer, .print .progress, .print .hero-art, .print .actions { display: none !important; }
+.print .hero { border-radius: 8px; padding: 26px 28px 22px; margin: 0 0 16px; color: var(--text); }
+.print .hero .notice p { margin: 0; }
+.print .hero::before { display: none; }
+.print .plogo { height: 38px; width: auto; display: block; margin: 0 0 16px; }
+.print .hero h1 { font-size: 26pt; max-width: none; }
+.print .hero .lead { font-size: 12pt; margin-bottom: 14px; }
+.print .notice { font-size: 10pt; margin-bottom: 12px; }
+.print .meta-row { margin: 0; font-size: 8.5pt; }
+.print .kicker { color: #5b6b76; }
+.print .kicker .num { color: #B3272A; }
+.print .hero .kicker { color: #c2ced6; }
+.print .hero .kicker .num { color: var(--accent-text); }
+.print a { color: #B3272A; }
+.print section.s { padding: 6px 0 10px; }
+.print section.s + section.s { border-top: 1px solid #dfe5e9; padding-top: 16px; }
+.print .s h2 { font-size: 17pt; margin: 0 0 8px; break-after: avoid; }
+.print .s .intro { color: #3d4c56; font-size: 10.6pt; }
+.print .card, .print .share, .print .post, .print .verdict { background: #f6f8f9; border-color: #dfe5e9; color: #0c1317; }
+.print .card { padding: 12px 14px; margin: 9px 0; border-radius: 8px; }
+.print .card h3 { font-size: 11pt; }
+.print .glossary dt { font-size: 10pt; }
+.print .glossary dd, .print .glossary .gl-note { color: #3d4c56; font-size: 9.6pt; }
+.print .glossary .gl-i { border-color: #dfe5e9; padding: 6px 0; break-inside: avoid; }
+.print .card.method { background: #fff; }
+.print .legend li { color: #3d4c56; font-size: 9.5pt; }
+.print .verdicts { gap: 9px; margin-bottom: 14px; }
+.print .verdict { padding: 12px 14px; border-radius: 8px; }
+.print .verdict:hover { transform: none; }
+.print .verdict .q { color: #3d4c56; font-size: 9.6pt; }
+.print .verdict .big { font-size: 20pt; }
+.print .verdict .a { color: #0c1317; font-size: 9.8pt; }
+.print .verdict .vnum { color: #5b6b76; }
+.print .verdict.analysis .big { color: #a16207; }
+.print .verdict.confirmed .big { color: #B3272A; }
+.print .verdict.none .big { color: #0c1317; }
+.print .pill { font-size: 8.4pt; min-height: 0; }
+.print .pill.confirmed, .print .pill.tested { color: #166534; }
+.print .pill.analysis { color: #854d0e; }
+.print .pill.unknown, .print .pill.notyet { color: #B3272A; }
+.print .pill.unknown .dot { background: #EF5350; }
+.print .pill.none { color: #3d4c56; }
+.print sup.cite a { color: #B3272A; background: #fdecea; font-size: 7.5pt; }
+.print .fig sup.cite a, .print .hero sup.cite a { color: var(--accent-text); background: rgba(239, 83, 80, 0.16); }
+.print .fig { padding: 14px 14px 12px; margin: 10px 0; border-radius: 8px; }
+.print .fig .ft { color: var(--text); }
+.print .card ul li::before { background: #EF5350; }
+.print .card ol.steps li .sn { background: #fff; color: #0c1317; border-color: #c9d2d8; }
+.print .card ol.steps li.l3 .sn { background: #EF5350; color: #fff; border-color: #EF5350; }
+.print .card ol.steps .lvl { color: #5b6b76; }
+.print .card ol.steps li:not(:last-child)::after { background: #c9d2d8; }
+.print .tbl { background: #fff; border-color: #dfe5e9; font-size: 9.6pt; }
+.print .tbl th { background: #f1f4f6; color: #5b6b76; }
+.print .tbl td { border-color: #e6ebee; }
+.print .tbl td:first-child { color: #0c1317; }
+.print .tbl td .why { color: #3d4c56; }
+.print .share { padding: 12px 14px; }
+.print .share .body p { color: #0c1317; }
+.print .post { background: #fff; }
+.print .post .ptop { color: #5b6b76; }
+.print .card, .print .fig, .print .verdict, .print tr, .print .post, .print .share .body p { break-inside: avoid; }
+.print .kicker { break-after: avoid; }
+.print .srcs { break-before: page; }
+.print .plist { margin: 0; padding: 0 0 0 0; list-style: none; font-size: 8.6pt; line-height: 1.45; }
+.print .plist > li { margin: 0 0 7px; break-inside: avoid; }
+.print .plist > li > b { color: #B3272A; font-family: var(--mono); font-weight: 500; }
+.print .plist .u { color: #5b6b76; font-family: var(--mono); font-size: 7.8pt; overflow-wrap: break-word; word-break: normal; text-decoration: none; }
+.print .plist ul { margin: 3px 0 0 18px; padding: 0; color: #3d4c56; }
+.print .foot { display: none; }
+.print .fig .art.wide svg { max-height: 118mm; width: auto; max-width: 100%; margin: 0 auto; }
+.print .fig { break-before: auto; }
+/* Figure 2 is tall; give it its own page so its labels print at a readable size */
+.print #fig-routes { break-before: page; }
+.print #fig-routes .art.wide svg { max-height: 232mm; }
+.print .pill.notyet { color: #B3272A; }
+.print .pill.notyet .dot { background: #EF5350; }
+.print .tbl td .why { font-size: 10pt; }
+.print .post .count { display: none; }
+/* a chapter opener stays with its first block; long numbered lists may break between items */
+.print .s > div.rv:not(.card) { break-after: avoid; }
+.print .card:has(ol) { break-inside: auto; }
+.print .card li { break-inside: avoid; }
+/* comfortable line length in print */
+.print .card p, .print .card li, .print .s .intro, .print .fig figcaption, .print .share .body p { max-width: 150mm; }
+
+.print .plist .u .sc { white-space: nowrap; }
+
+.print, .print * { font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0, "clig" 0; }

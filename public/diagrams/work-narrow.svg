@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 885" role="img" aria-labelledby="work-n-title work-n-desc">
+  <title id="work-n-title">The work, step by step</title>
+  <desc id="work-n-desc">Level 1, if Overledger treats Redbelly as self-serve, is three steps: register a Redbelly node, pass the health check and give every sending address Redbelly access. Level 3 is five steps that depend on Quant, and none have been announced.</desc>
+  <rect x="12" y="12" width="376" height="371" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+  <line x1="47" y1="130" x2="47" y2="306" stroke="#263641" stroke-width="3" stroke-linecap="round"/>
+  <rect x="32" y="45" width="18" height="4" rx="2" fill="#8fa1ad"/>
+  <text x="60" y="52" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="700" fill="#f1f5f8">Level 1</text>
+  <rect x="32" y="68" width="272" height="28" rx="4" fill="#17222a" stroke="#263641" stroke-width="1.5"/>
+  <text x="46" y="87.0" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#c2ced6">small, if self-serve applies</text>
+  <text x="78" y="136" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8">Register a Redbelly node</text>
+  <text x="78" y="159" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="78">official RPC as private, or an approved</tspan><tspan x="78" dy="19">provider (not confirmed)</tspan></text>
+  <circle cx="47" cy="130" r="15" fill="#263641" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="47" y="135.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8">1</text>
+  <text x="78" y="224" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8">Pass the health check</text>
+  <text x="78" y="247" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6"><tspan x="78">if it fails, the node</tspan><tspan x="78" dy="19">is not added</tspan></text>
+  <circle cx="47" cy="218" r="15" fill="#263641" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="47" y="223.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8">2</text>
+  <text x="78" y="312" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8"><tspan x="78">Give every sending address</tspan><tspan x="78" dy="22">Redbelly access</tspan></text>
+  <text x="78" y="357" font-family="Be Vietnam Pro, sans-serif" font-size="14" font-weight="400" fill="#c2ced6">institutions can keep their own keys</text>
+  <circle cx="47" cy="306" r="15" fill="#263641" stroke="#8fa1ad" stroke-width="1.5"/>
+  <text x="47" y="311.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#f1f5f8">3</text>
+  <rect x="12" y="399" width="376" height="474" rx="6" fill="#0c1317" stroke="#223039" stroke-width="1.5"/>
+  <line x1="47" y1="547" x2="47" y2="819" stroke="#263641" stroke-width="3" stroke-dasharray="8 6"/>
+  <rect x="32" y="432" width="18" height="4" rx="2" fill="#8fa1ad"/>
+  <text x="60" y="439" font-family="Be Vietnam Pro, sans-serif" font-size="18" font-weight="700" fill="#f1f5f8">Level 3</text>
+  <rect x="32" y="455" width="238" height="58" rx="4" fill="none" stroke="#EF5350" stroke-width="1.5"/>
+  <text x="46" y="479" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#ffb3ae"><tspan x="46">depends on Quant,</tspan><tspan x="46" dy="19">none announced</tspan></text>
+  <text x="78" y="553" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8"><tspan x="78">Deploy the rollup's bridge and</tspan><tspan x="78" dy="22">dispute contracts on Redbelly</tspan></text>
+  <circle cx="47" cy="547" r="15" fill="#EF5350"/>
+  <text x="47" y="552.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">1</text>
+  <text x="78" y="621" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8"><tspan x="78">Post rollup state</tspan><tspan x="78" dy="22">roots to Redbelly</tspan></text>
+  <circle cx="47" cy="615" r="15" fill="#EF5350"/>
+  <text x="47" y="620.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">2</text>
+  <text x="78" y="689" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8"><tspan x="78">Add each token through</tspan><tspan x="78" dy="22">Quant governance</tspan></text>
+  <circle cx="47" cy="683" r="15" fill="#EF5350"/>
+  <text x="47" y="688.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">3</text>
+  <text x="78" y="757" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8"><tspan x="78">Issuers decide if the bridge</tspan><tspan x="78" dy="22">contract may hold their tokens</tspan></text>
+  <circle cx="47" cy="751" r="15" fill="#EF5350"/>
+  <text x="47" y="756.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">4</text>
+  <text x="78" y="825" font-family="Be Vietnam Pro, sans-serif" font-size="16" font-weight="600" fill="#f1f5f8"><tspan x="78">Keep Overledger allowlists</tspan><tspan x="78" dy="22">in step with Receptor</tspan></text>
+  <circle cx="47" cy="819" r="15" fill="#EF5350"/>
+  <text x="47" y="824.0" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="500" fill="#0c1317">5</text>
+</svg>

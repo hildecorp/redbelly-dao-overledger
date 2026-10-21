@@ -1,0 +1,419 @@
+{
+ "title": "Could Redbelly connect to Quant Overledger?",
+ "subtitle": "A feasibility report on interoperability between Redbelly Network and Quant's Overledger",
+ "date": "15 October 2026",
+ "status_note": "Feasibility research only. Redbelly and Quant have no announced partnership or talks {no-talks}, and nothing in this report suggests otherwise. Redbelly has not published an official position on bridging {no-bridge-position}, so any question that no public source answers is marked Unknown.",
+ "labels": {
+  "confirmed": "Stated in a public source. The source is linked and quoted in the source list.",
+  "tested": "We ran the call ourselves on 15 October 2026. The full log is in evidence/tests.",
+  "analysis": "Our reasoning from the confirmed facts it cites. Not a statement by Redbelly, Tokeniser or Quant.",
+  "unknown": "Not answered by any public source we found. Treat as open."
+ },
+ "key_findings": [
+  {
+   "q": "Could Overledger's Gateway reach Redbelly today, for reading data and sending signed transactions?",
+   "a": "Possibly, but unconfirmed. Redbelly runs Ethereum-style smart contracts, which is what EVM compatible means, and its public RPC, the address apps use to read the chain and send transactions, appears to fit Overledger's self-serve tests. But Overledger describes self-serve as for public permissionless networks, and writing to Redbelly needs a credential. We found no public test of this route, and we did not test inside Overledger.",
+   "label": "analysis",
+   "cite": "rb-evm con-evm con-criteria t-chainid t-ankr con-selfserve-scope rb-access",
+   "verdict": "Possibly"
+  },
+  {
+   "q": "Can Redbelly join the Fusion Rollup, Overledger's shared layer for deposits, unified token balances and cross-chain messages?",
+   "a": "Not possible yet, as far as public sources show. Redbelly is not among the networks documented at testnet launch, the live list needs an API key so we could not check it, and the docs describe no self-serve way to add a network.",
+   "label": "analysis",
+   "cite": "fus-connected fus-bridge-contracts t-ol-auth",
+   "verdict": "Not yet"
+  },
+  {
+   "q": "Would Receptor credentials and Tokeniser rules travel with an asset to another chain?",
+   "a": "No, not by themselves. Redbelly's access credential and Proof by Query checks run on Redbelly, and Tokeniser enforces its rules at the point of transfer on Redbelly. No public source shows these checks reaching a copy of the asset on another chain.",
+   "label": "analysis",
+   "cite": "rb-access pbq-contract pbq-publish tk-runs tk-point",
+   "verdict": "No"
+  },
+  {
+   "q": "Is there any agreement between Redbelly and Quant?",
+   "a": "None has been announced.",
+   "label": "confirmed",
+   "cite": "no-talks",
+   "verdict": "None"
+  }
+ ],
+ "sections": [
+  {
+   "id": "why",
+   "title": "1. Why this question comes up now",
+   "blocks": [
+    {
+     "label": "confirmed",
+     "text": "On 24 September 2026 The Clearing House said it selected Quant to power its On-Chain Money Initiative, a payments network for clearing and settling tokenised deposits between financial institutions {tch-select}. Quant's technology is to provide the network's interoperability, orchestration and transaction management layer {tch-layer}, with connectivity to existing payment systems such as RTP and CHIPS {tch-fiat}. Quant's own release says The Clearing House will use Quant's technology to bring on-chain capabilities to its tokenised deposit network {quant-use}."
+    },
+    {
+     "label": "confirmed",
+     "text": "The network is expected to be available to participating institutions in the first half of 2027, and details on participation and use cases are still to be announced {tch-date}."
+    },
+    {
+     "label": "unknown",
+     "text": "Neither announcement names any blockchain the network will use or connect to, and neither mentions Redbelly. No public source we found says whether it will connect to Redbelly or to any other specific chain {tch-date}."
+    }
+   ],
+   "short": "Why now?",
+   "kicker": "Context",
+   "description": "Why the question comes up now: The Clearing House chose Quant for its tokenised deposit network, and what that announcement does and does not say."
+  },
+  {
+   "id": "overledger",
+   "title": "2. What is Overledger?",
+   "blocks": [
+    {
+     "label": "confirmed",
+     "text": "Overledger is Quant's platform for building applications that span more than one blockchain {ol-what}. It has three foundations: a Gateway that authenticates clients, routes requests and is also the way in to the Fusion Rollup {ol-gateway ol-fronts-fusion}; Connectors, one for each chain family such as EVM or Solana {ol-connector-family}, that put that family's RPC protocol behind one common interface {ol-connectors}; and the Fusion Rollup, a shared layer that anchors to several chains at once and supports deposits, withdrawals and cross-chain messages between them {ol-fusion}."
+    },
+    {
+     "label": "analysis",
+     "text": "In plain terms, the Gateway and Connectors are a switchboard: one login and one interface to talk to many chains {ol-gateway ol-connectors}. The Fusion Rollup is different. It is a separate EVM-compatible layer: tokens deposited from the chains connected to it appear as balances on the rollup and can be withdrawn back to those chains {ol-fusion}. The rollup connects to only a subset of the networks the Gateway reaches {ol-subset}, so a chain can be reachable through the switchboard without being connected to the Fusion Rollup."
+    },
+    {
+     "label": "confirmed",
+     "text": "Multi-step workflows such as signing or deploying a contract run as Flow Apps {flow-what}. Signing can be done with the user's own keys {flow-own-keys}, and neither the calling Flow App nor the Gateway ever sees them {flow-byo}."
+    }
+   ],
+   "short": "What is Overledger?",
+   "kicker": "Overledger",
+   "description": "What Quant's Overledger is: a Gateway, Connectors for each chain family, Flow Apps and the separate Fusion Rollup, in plain words."
+  },
+  {
+   "id": "how-connect",
+   "title": "3. How chains connect to Overledger today",
+   "blocks": [
+    {
+     "label": "confirmed",
+     "text": "There are two routes. The self-serve route covers six chain families, including EVM, where an account can register a node and use the network without talking to Quant's account team {con-six}. The self-serve EVM family is described as covering every EVM-compatible chain {con-evm}, but self-serve Connectors are for public, permissionless chain families {con-selfserve-scope}, and permissioned EVM networks such as permissioned Hyperledger Besu are on the engagement route {con-besu}. The managed engagement route is for private or consortium networks, and for chain families Quant does not support yet {ol-two-paths}."
+    },
+    {
+     "label": "confirmed",
+     "text": "A chain family qualifies for self-serve when its nodes offer an interface over HTTPS, need nothing beyond an API key, and it does not matter which node a client uses {con-criteria}. Networks where node identity matters, such as permissioned consortium chains and operator-gated public chains, are not self-serve today {con-engagement}."
+    },
+    {
+     "label": "confirmed",
+     "text": "For public permissionless networks, a chain that is not listed yet but belongs to one of the six self-serve families is added with the same registration call that adds a node {con-one-call con-new-network}. The first registration creates the network, and it then becomes available to other Overledger users {con-new-network}."
+    },
+    {
+     "label": "confirmed",
+     "text": "Each node is registered as public or private. A public node must come from an approved provider and joins the shared pool for that network {con-public-private con-node-public-shared}, while a private node can be at any address but is scoped to the account that added it {con-public-private con-node-private-scope}. The approved providers are Alchemy, Infura, QuickNode, Chainstack, GetBlock, Blockdaemon and Ankr {con-providers}, and a public node URL must carry the provider's API key {con-key}. A private node can be any reachable HTTPS address {con-private-url}. Every node must pass a health check before it is used {con-health}."
+    },
+    {
+     "label": "confirmed",
+     "text": "When a brand-new chain family is needed, the documented effort is about 2 days for a health and chain identity checker, plus about 1 day for each app that needs to use it {con-family-cost con-app-cost}."
+    }
+   ],
+   "short": "How chains connect",
+   "kicker": "Overledger",
+   "description": "How a chain reaches Overledger today: the self-serve route for six chain families, the managed route with Quant, and the health check."
+  },
+  {
+   "id": "redbelly",
+   "title": "4. The Redbelly facts that matter here",
+   "blocks": [
+    {
+     "label": "confirmed",
+     "text": "Redbelly is a layer 1 blockchain built for real world asset tokenisation {rb-l1}. It is compatible with the Ethereum Virtual Machine and runs smart contracts written for it {rb-evm}. Mainnet is chain ID 151 with a public RPC address {rb-mainnet}, and Redbelly lists Ankr as a third-party public RPC provider for mainnet {rb-ankr}. Testnet is chain ID 153 {rb-testnet}."
+    },
+    {
+     "label": "tested",
+     "text": "On 15 October 2026 the official mainnet RPC and the Ankr RPC both answered with chain ID 151 (0x97) {t-chainid t-ankr}, and the official mainnet RPC returned block data {t-blocks}. The method net_version, which gives a network ID to wallets and tools that predate eth_chainId {fus-net-version}, returned \"the method net_version does not exist/is not available\" {t-netversion}."
+    },
+    {
+     "label": "confirmed",
+     "text": "Writing to Redbelly is gated by identity. Every user must claim an access credential from an accredited issuer before their account can write to the network {rb-access}, and all participants must prove who they are before gaining access {rb-all-prove}. Accredited issuers are listed in an on-chain registry {rb-registry}. Businesses can also be verified as incorporated entities {rb-business-optional rb-business}, and even node operators need network access for their accounts {rb-operator}."
+    },
+    {
+     "label": "confirmed",
+     "text": "Receptor is Redbelly's identity and verifiable credential protocol {rec-what}, built on the W3C verifiable credential data model {rec-w3c}. It supports two methods {rec-two-methods}. Proof by Query uses a zero knowledge verifier smart contract {pbq-contract} and publishes identity state to the chain {pbq-publish}. Selective Disclosure uses BBS+ signatures {sd-bbs}, reveals chosen details to a verifier, and can only be used off-chain {sd-offchain}. The documented identifiers of Averer, one authorised issuer, take the form did:receptor:redbelly {rec-did}, and apps can use eligibility checks to control who may call their contract functions {rec-checks}."
+    },
+    {
+     "label": "confirmed",
+     "text": "Tokeniser runs on Redbelly {tk-runs} and enforces eligibility, identity and target market rules at the point of transfer, every time {tk-point}. Before any trade proceeds, identity, eligibility and limits are checked {tk-checks}; transfers are recorded on the issuer's register in real time {tk-register}; and pledged units stay locked until a loan is repaid {tk-locked}. Redbelly settles a transaction in a single round {tk-final}."
+    },
+    {
+     "label": "confirmed",
+     "text": "Redbelly already has token bridges. Its developer portal lists three routes: Celer cBridge {br-celer-out}, LayerZero with Stargate {br-lz} and Lucid Labs {br-lucid}. Celer launched with a pegged bridge method {br-celer-pegged}, and its RBNT route goes out from Redbelly but not back {br-celer-out}. Redbelly announced Wrapped RBNT on Ethereum with the contract 0xb45f...bf13 {br-x br-x-ca}, which the portal lists under Lucid Labs {br-wrbnt-lucid}. The portal lists a different Ethereum contract for the Celer route {br-wrbnt-celer}. Listing these routes is not an official position: Redbelly has not published one on bridging {no-bridge-position}."
+    },
+    {
+     "label": "confirmed",
+     "text": "Earlier Task Board research adds detail. The selected TASK-08 entry reported LayerZero live on Redbelly mainnet {t08-lz t08alt-lz} and built its own lock-and-mint bridge on testnet {t08-pattern}. A second TASK-08 entry found that, when it was written, no major interoperability protocol had deployed its core messaging setup to Redbelly testnet {t08alt-testnet}. When the TASK-16 playbook was written, the bridges it called official, Reddex and Lucid, supported only bridging USDC and USDT from BNB Chain {t16-routes}."
+    }
+   ],
+   "short": "Redbelly facts that matter",
+   "kicker": "Redbelly",
+   "description": "The Redbelly facts that matter: EVM compatibility, chain ID 151, identity-gated writing, Receptor credentials, Tokeniser and existing bridges."
+  },
+  {
+   "id": "now",
+   "title": "5. Can Redbelly connect now, and what is missing?",
+   "intro": "A connection can mean three different things. Each has a different answer.",
+   "blocks": [
+    {
+     "label": "analysis",
+     "heading": "Level 1: reaching Redbelly through the Overledger Gateway. Possibly, unconfirmed.",
+     "text": "Redbelly is EVM compatible {rb-evm}, and Overledger's self-serve EVM family is described as covering EVM-compatible chains {con-evm}. An unlisted network in a self-serve family can be added by the first node registration {con-new-network}. At the RPC level Redbelly appears to fit the self-serve tests {con-criteria}: its RPC works over HTTPS and answered without a key, two different endpoints returned the same chain {t-chainid t-ankr}, and its write rule is attached to accounts {rb-access}, not to the node a client uses. Ankr, an approved provider {con-providers}, runs a Redbelly mainnet endpoint {rb-ankr}, and the official RPC could be added as a private node {con-private-url}."
+    },
+    {
+     "label": "analysis",
+     "text": "If it works, this level would give an institution one interface to read Redbelly data and send transactions it has signed itself. After its own access checks, the Gateway forwards the payload to a Redbelly node and passes back the native response unchanged {con-forward}, so Redbelly's own rules still apply. A transaction sent this way only succeeds if the sending account has Redbelly write access {rb-access}."
+    },
+    {
+     "label": "unknown",
+     "heading": "Four points are open",
+     "list": [
+      "How Overledger would classify Redbelly. Self-serve is written for public, permissionless networks {con-selfserve-scope con-permissionless}, Overledger's own glossary calls a network where anyone can read but only allowlisted parties can write \"public permissioned\" {ol-permissioned}, and permissioned EVM networks are on the engagement route {con-besu}. The same docs send networks that need any other identity-bound configuration, and operator-gated public chains, to the engagement route {con-identity-bound con-engagement}, and Redbelly selects its node operators by application {rb-operator-select}. Writing to Redbelly needs an access credential {rb-access}, so Redbelly could be treated as an engagement network; the docs do not say.",
+      "Which call the health check uses. The docs say only that it uses the chain's standard validation {con-health} and that a checker does a chain identifier lookup {con-family-cost}. If it relies on net_version, Redbelly's answer {t-netversion} could fail it.",
+      "Whether a provider's keyed service covers Redbelly. A public node URL must carry a provider API key {con-key}, and we did not confirm that Ankr's keyed service covers Redbelly.",
+      "Whether Redbelly is already listed. Overledger's live network list {con-live-list} and the Fusion Rollup's list {api-networks} both answered \"Missing authorization header\" without an API key {t-ol-auth-all t-ol-auth}, so we could not see it."
+     ]
+    },
+    {
+     "label": "analysis",
+     "heading": "Level 2: Overledger Flow Apps on Redbelly. Unknown.",
+     "text": "Flow Apps are multi-step workflows run through the Gateway {flow-what}, and customers and partners can also host their own {ol-external-apps}. The catalogue is not listed in the public docs; only account holders can see which apps are available to them {flow-not-listed flow-account-registry}, and every shipped app is built by Quant {flow-internal}, so whether a given app accepts a self-serve EVM network such as Redbelly cannot be checked from public sources. The docs give an effort of about a day per app only for adding a brand-new chain family {con-app-cost}; they give no figure for a new network inside a family Overledger already supports."
+    },
+    {
+     "label": "confirmed",
+     "heading": "Level 3: joining the Fusion Rollup.",
+     "text": "The networks documented as connected at testnet launch are Ethereum Sepolia, Polygon Amoy and Quant's permissioned Besu testnet {fus-connected}. Each connected chain carries the rollup's bridge and dispute contracts {fus-bridge-contracts} and receives the rollup's state roots {fus-roots}. Token entries on the bridge are controlled by Quant's governance signers {fw-token-gov}."
+    },
+    {
+     "label": "analysis",
+     "text": "Redbelly is not in the documented list, the live list could not be read without an API key {t-ol-auth}, and the documentation we read describes no self-serve way to add a chain to the Fusion Rollup. The Redbelly side looks light. Fusion is documented as supporting public and permissioned networks side by side {fus-sbs}, and it posts transaction data to a single permissioned chain and only state roots to the others {fus-da}, so a Redbelly deployment would carry the bridge and dispute contracts and state roots, not transaction data. Redbelly's access credential is not a blocker in principle: the accounts that deploy those contracts and post state roots would each need Redbelly network access {rb-access}, which is a setup step. The documented gap is on the Quant side, because Redbelly is not in the connected list and no source shows Quant has connected it. No such work has been announced {no-talks}.",
+     "heading": "Not possible yet, as far as public sources show."
+    }
+   ],
+   "short": "Can Redbelly connect now?",
+   "kicker": "The answer",
+   "description": "Can Redbelly connect now? Gateway access is possible but unconfirmed, Flow Apps are unknown, and the Fusion Rollup is not possible yet."
+  },
+  {
+   "id": "work",
+   "title": "6. The technical work a connection would need",
+   "intro": "Written for a non engineer. Steps marked Level 1 are small, but only if Overledger treats Redbelly as a self-serve network, which its docs do not confirm {con-selfserve-scope con-identity-bound}. Steps marked Level 3 depend on Quant, because Redbelly is not among the documented Fusion Rollup networks {fus-connected} and bridge tokens are added by Quant's governance {fw-token-gov}; the accounts involved would also need Redbelly access {rb-access}. No such work has been announced {no-talks}.",
+   "blocks": [
+    {
+     "label": "analysis",
+     "list": [
+      "Level 1, step 1: someone with an Overledger account registers a Redbelly node, the server Overledger would send requests to {con-forward}: the official RPC as a private node {con-public-private con-private-url} or, if an approved provider's keyed service covers Redbelly (not confirmed), that provider's endpoint as a public node {con-providers con-key}. The first registration also adds the network {con-new-network}. This is one form or one API call {con-one-call}.",
+      "Level 1, step 2: the node has to pass Overledger's health check {con-health}. If the check fails, the node is not added, and the docs do not say what would happen next. For scale, a checker for a brand-new chain family is documented at about 2 days {con-family-cost}.",
+      "Level 1, step 3: every address an institution sends from needs Redbelly write access, which its user enables after claiming an access credential from an accredited issuer {rb-access}. Claiming that credential needs a passport checked by biometrics {rb-passport}, which is friction for an institution that sends from many addresses. The organisation can also be verified as a business {rb-business}. They sign with their own keys and send the signed transaction, which the Gateway forwards unchanged {con-forward}.",
+      "Level 3, step 1: the rollup's standard bridge and dispute contracts are deployed on Redbelly {fus-bridge-contracts}, from accounts that hold Redbelly access {rb-access}. These are the contracts that hold tokens sent to the rollup and let a challenger dispute its state during the dispute window {fus-dispute}.",
+      "Level 3, step 2: the rollup's services start posting rollup state roots, short fingerprints of the rollup's balances, to Redbelly for settlement {fus-roots}.",
+      "Level 3, step 3: each token that should move is added to the bridge token list by Quant's governance {fw-token-gov}.",
+      "Level 3, step 4: issuers decide whether their asset contracts may hold or release tokens to the bridge contract, because Tokeniser checks eligibility on every transfer {tk-point}.",
+      "Level 3, step 5: someone would have to keep Overledger's own allowlists {fw-binding} in step with Receptor credentials {rb-access}, because neither system's documentation describes a link to the other."
+     ]
+    },
+    {
+     "label": "analysis",
+     "text": "Registering a node is a technical action any Overledger account can take {con-new-network}. It would not by itself mean any agreement between Redbelly and Quant."
+    }
+   ],
+   "short": "The work it would take",
+   "kicker": "The answer",
+   "description": "The technical work a connection would need, step by step, for a non engineer: small Level 1 steps and Level 3 steps that depend on Quant."
+  },
+  {
+   "id": "offer",
+   "title": "7. What a connection could offer institutions",
+   "blocks": [
+    {
+     "label": "analysis",
+     "list": [
+      "One interface. An institution that already reaches other chains through Overledger {ol-what} could read Redbelly and send its own signed transactions through the same Gateway and firewall checks {fw-every}, once a Redbelly node is registered {con-new-network}. If an approved provider's public nodes were registered for Redbelly (not confirmed), it would not need to run its own Redbelly RPC or failover {ol-no-rpc con-providers con-key}; with only a private node, each institution would add and run its own {con-node-private-scope}.",
+      "Rules stay on Redbelly. At Level 1 the Gateway passes each payload to a Redbelly node and passes back the native response unchanged {con-forward}, so Redbelly's access credential still applies to every sending account {rb-access}, and Tokeniser's eligibility checks still apply to every transfer of a Tokeniser asset {tk-point}.",
+      "Key control. Institutions can keep and use their own keys in Overledger's model {flow-own-keys}.",
+      "Unified balances, only at Level 3. The Fusion Rollup can merge copies of the same token from several chains into one balance {fus-unify}. Redbelly is not among the documented connected networks {fus-connected}, so as far as public sources show this is not available to Redbelly.",
+      "No known route to tokenised deposit networks. The Clearing House network will use Quant's technology for its interoperability layer {tch-layer}, but neither announcement names the chains it will use or mentions Redbelly. Whether it will ever reach Redbelly, or any public chain, is unknown {tch-date}."
+     ]
+    },
+    {
+     "label": "analysis",
+     "text": "Limits to weigh. Redbelly's developer portal already lists bridge routes through Celer, LayerZero and Lucid Labs {br-celer-out br-lz br-lucid}, and Tokeniser points to EVM compatibility as its link to other networks {tk-150}. Overledger would add an institutional access layer rather than a first route out. Level 3 would also put Quant's governance signers in the path, since they control which tokens may cross the Fusion bridge {fw-token-gov}, and withdrawals from the rollup wait for a dispute window {fus-dispute}, unlike Redbelly's single round settlement {tk-final}."
+    }
+   ],
+   "short": "What it could offer",
+   "kicker": "Institutions",
+   "description": "What a connection could offer institutions using Redbelly, and the limits to weigh, from one interface to settlement timing."
+  },
+  {
+   "id": "compliance",
+   "title": "8. Receptor credentials and Tokeniser assets across chains",
+   "blocks": [
+    {
+     "label": "analysis",
+     "heading": "How Receptor credentials would behave",
+     "text": "A Receptor credential is a W3C verifiable credential held by the user {rec-w3c}. Its two methods travel differently. A Selective Disclosure proof is checked off-chain {sd-offchain}, so in principle any verifier could check it, including an externally hosted Overledger Flow App {ol-external-apps}; the app catalogue is not public {flow-not-listed}, so whether such an app exists is unknown. A Proof by Query check runs in a verifier contract against identity state published on Redbelly {pbq-contract pbq-publish}, so another chain cannot run the same check unless that setup is rebuilt there. The access credential unlocks write access on Redbelly, through a Redbelly network contract {rb-access}; no source shows another chain or Overledger reading it."
+    },
+    {
+     "label": "analysis",
+     "heading": "How Tokeniser assets would behave",
+     "text": "Tokeniser enforces a Tokeniser asset's rules on Redbelly at every transfer {tk-runs tk-point tk-checks}. A lock-and-mint bridge, the pattern of the TASK-08 testnet bridge {t08-pattern}, locks the asset on one chain and issues a copy on the other. In our reading, the copy then obeys the rules of the contracts and policies on the other chain. Tokeniser says its reach to other networks can be permissioned as a mandate allows {tk-150-faq}, but publishes no detail of how its transfer checks would apply to such a copy. Overledger's firewall decides access from its own list of users and their addresses {fw-binding}, not from Receptor credentials."
+    },
+    {
+     "label": "analysis",
+     "heading": "Where compliance could break",
+     "list": [
+      "A copy on another chain without eligibility checks could be passed to someone who never proved eligibility on Redbelly {tk-point}.",
+      "Two lists of who is allowed: Receptor credentials on Redbelly {rb-access} and Overledger's allowlists {fw-binding}. If they drift apart, one system allows what the other refuses.",
+      "If a holder's credential stopped being valid on Redbelly {rb-access}, nothing documented would pass that change to a copy held elsewhere or to Overledger's allowlists {fw-binding}.",
+      "Merged balances {fus-unify} could mix a restricted asset with an unrestricted copy of the same asset.",
+      "The list of tokens that may cross the Fusion bridge is set by Quant's governance {fw-token-gov}, not by the issuer.",
+      "Tokeniser records every transfer on the issuer's register in real time {tk-register}, and already keeps units pledged for a loan locked until it is repaid {tk-locked}. Units locked in a bridge contract, or held on another chain, would need similar clear treatment in that register.",
+      "Settlement timing changes: rollup withdrawals wait for a dispute window {fus-dispute}, while Redbelly is final in one round {tk-final}."
+     ]
+    },
+    {
+     "label": "analysis",
+     "text": "The lowest risk pattern is for regulated assets to stay on Redbelly and for Overledger to carry only instructions and data at Level 1, so that every transfer still meets Redbelly's checks {con-forward rb-access tk-point}."
+    }
+   ],
+   "short": "Credentials and assets across chains",
+   "kicker": "Compliance",
+   "description": "How Receptor credentials and Tokeniser assets would behave across chains, and seven points where compliance could break."
+  },
+  {
+   "id": "open",
+   "title": "9. Not possible yet, and unknown",
+   "blocks": [
+    {
+     "label": "summary_table",
+     "rows": [
+      [
+       "Joining the Fusion Rollup",
+       "Not possible yet, as far as public sources show",
+       "fus-connected fus-bridge-contracts t-ol-auth"
+      ],
+      [
+       "Receptor credentials recognised by Overledger's firewall",
+       "Not possible yet, no documented link",
+       "fw-binding rb-access"
+      ],
+      [
+       "Tokeniser rules enforced on copies held on other chains",
+       "Unknown, Tokeniser says other networks can be reached with permissioned access but publishes no detail for copies",
+       "tk-150-faq tk-point t08-pattern"
+      ],
+      [
+       "Whether Overledger treats Redbelly as self-serve or engagement",
+       "Unknown, writing to Redbelly needs a credential",
+       "con-selfserve-scope ol-permissioned rb-access"
+      ],
+      [
+       "Whether Redbelly passes Overledger's EVM health check",
+       "Unknown, needs a test with an account",
+       "con-health t-netversion"
+      ],
+      [
+       "Whether Redbelly is already in Overledger's live network list",
+       "Unknown, the lists need an API key",
+       "t-ol-auth-all t-ol-auth"
+      ],
+      [
+       "Whether Flow Apps work with Redbelly",
+       "Unknown, catalogue visible only to account holders",
+       "flow-not-listed flow-account-registry"
+      ],
+      [
+       "Which chains The Clearing House network will reach",
+       "Unknown",
+       "tch-date"
+      ],
+      [
+       "Redbelly's position on bridging",
+       "Unknown, no official position published",
+       "no-bridge-position"
+      ],
+      [
+       "Any plan by Redbelly or Quant to connect",
+       "None announced",
+       "no-talks"
+      ]
+     ]
+    }
+   ],
+   "short": "Not possible yet, and unknown",
+   "kicker": "Open questions",
+   "description": "Everything that is not possible yet or unknown, in one table, with the source for each answer."
+  },
+  {
+   "id": "method",
+   "title": "10. How this report was made and how to check it",
+   "blocks": [
+    {
+     "label": "method",
+     "text": "Every source page was saved as a text snapshot on 15 October 2026, with its address, capture time and SHA-256 hash in evidence/manifest.json. The snapshots, the manifest and our test logs are published with the website under /evidence. Each factual claim cites a fact, and each fact quotes its source word for word. The check script confirms that every quote is in its snapshot, that every Confirmed paragraph cites a source, and that the text has no partnership wording, no investment language, no dashes and no emoji. We ran the RPC and API calls ourselves, and kept the full output in evidence/tests. We did not create an Overledger account, so nothing here was tested inside Overledger."
+    }
+   ],
+   "short": "How this was made",
+   "kicker": "Method",
+   "description": "How this report was made and how to check it: saved source copies with SHA-256 hashes, our own tests and the check script."
+  }
+ ],
+ "community_summary": {
+  "paragraphs": [
+   "Could Redbelly connect to Quant's Overledger? We looked only at public documents. Redbelly and Quant have not announced any partnership or talks, and this research does not suggest any.",
+   "Overledger is Quant's platform for reaching many blockchains through one interface. Its self-serve route covers EVM chains, and Redbelly is EVM compatible, so a basic connection, reading Redbelly and sending transactions the sender has signed, looks possible. It is untested, and Overledger describes self-serve as for public permissionless networks, while writing to Redbelly needs a credential. Every Redbelly rule would still apply.",
+   "Overledger's Fusion Rollup, its shared layer for moving tokens between chains, did not list Redbelly among the networks connected at its testnet launch, and the docs describe no self-serve way to add a chain. As far as public sources show, that part is not possible yet.",
+   "Receptor credentials and Tokeniser's eligibility rules are enforced on Redbelly. In our reading of the docs, they do not follow a token to another chain by themselves, and no public source shows how they would. Keeping regulated assets on Redbelly avoids that gap.",
+   "Open questions: whether Overledger would treat Redbelly as self-serve, whether Redbelly passes its health check, which chains The Clearing House network will reach, and Redbelly's own position on bridging. Full report with every source: {site}"
+  ],
+  "thread": [
+   "1/ The Clearing House picked Quant to power its tokenised deposit network, so people are asking: could Redbelly connect to Quant's Overledger? We read the public docs. Neither announcement mentions Redbelly, and no partnership or talks have been announced.",
+   "2/ Overledger reaches many chains through one interface. Its self-serve route covers EVM chains, and Redbelly is EVM compatible. A basic connection for reading data and sending signed transactions looks possible, but it is unconfirmed and untested.",
+   "3/ Redbelly's rules still apply on that route. Every account that sends a transaction needs a Redbelly access credential, and Tokeniser checks eligibility on every transfer of its assets.",
+   "4/ Overledger's Fusion Rollup, which moves tokens between connected chains, did not list Redbelly at its testnet launch, and the docs describe no self-serve way to add a chain. As far as public sources show, that is not possible yet.",
+   "5/ Our reading of the docs: Receptor credentials and Tokeniser rules do not travel with a token to another chain by themselves, so a copy elsewhere follows that chain's rules. Keeping regulated assets on Redbelly avoids the gap.",
+   "6/ Still unknown: whether Overledger would treat Redbelly as self-serve, since writing needs a credential; which chains The Clearing House network will reach; and Redbelly's position on bridging. Full report with every source: {site}"
+  ],
+  "description": "A plain language summary of the report for the community, as a few paragraphs and a six post X thread, with copy buttons."
+ },
+ "glossary": [
+  [
+   "RPC",
+   "The address and interface that apps and wallets use to read a blockchain and send transactions to it. Overledger's self-serve test is about how a chain's nodes answer RPC calls {con-criteria}."
+  ],
+  [
+   "Node",
+   "A computer that runs a blockchain's software and answers RPC calls. Overledger registers nodes as public or private {con-public-private}."
+  ],
+  [
+   "EVM",
+   "The Ethereum Virtual Machine, the engine that runs Ethereum-style smart contracts. Redbelly can run contracts written for it {rb-evm}."
+  ],
+  [
+   "Self-serve and engagement",
+   "Overledger's two ways to add a chain: self-serve, by one form or API call, or a managed project with Quant's team {con-six ol-two-paths}."
+  ],
+  [
+   "Gateway and Connectors",
+   "Overledger's single way in, and the parts behind it that speak each chain family's protocol {ol-gateway ol-connectors}."
+  ],
+  [
+   "Fusion Rollup",
+   "Overledger's separate shared layer: deposits from connected chains become balances on it and can be withdrawn back {ol-fusion}."
+  ],
+  [
+   "State root",
+   "A short fingerprint of the rollup's balances, posted to every connected chain {fus-roots}."
+  ],
+  [
+   "Dispute window",
+   "The wait before a rollup withdrawal is final, during which a challenger can prove the rollup's state invalid {fus-dispute}."
+  ],
+  [
+   "Allowlist",
+   "A list of addresses a contract lets through. Overledger turns its rules about users into allowlists {fw-binding}."
+  ],
+  [
+   "Verifiable credential",
+   "A signed digital statement about a person, such as having passed identity checks, that the person holds. Receptor uses this W3C model {rec-w3c}."
+  ]
+ ]
+}

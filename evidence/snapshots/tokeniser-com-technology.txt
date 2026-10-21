@@ -1,0 +1,233 @@
+URL: https://tokeniser.com/technology
+TITLE: Our Technology | Proven Australian infrastructure | Tokeniser
+
+Skip to content
+Product
+Superpowers
+Solutions
+Resources
+Pricing
+About Us
+Login to Tokeniser
+Contact us
+
+OUR TECHNOLOGY
+
+Built on proven Australian infrastructure
+
+Tokeniser gives you a familiar platform. Underneath it runs Redbelly Network, Australia's public digital token infrastructure: proven settlement, verified security, and eligibility built into the protocol.
+
+Book a demo
+Explore Redbelly
+
+PROVEN INFRASTRUCTURE
+
+Rails already tested at institutional scale
+
+Tokeniser runs on infrastructure with the properties a licensed business needs: verified security, a regulation-forward design, and settlement that completes in a single round.
+
+Verified consensus
+
+Redbelly's consensus is proven correct by model checking, which exhaustively checks every reachable state of the protocol.
+
+Regulation forward
+
+Designed as public digital token infrastructure under Australian law, with identity and eligibility programmed into the protocol, beneath your existing licence.
+
+Settlement at machine speed
+
+Deterministic finality settles a transaction in a single round, final the moment it completes.
+
+PROVEN AT SCALE
+
+Infrastructure you can put client assets on
+
+Redbelly has run since mainnet launch in October 2024 with 100% uptime, across more than 400 validators, with zero forks or rollbacks. It has settled a tokenised corporate bond in the Reserve Bank of Australia's pilot wholesale CBDC as part of Project Acacia. This is infrastructure already trusted with regulated assets and central bank money.
+
+100%
+
+Uptime since mainnet launch, October 2024
+
+400+
+
+Validators contributing to the network
+
+0
+
+Forks or rollbacks
+
+RBA
+
+Central bank money settled in Project Acacia
+
+FIGURES PUBLISHED BY REDBELLY NETWORK
+
+VERIFIED SECURITY
+
+Security proven, not assumed
+
+Redbelly's consensus protocol is proven correct through model checking: an automated solver exhaustively checks every reachable state of the protocol and confirms it holds in each one.
+
+The consensus method itself is patented and built from scratch, developed from research at the University of Sydney and CSIRO, Australia's government science agency.
+
+METHOD
+
+Model checking of every reachable state
+
+CONSENSUS
+
+Patented, built from scratch for deterministic finality
+
+ORIGIN
+
+University of Sydney and CSIRO research
+
+TRACK RECORD
+
+Zero forks or rollbacks since launch
+
+COMPLIANT BY DESIGN
+
+Compliance built into the protocol, beneath your licence
+
+Australia's digital assets framework recognises open, permissionless protocols as public digital token infrastructure, sitting outside markets, clearing and settlement, and custody licensing. Redbelly is designed to operate squarely within that category.
+
+STAYS WITH YOU
+
+Your AFSL obligations
+
+Offer, disclosure, onboarding and KYC stay exactly where they are, under the licence you already hold.
+
+EXEMPT PROTOCOL UTILITY
+
+The rails beneath
+
+Settlement, secondary liquidity and collateral mobility sit in the exempt protocol layer.
+
+AUTOMATIC
+
+Enforced at transfer
+
+Eligibility, identity and your target market determination are enforced at the point of transfer, every time.
+
+Read the detail on the category and the three statutory tests on About Protocol Finance.
+
+WHAT THE RAILS ADD
+
+Your asset does more once it is on the rails
+
+Once an asset is issued it inherits the whole utility layer: settlement, a continuous secondary market, financing, and reach into the networks your investors already use.
+
+Instant settlement, around the clock
+
+Deterministic consensus finalises a transaction in a single round, so settlement is quasi-instant and final the moment it completes. One settlement layer becomes a single source of truth every party can trust.
+
+Liquidity and leverage
+
+Automated market makers give otherwise illiquid assets a continuous secondary market, and tokenised assets become composable collateral in lending protocols. All of it as exempt protocol utility.
+
+Agentic distribution and reach
+
+Deterministic rails give agents what they need: known identities, programmable permissions and fixed costs. Credential-gated distribution reaches eligible investors directly, within your mandate, and full EVM compatibility connects you to more than 150 networks out of the box.
+
+Proven throughput. Australian infrastructure.
+
+97,500
+
+Transactions per second, settlement at machine speed
+
+100%
+
+Uptime since mainnet launch
+
+0
+
+Forks or rollbacks
+
+150+
+
+Networks connected out of the box
+
+THE TURNKEY STACK
+
+One integration. The whole stack.
+
+Tokeniser is one layer of a vertically integrated stack. Issue once, and the same asset gains distribution, liquidity and settlement, while your regulated obligations stay where they already are.
+
+ISSUE
+
+Tokeniser
+
+Compliant issuance and lifecycle of tokenised assets. Your AFSL covers the offer.
+
+REACH
+
+Averer
+
+Identity and the AI-native wallet. Verifiable credentials gate every holder, enabling direct-to-investor distribution within your mandate.
+
+SETTLE AND PROGRAM
+
+Redbelly Network
+
+The settlement layer with deterministic finality, and programmable composability with liquidity and lending protocols, exempt from market, clearing and settlement, and custody licensing.
+
+FAQ
+
+Common questions about the technology beneath Tokeniser answered.
+
+Is Redbelly a private network?
+
+No. Redbelly is a public network designed to meet the three statutory tests for public digital token infrastructure under Australian law: open and non-discretionary, permissionless contribution, and no critical participant.
+
+What does “formally verified” mean here?
+
+Redbelly’s consensus protocol is proven correct using model checking, an automated method that exhaustively checks every reachable state of the protocol.
+
+Do I need a new licence to use the infrastructure?
+
+No. The protocol layer is designed to sit outside markets, clearing and settlement, and custody licensing. Your existing AFSL obligations, issuance, disclosure and conduct, remain unchanged.
+
+How fast does it settle?
+
+Settlement is quasi-instant. Deterministic consensus finalises a transaction in a single round, with finality the moment it completes.
+
+Where did the technology come from?
+
+Redbelly was born from research at the University of Sydney and CSIRO, Australia’s government science agency, with a patented consensus method built from scratch.
+
+Can it connect to other networks?
+
+Yes. Full EVM compatibility gives connection to more than 150 networks out of the box, with permissioned or permissionless access as your mandate allows.
+
+Proven rails. Australian infrastructure.
+
+Tokenise on infrastructure already trusted with regulated assets and central bank money. Let's talk about your path forward.
+
+Book a demo
+Contact us
+
+© Tokeniser 2026. All rights reserved.
+
+Tokeniser Pty. Ltd. is an Australian company providing compliant asset tokenisation and management solutions.
+
+Privacy Policy
+Cookie Settings
+Terms & Conditions
+
+Tokeniser is a Redbelly Network project: born from research at the University of Sydney and Australian Government Science Agency: CSIRO, and built on infrastructure trusted by leading financial institutions.
+
+Contact
+
+Contact sales
+Request a demo
+
+PRIVACY
+
+We use cookies
+
+We use cookies to run Tokeniser securely and — with your permission — for analytics and marketing. You can Accept all, Reject all, or choose categories. See our Privacy Policy.
+
+Accept all
+Reject all
+Manage preferences
