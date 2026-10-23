@@ -1,0 +1,29 @@
+# Runs the quality gate (scripts/check.py) on every push and pull request, so the result on GitHub always matches the
+# committed report. The private .credit-names and .credit-links lists are not in the repository, so this run skips the
+# personal credit name scan in check 5; run the check locally, where the lists are, before every push.
+name: Quality gate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install what the check reads PDF and Word files with
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          python -m pip install python-docx==1.2.0
+      - name: Run scripts/check.py
+        run: python scripts/check.py

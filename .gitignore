@@ -1,4 +1,22 @@
+# Private lists used by scripts/check.py (personal credit scan) and scripts/snap_sources.py (redaction).
+# They hold contributor names and links, so they stay on this computer.
 .credit-names
 .credit-links
+
+# Scratch output of scripts/build.py and scripts/snap_sources.py (print page, diagram PNGs, fresh captures)
+/build/
+
+# Python
 __pycache__/
-build/
+*.py[cod]
+.venv/
+venv/
+
+# Vercel CLI project link
+.vercel/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
